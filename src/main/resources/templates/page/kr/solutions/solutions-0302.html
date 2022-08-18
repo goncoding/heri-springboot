@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='분류 시스템',
+	url='/kr/solutions/solutions-0302',
+	enUrl='/en/solutions/solutions-0302',
+	description='두산로지스틱스솔루션은 세계적인 물류 자동화 시스템 업체들과의 파트너십을 통해 Cross belt sorter, Slide shoe sorter, Pocket sorter system 등 첨단 분류 시스템을 제공합니다.',
+	keyword='분류 시스템, 물류 자동화, 물류 자동화 시스템, 크로스 벨트 소터, 슬라이드슈소터, 포켓소터 시스템, 소터 시스템 Sortation System, Warehouse automation, Material Handling Equipment, Material handling system, Gold peak, Ginfon, MHS, Vanriet, KNAPP, Cross belt sorter, Slide Shoe Sorter, Pocket sorter system'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth3Breadcrumb(
+		depth1name='솔루션',
+		depth1url='/kr/solutions/solutions-01',
+		depth2name='물류 자동화 시스템',
+		depth2url='/kr/solutions/solutions-03',
+		depth3name='분류 시스템',
+		depth3url='/kr/solutions/solutions-0302',
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='물류 자동화 시스템',
+		className='sub-solutions0302'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="tab-area tab-type02 quad page">
+				<a href="#tabList" class="current-tab-text">보관 시스템</a>
+				<div class="tab-inner-wrap cb" id="tabList">
+					<a href="/kr/solutions/solutions-0301">
+						<span>보관 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0302" class="on">
+						<span>분류 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0303">
+						<span>피킹 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0304">
+						<span>이송 시스템</span>
+					</a>
+				</div>
+			</div>
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">분류 시스템</strong>
+				</div>
+			</div>
+			<div class="sequential">
+				<div class="section">
+					<div class="thumb w-only2">
+						<img src="/images/solutions/img-solutions-portfolio-sotation.jpg" alt="물류 자동화 기술 포트폴리오"
+							 usemap="#portfolio-map">
+						<map name="portfolio-map">
+							<area shape="circle" coords="395,556,12" href="/kr/solutions/solutions-0301" alt="보관 시스템"
+								  title="보관 시스템">
+							<area shape="circle" coords="649,798,12" href="/kr/solutions/solutions-0303" alt="피킹 시스템"
+								  title="피킹 시스템">
+							<area shape="circle" coords="734,612,12" href="/kr/solutions/solutions-0304" alt="이송 시스템"
+								  title="이송 시스템">
+						</map>
+					</div>
+					<div class="thumb m-only2">
+						<img src="/images/solutions/img-solutions-portfolio-sotation-m.jpg" alt="물류 자동화 기술 포트폴리오"
+							 class="m-only2">
+					</div>
+					<a href="/images/solutions/img-solutions-portfolio-sotation-btnless.jpg"
+					   class="btn btn-expand m-only2" title="확대">확대</a>
+				</div>
+				<div class="section">
+					<ul class="explain-area thumb-type">
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation01.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Cross-belt Sorter</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>평면 및 경사로 내 트랙을 따라 이동하는 컨베이어 벨트로 구성되어 횡방향으로 품목이 분류되는 시스템</li>
+										<li>모듈식 디자인을 제공하여 직선, 곡선, 경사 등 다양한 레이아웃에 적용 가능</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner05.jpg" alt="MHS GLOBAL">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation02.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Slide Shoe Sorter</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>196m/min의 고속으로 품목을 분류 (12,000 piece/hr 분류 가능, 세계 최고 수준)</li>
+										<li>반송물의 크기/형상에 대한 제약이 적고, 품목 파손을 예방</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner05.jpg" alt="MHS GLOBAL">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation03.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Pocket Sorter System</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>포켓 또는 행거용 어댑터를 장착할 수 있는 오버 헤드 분류, 시퀀싱 시스템</li>
+										<li>
+											포켓을 정렬하는 시스템은 매트릭스 정렬이라는 고유한 정렬 알고리즘 기반 작동하여
+											다양한 구역에서 배치된 포켓을 정확한 순서로 재배치하여 단일 포장 스테이션으로 운반
+										</li>
+										<li>전자상거래 및 옴니채널 Application, 패션 및 소매에 이상적인 시스템</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner01.jpg" alt="KNAPP AG">
+									</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

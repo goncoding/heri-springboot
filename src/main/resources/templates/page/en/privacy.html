@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Privacy Policy',
+	url='/en/privacy',
+	krUrl='/kr/privacy',
+	description='Doosan heritage',
+	keyword='두산로지스틱스솔루션 개인정보처리방침, 두산로지스틱스솔루션 개인정보취급방침,  두산로지스틱스솔루션 영상정보기기 운영방침, Doosan logistics solutions general data protection policy, doosan logistics solutions cookie policy'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth1Breadcrumb(
+		depth1name='Privacy Policy',
+		depth1url='/en/privacy'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual('Privacy Policy', 'sub-bg-none')"></th:block>
+
+	<div class="sub-contents border-has sub-footer">
+		<div class="tab-area tab-type01">
+			<div class="tab-inner-wrap cb">
+				<a href="/en/privacy" class="on">
+					<span>Personal Information Processing Policy</span>
+				</a>
+				<a href="/en/privacy/media">
+					<span>Visual Information Processing Equipment Management Policy</span>
+				</a>
+			</div>
+		</div>
+		<h3 class="blind">Personal Information Processing Policy</h3>
+		<div class="sub-contents-inner">
+			<div class="contents-block border-none">
+				<div>
+					<p class="txt-normal">
+						Doosan Logistics Solutions Co.,Ltd. (hereinafter referred to as ‘Doosan’) complies with personal
+						information protection regulations in the relevant laws such as the Personal Information
+						Protection Act and the Act on the Promotion of Information and Communications Network
+						Utilization and Information Protection, etc. We are doing our best to protect the interests of
+						information subjects such as customers, employees, and website users by establishing the privacy
+						policy and practicing safeguards in accordance with relevant laws. This Privacy policy covers
+						how we collect, use, share and store your personal information and how we secure your
+						information. Doosan may change our Privacy policy from time to time. We will provide
+						notification to you through our website or by other means. (e.g., get in touch with
+						individually) Our Privacy Policy describes how to process personal information and how to
+						operate and manage video devices. Note that a different privacy policy may apply to other Doosan
+						entities’ websites. If we modify our Privacy policy, we will post the revised statement here or
+						notify you by other means.
+					</p>
+					<p class="txt-normal">
+						Doosan Logistics Solutions Co.,Ltd. (hereinafter referred to as ‘Doosan’) recognizes the
+						importance of privacy and data protection to our customers and website users (hereinafter the
+						“Data subject”). We have committed to data and privacy protection across entire company and
+						applications. Therefore, the Company complies with all applicable privacy and data protection
+						laws, such as the Personal Information Protection Act and Act on Promotion of Information and
+						Communications Network Utilization and Information Protection, etc. (hereinafter referred to as
+						the” Act on Information and Communications Network).
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">01. What Data Doosan Collects</h4>
+				<div>
+					<ol class="number-list">
+						<li>
+							1. We collect your personal data in accordance with law and with transparency and fairness
+							to you.
+						</li>
+						<li>
+							2. We only collect personal information which is essential to providing our services. We do
+							not collect data which is, by its nature, particularly sensitive or might jeopardize the
+							basic human right and privacy. (e.g., data revealing racial or ethnic origin, religion or
+							other beliefs, birthplace, political opinions, sex life, sexual orientation, data concerning
+							health, criminal background, etc.)
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">02. Information Collected about You and How We Collect</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Here are the types of personal information we collect. Data stipulated in Clause 2 below
+							might be automatically collected about your use of our website. We gather data in order to:
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>1. Deal with complaints</div>
+									<ul class="dash-list nomargin">
+										<li>Required : Name, Email</li>
+										<li>
+											Optional : Country, Company name
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>
+										2. Analyze and improve services we provide: information involved here is
+										automatically generated and collected through your online activities.
+									</div>
+									<ul class="dash-list nomargin">
+										<li>Your service use records, access log, cookies, originating IP address</li>
+									</ul>
+								</li>
+								<li>
+									<div>3. Hire new employees</div>
+									<ul class="dash-list nomargin">
+										<li>
+											General information : name(Korean/Chinese/English), birthdate, gender,
+											photo, password, phone numbers, home address, mobile, email, education,
+											military service(status, duration, branch, rank), language skill,
+											qualifications, veterans’ family (yes/no), career, experiences, R&amp;D
+											experience.
+										</li>
+										<li>Sensitive data : disability and disability type/grade</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">03. Why We Use Personal Information?</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">Doosan Logistics Solutions Co.,Ltd. uses personal information to:</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>1. Develop relationships with our customers.</div>
+									<ul class="dash-list nomargin">
+										<li>
+											This may include: (i) analyzing your interactions with us, providing
+											functionality, improving our website, and enhancing the usability and
+											effectiveness of our services;
+										</li>
+										<li>
+											(ii) handling customers’ complaints. We use personal data to take steps to
+											address complaints and communicate with. Also, we refer to data in order to
+											provide notice how complaints have been processed, if applicable.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>2. Hire new employees.</div>
+									<ul class="dash-list nomargin">
+										<li>
+											In the event where we hire new employees, we refer to personal information
+											to identify applicants and their real names. In addition to this, we contact
+											applicants using their contact information. To comply with the Act on the
+											Honorable Treatment of and Support for Persons, etc. of Distinguished
+											Service to the State and the Act on the Employment Promotion of Persons with
+											Disabilities, personal information might be referenced to identify whether
+											an applicant is a member of veteran’s family or has any impairments.
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">04. Retention of Personal Information</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">Doosan collects personal data to:</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>1. Resolve complaints;</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Information stored: name, email, country, company name
+										</li>
+										<li>Retention period: 1 year</li>
+									</ul>
+								</li>
+								<li>
+									<div>2. Analyze and improve services we provide;</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Information stored : Service use history, access log, cookies, originating
+											IP address
+										</li>
+										<li>Retention period : 3 years</li>
+									</ul>
+								</li>
+								<li>
+									<div>3. Hire new employees</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Information stored: name(Korean/Chinese/English), Photo, password, phone
+											number, address, mobile, email, education, military service(status,
+											duration, branch, rank), language skills, qualifications, veterans’ family
+											(yes/no), career, experiences, R&amp;D experience, sensitive data, such as
+											disability and disability type/grade.
+										</li>
+										<li>
+											<div>Retention period</div>
+											<ul class="dot-list nomargin">
+												<li>
+													For those who are not employed, their information is retained up to
+													5 years on the basis of their consent from the completion of our
+													hiring process. Its intent is to build a potential candidate
+													database.
+												</li>
+												<li>
+													For those who are hired, we retain their information until
+													achievement of privacy statement on the premise of their agreement.
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">05. How We Delete Personal Data and Steps We Take</h4>
+				<div>
+					<div class="rule-block">
+						<ol class="number-list">
+							<li>
+								1. Within 5 days after the expiration of the retention period, personal data is deleted.
+								In case Doosan no longer needs personal data for good reason such as achievement of
+								privacy statement, service or business closure, the data is deleted within 5 days after
+								when the information is regarded no longer needed.
+							</li>
+							<li>
+								<div>2. How to delete</div>
+								<ul class="txt-list nomargin">
+									<li>a. Physical records revealing personal data: shredding or incinerating.</li>
+									<li>
+										b. Electronic records: permanently erased so as to ensure that they cannot be
+										restored
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">06. When We May Share Personal Information</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							We do not disclose or share personal information with third parties without the prior
+							consent of data subjects and/or without good cause set forth in applicable laws except as
+							described herein:
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list">
+								<li>We may share your information with your permission.</li>
+								<li>
+									We may share your personal information with third parties when we have a good faith
+									belief that disclosure is indispensable for compliance with statutory obligations
+									and regulations.
+								</li>
+								<li>
+									<p class="txt-normal">
+										There may be a time when data subjects or their dully authorized representatives
+										are unable to express their consent or out of reach while your or others life,
+										body, or/and property is thought to be in danger. In this situation, we share
+										your information without prior consent.
+									</p>
+									<div class="table-wrap noscroll scrolled">
+										<table class="tbl-basic">
+											<caption></caption>
+											<colgroup>
+												<col style="width:17%">
+												<col style="width:28%">
+												<col style="width:37%">
+												<col style="width:18%">
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">Data shared with</th>
+												<th scope="col">Data shared with</th>
+												<th scope="col">Why we share</th>
+												<th scope="col">Retention Period</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>MultiCampus Co., Ltd.</td>
+												<td>name, birthdate, test date, Applicant No., scores</td>
+												<td>To confirm authenticity of OPIc scores from identity check.</td>
+												<td>Deletes right after getting scores</td>
+											</tr>
+											<tr>
+												<td>Korea TOEIC Committee</td>
+												<td>name, birthdate, test date, Applicant No., scores</td>
+												<td>To confirm authenticity of TOEIC Speaking scores from identity
+													check.
+												</td>
+												<td>Deletes right after getting scores</td>
+											</tr>
+											<tr>
+												<td>Cube Communication</td>
+												<td>name(KOR/ENG), gender, phone (mobile)</td>
+												<td>
+													To make name tags or a seating plan for new employee welcome party.
+												</td>
+												<td>Deletes right after party</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">07. Service Providers Who Handle Personal Data On Behalf of Us</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							We hire third parties to perform support services for data subjects. We control and
+							supervise them to ensure personal information is processed in a safe manner pursuant to
+							applicable laws and regulations. The table below describes personal information third
+							parties manage on our behalf.
+						</p>
+					</div>
+
+					<div class="rule-block">
+						<ol class="number nomargin">
+							<li><p class="txt-normal">1. Data Storage Service</p>
+								<div class="table-wrap noscroll scrolled">
+									<table class="tbl-basic">
+										<caption></caption>
+										<colgroup>
+											<col style="width:25%">
+											<col>
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">Service Provider</th>
+											<th scope="col">Services</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>Doosan Digital Innovation</td>
+											<td>
+												Complaints archive and offer related services - name, email, country, company name
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">08. Exercising Your Rights</h4>
+				<div>
+					<div class="rule-block">
+						<ol class="number-list">
+							<li>
+								1. You have the right to withdraw any consent previously granted or to request for
+								search, correction, or amendment to your personal data. To exercise your rights, you can
+								contact our Privacy Officer on the phone or email or write to us at the appropriate
+								address.
+							</li>
+							<li>
+								2. Following your rectification request, we neither use nor share your personal
+								information until we rectify your inaccurate information.
+							</li>
+							<li>
+								3. For children under the age of 14, their parents or legal guardians hold the right to
+								view and update the kid’s personal information, and to withdraw consent to personal
+								information collection and use.
+							</li>
+							<li>
+								4. If any personal information passes its expiration date or is erased upon request of
+								data subjects or legal representatives, we will not view or use the information unless
+								applicable laws otherwise clearly require.
+							</li>
+						</ol>
+					</div>
+					<div class="rule-block">
+						<a href="/download/privacy/privacy_form1_kr.doc"
+						   class="btn btn-download fPointC02 underline-over" title="file download">
+							<span>Request form</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">09. Cookies and Your Choices</h4>
+				<div>
+					<div class="rule-block">
+						<ol class="number-list">
+							<li>
+								1. A cookie is an element of data that a website can send to your browser which may then
+								be stored on your system. We use cookies to gather data about visitors to our website.
+							</li>
+							<li>
+								2. You can choose not to use cookies. You can set your browser to accept, block or alert
+								you about cookies. Please note, however, that without cookies you may not be able to
+								take full advantage of all our website features.
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">10. How Doosan Secures Your Information</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Doosan retains data as required or permitted by Article 29 of the Personal Information
+							Protection Act and Article 28 of the Act on Information and Communications Network. We keep
+							your data secure by using a variety of security technologies and procedures such as;
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>1. Minimizing the number of authorized staff who handle personal data.</div>
+									<ul class="dash-list nomargin">
+										<li>
+											We minimize power and authority of those who process and handle personal
+											data.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>2. Regular trainings given to them.</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Our privacy guidelines are communicated with our Privacy staff as part of
+											regular trainings.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>3. Regular internal audit.</div>
+									<ul class="dash-list nomargin">
+										<li>
+											To ensure your personal data is secure, we perform internal audit on a
+											regular basis.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>4. Internal Privacy Guidelines and Safeguards</div>
+									<ul class="dash-list nomargin">
+										<li>
+											We build privacy and security guidelines and strictly enforce privacy
+											safeguards within the Company to protect your personal information from
+											unauthorized access, alteration or destruction; maintain data accuracy; and
+											help ensure the appropriate use of your information.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>5. Personal Data Encryption</div>
+									<ul class="dash-list nomargin">
+										<li>
+											When your personal information and password is stored and maintained, they
+											are encrypted. We protect your personal information during transit using
+											security measures.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>6. Cybersecurity</div>
+									<ul class="dash-list nomargin">
+										<li>
+											To prevent loss of data, unauthorized access or destruction, we utilize
+											security program with limited access housed in facilities and update and
+											inspect them on a regular basis using physical and technical security
+											measures.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>7. Access Control</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Access to personal data processing system are granted, changed or terminated
+											for security as needed. Firewalls are utilized against unauthorized or
+											unlawful access.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>8. Access Log Keeping and Forging Protection</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Personal data access log is maintained at least for 6 months. Access log is
+											protected using security feature against forging, data loss, or leak.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>9. Keep Documents Secure in Storage</div>
+									<ul class="dash-list nomargin">
+										<li>
+											Documents and portable storage devices containing personal information are
+											kept in locked storage.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div>10. Restricting Unauthorized Access</div>
+									<ul class="dash-list nomargin">
+										<li>
+											We keep personal information in a separate place and have developed access
+											control protocols to protect information from unauthorized access.
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">11. Chief Privacy and Data Protection Officer</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							If you have any questions or concerns about Doosan Logistics Solutions Co.,Ltd.’s Privacy
+							Policy or data processing, you can contact our Chief Privacy and Data Protection Officer.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>a. CPO (Chief Privacy and Data Protection Officer)</div>
+									<ul class="dash-list nomargin">
+										<li>Name : Yonghae Choi</li>
+									</ul>
+								</li>
+								<li>
+									<div>b. Privacy and Data Protection Office</div>
+									<ul class="dash-list nomargin">
+										<li>Department : Doosan Heritage Team</li>
+										<li>Phone: +82-31-270-1800</li>
+										<li>Fax: +82-31-270-1850</li>
+										<li>
+											Email:
+											<a href="mailto:dlsmarketing@doosan.com">dlsmarketing@doosan.com</a>
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							If you have other unresolved privacy concerns, please contact institutions below.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<ul class="dash-list nomargin">
+										<li>
+											Personal Information Intrusion Report Center at Korea Internet &amp;
+											Security Agency (<a href="http://privacy.kisa.or.kr" target="_blank">
+											privacy.kisa.or.kr
+											<span class="new-window">New <em>window</em></span></a> TEL: 118)
+										</li>
+										<li>
+											Cyber Crime Investigation Team at Supreme Prosecutor’s Office
+											(<a href="http://www.spo.go.kr" target="_blank">www.spo.go.kr
+											<span class="new-window">New <em>window</em></span></a> TEL: 1301)
+										</li>
+										<li>
+											National Police Agency Cyber Bureau
+											(<a href="http://www.cyberbureau.police.go.kr" target="_blank">www.cyberbureau.police.go.kr
+											<span class="new-window">New <em>window</em></span></a> TEL: 182)
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">12. Our Privacy Policy Scope</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Our Privacy Policy applies to our website
+							(<a href="http://www.doosanlogistics.com" target="_blank">www.doosanlogistics.com
+							<span class="new-window">New <em>window</em></span></a>) only. Other Doosan companies may
+							have their own privacy policies and service offers to other Doosan entities may be construed
+							in a different privacy policy rather than our policy.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">13. Updates to Our Privacy Policy</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							When we change the policy, a notice will be posted on the website along with updates and
+							reason before enforcing the change.
+						</p>
+					</div>
+
+					<div class="rule-block">
+						<p class="txt-normal">
+							[Addendum] 1. (Effective Date) This Privacy Policy comes into effect on July 31, 2020.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

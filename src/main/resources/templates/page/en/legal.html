@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Legal Notice',
+	url='/en/legal',
+	krUrl='/kr/legal',
+	description='This is a legal guide to the content posted on the Doosan Logistics Solutions website.',
+	keyword='두산로지스틱스솔루션 웹사이트 법적고지, Doosan logistics solutions legal notice'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth1Breadcrumb(
+		depth1name='Legal Notice',
+		depth1url='/en/legal'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual('Legal Notice', 'sub-bg-none')"></th:block>
+
+	<div class="sub-contents border-has">
+		<div class="sub-contents-inner">
+			<div class="contents-block">
+				<h4 class="tit">Limitation of Use</h4>
+				<div>
+					<p class="txt-normal">
+						The user is bound by the regulations of legal notice, terms and conditions of use, and privacy
+						policy (hereinafter referred to as ‘Regulations of This Site’) by accessing, searching, or using
+						the website of Doosan Logistics Solutions Co.,Ltd. (hereinafter referred to as ‘This Website’)
+						and will be deemed to have read, understood, and agreed to comply with all applicable laws and
+						regulations.
+					</p>
+					<p class="txt-normal">
+						This website and all its contents may not be used for copying, duplication, re-publishing,
+						uploading, posting, transmission, distribution, or creation of secondary works without the prior
+						written consent of Doosan Logistics Solutions Co.,Ltd. Note, however, that Doosan Logistics
+						Solutions Co.,Ltd. gives users non-exclusive, non-transferable, limited rights to enable them to
+						access and use information (‘Materials’) such as the text, photograph, sound, file, link, and
+						source code of this website using the users’ PC only and to use this website for personal and
+						non-commercial purposes only. The materials downloaded without modification of the contents
+						should maintain the copyright and other property rights notices, and the materials of this
+						website cannot be transferred to a third party unless the obligations arising from the use of
+						this website are notified to and accepted by the third party.
+					</p>
+					<p class="txt-normal">
+						The copyrights to this website and all the materials posted here are protected by the copyright
+						laws of each country and international conventions, and you should agree to prevent the illegal
+						copying of the materials. If you fail to comply with the regulations of this website, all rights
+						given to you will be automatically terminated without notice, and you should immediately destroy
+						the copies of all the materials you have downloaded for retention or management. Doosan
+						Logistics Solutions Co.,Ltd. does not grant any express or implied rights to the patent,
+						trademark, copyright, or business information, except the right explicitly given to you
+						according to these terms and conditions.
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">Indemnity</h4>
+				<div>
+					<p class="txt-normal">
+						Materials on this website may contain incorrect information or typographical errors. Doosan
+						Logistics Solutions Co.,Ltd. guarantees neither the accuracy nor completeness of the data nor
+						the reliability of advice, opinion, statement, or other information posted on or distributed
+						through this website. You are solely responsible for trusting such advice, etc. Doosan Logistics
+						Solutions Co.,Ltd. reserves the right to correct errors or omissions on this website at its sole
+						discretion, and it may change this website and the materials, products, programs, services, and
+						prices described on this website without prior notice.
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">Limitation of Liability</h4>
+				<div>
+					<p class="txt-normal">
+						Doosan Logistics Solutions Co.,Ltd. assumes no responsibility for any direct or indirect
+						damages, special or consequential damages, or other damages (including, but not limited to, lost
+						revenue, business suspension, loss of information, programs, and other data in the information
+						processing system) arising from or in connection with using or not using the contents, data, or
+						function of this website or the linked websites, whether or not you have been explicitly
+						informed of the possibility of such damages.
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">About Doosan Logistics Solutions Co.,Ltd.</h4>
+				<div>
+					<p class="txt-normal">
+						Doosan Logistics Solutions Co.,Ltd. is an independent corporation, and other Doosan companies
+						are separate independent corporations. Therefore, no other affiliated company of Doosan can
+						provide or process the service on behalf of Doosan Logistics Solutions Co.,Ltd. and shall have
+						no liability for any other company unless taking responsibility is specifically agreed upon in
+						writing. You should agree that any contents of this website establish a legal relationship that
+						companies other than Doosan Logistics Solutions Co.,Ltd. collectively assume responsibility
+						for.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

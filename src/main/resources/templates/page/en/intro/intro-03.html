@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='About DLS',
+	url='/en/intro/intro-03',
+	krUrl='/kr/intro/intro-03',
+	description='Learn more about the business area, location, and contact information of Doosan Logistics Solutions, the total solution provider of warehouse automation industry.',
+	keyword='두산로지스틱스솔루션, 두산, 두산로지스틱스솔루션 기업정보, 두산로지스틱스솔루션 위치, 두산로지스틱스솔루션 주소, 두산로지스틱스솔루션 연락처, Doosan Logistics solutions, Doosan, Doosan Logistics Solutions company introduction, Doosan Logistics solutions location, Doosan logistics solutions address, Doosan logistics solutions contact information'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth2Breadcrumb(
+		depth1name='Company',
+		depth1url='/en/intro/intro-01',
+		depth2name='About DLS',
+		depth2url='/en/intro/intro-03'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/en/part/sub-gnb :: intro"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual(
+		title='About DLS',
+		className='sub-intro03'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/en/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="tab-area tab-type01 page">
+			<div class="tab-inner-wrap cb">
+				<a href="/en/intro/intro-03" class="on">
+					<span>Overview</span>
+				</a>
+				<a href="/en/intro/intro-0302">
+					<span>Global Network</span>
+				</a>
+				<a href="/en/intro/intro-0303">
+					<span>Organization</span>
+				</a>
+			</div>
+		</div>
+
+		<h3 class="blind">Overview</h3>
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">“The Number 1 Logistics Innovation Partner”</strong>
+				</div>
+			</div>
+		</div>
+		<div class="sequential">
+			<div class="sub-contents-inner intro-overview">
+				<h4 class="bar-type wh center">About Company</h4>
+				<div class="intro-overview-inner">
+					<div class="overview-item ico01">
+						<dl>
+							<dt>Company Name</dt>
+							<dd>
+								<span>Doosan Logistics Solutions Co.,Ltd.</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="overview-item ico02">
+						<dl>
+							<dt>Founded in</dt>
+							<dd>
+								<span>2019</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="overview-item ico03">
+						<dl>
+							<dt>CEO</dt>
+							<dd>
+								<span>Kim Hwan-sung</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="overview-item ico04">
+						<dl>
+							<dt>Number of projects</dt>
+							<dd>
+								<span>2,000+</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="overview-item ico05">
+						<dl>
+							<dt>Number of customers</dt>
+							<dd>
+								<span>300+</span>
+								<em class="alpha">companies</em>
+							</dd>
+						</dl>
+					</div>
+					<div class="overview-item ico06">
+						<dl>
+							<dt>Global networks</dt>
+							<dd>
+								<em>
+									Asian countries incl.<br>
+									South Korea
+								</em>
+								<br>
+								<span>10+</span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="sub-contents-inner intro-biz">
+				<h4 class="bar-type center">Business Areas</h4>
+				<div class="summary-area">
+					<div class="summary-txt">
+						Doosan Logistics Solutions is a system integrator that provides
+						turnkey solutions by combining warehouse<br class="w-only">
+						design and consulting, warehouse process control software, and material handling systems.<br>
+						We deliver tailored solutions and services to meet customers’ requirements.
+					</div>
+				</div>
+				<div class="intro-biz-inner cb">
+					<div class="biz-part">
+						<a href="/en/solutions/solutions-02">
+							<div class="text">
+								<dl>
+									<dt>Consulting &amp; Engineering</dt>
+									<dd>
+										<ul class="dot-list">
+											<li>Analysis and diagnosis of current warehouse operation</li>
+											<li>Suggestions for optimized warehouse automation solutions</li>
+										</ul>
+									</dd>
+								</dl>
+								<span class="btn btnL btn-white-r">Learn more</span>
+							</div>
+						</a>
+					</div>
+					<div class="biz-part">
+						<a href="/en/solutions/solutions-03">
+							<div class="text">
+								<dl>
+									<dt>Material Handling Systems</dt>
+									<dd>
+										<ul class="dot-list">
+											<li>
+												<span>Storage</span>
+												/
+												<span>Sortation</span>
+												/
+												<span>Picking</span>
+												/
+												<span>Transport System</span>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+								<span class="btn btnL btn-white-r">Learn more</span>
+							</div>
+						</a>
+					</div>
+					<div class="biz-part">
+						<a href="/en/solutions/solutions-04">
+							<div class="text">
+								<dl>
+									<dt>Logistics IT</dt>
+									<dd>
+										<ul class="dot-list">
+											<li>
+												<span>WES</span>
+												/
+												<span>WMS</span>
+												/
+												<span>WCS</span>
+												/
+												<span>SMS</span>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+								<span class="btn btnL btn-white-r">Learn more</span>
+							</div>
+						</a>
+					</div>
+					<div class="biz-part">
+						<a href="/en/solutions/solutions-05">
+							<div class="text">
+								<dl>
+									<dt>Technical Support</dt>
+									<dd>
+										<ul class="dot-list">
+											<li>Software maintenance</li>
+											<li>Hardware maintenance</li>
+										</ul>
+									</dd>
+								</dl>
+								<span class="btn btnL btn-white-r">Learn more</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="sub-contents-inner">
+				<h4 class="bar-type center">Location</h4>
+				<div class="map-wrap">
+					<div class="iframe-wrap">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.3301850885086!2d127.0777236155832!3d37.31100574647804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5bb3996e8183%3A0xb031730047b87a37!2z65GQ7IKw6riw7Iig7JuQ!5e0!3m2!1sko!2skr!4v1591966416725!5m2!1sko!2skr"
+								title="Doosan Technical Center" class="intro-map" style="border:0;" allowfullscreen=""
+								aria-hidden="false" tabindex="0" width="600" height="398"></iframe>
+					</div>
+					<div class="thumb"></div>
+					<div class="table-area">
+						<table class="tbl-bar">
+							<caption></caption>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">Address</th>
+								<td>
+									7F, 10, Suji-ro 112beon-gil, Suji-gu, Yongin-si, Gyeonggi-do, 16858, Republic of
+									Korea
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">Tel</th>
+								<td>031 270 1800</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

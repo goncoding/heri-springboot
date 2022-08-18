@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='레퍼런스',
+	url='/kr/reference/reference',
+	enUrl='/en/reference/reference',
+	description='두산로지스틱스솔루션은 식음료, 제약, 헬스케어, 택배, 3PL, 일반유통, 패션, 화학, 전기전자, 자동차, 화장품 등 다양한 산업의 물류자동화를 위한 솔루션을 제공하고 있습니다.',
+	keyword='두산로지스틱스솔루션 고객사, 두산로지스틱스솔루션 레퍼런스, Doosan logistics solutions customer, doosan logistics solutions reference'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+
+	<style>
+		.tab-area.tab-type02 .tab-inner-wrap a {
+			cursor: pointer;
+		}
+		.reference-contents .reference-area li {
+			width: calc(25% - 40px);
+			margin-top: 80px;
+		}
+		.reference-contents .reference-area li .btn-more {
+			cursor: pointer;
+		}
+		.reference-contents .reference-area li:nth-child(4n+1) {
+			margin-left: 40px;
+		}
+		.reference-contents .reference-area ul {
+			margin-top: -80px;
+			margin-left: -40px;
+		}
+		@media (max-width: 1080px) {
+			.reference-contents .reference-area ul {
+				margin-left: -15px;
+			}
+			.reference-contents .reference-area li {
+				width: calc(25% - 15px);
+			}
+			.reference-contents .reference-area li:nth-child(4n+1) {
+				margin-left: 15px;
+			}
+		}
+		@media (max-width: 766px) {
+			.reference-contents .reference-area ul {
+				margin-left: 0;
+			}
+			.reference-contents .reference-area li {
+				display: table;
+				width: 100%;
+				margin-left: 0;
+			}
+			.reference-contents .reference-area li:nth-child(4n+1) {
+				margin-left: 0;
+			}
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('.change-tab').click(function(event){
+				event.preventDefault();
+				$('.tab-contents').children('.tit').text($(this).find('span').text());
+				if($(this).hasClass('all')) {
+					$('.reference-item').show();
+				} else {
+					var categoryId = $(this).data('category-id');
+					$('.reference-item').hide();
+					$('.category-' + categoryId).show();
+				}
+			});
+
+			$('.open-video').click(function(event){
+				event.preventDefault();
+				$('#video-title').text($(this).data('video-title'));
+				$('#video-frame').attr('src', $(this).data('video-url'));
+				$('#video-popup').addClass('on');
+			});
+
+			$('.btn-close-pop').click(function(){
+				event.preventDefault();
+				$('#video-frame').attr('src', '');
+	            $('.popWrap').removeClass('on');
+			});
+		});
+	</script>
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth1Breadcrumb(
+		depth1name='레퍼런스',
+		depth1url='/kr/reference/reference'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='레퍼런스',
+		className='sub-reference'
+	)"></th:block>
+
+	<div class="sub-contents reference-contents">
+		<div class="sub-contents-inner">
+			<div class="tab-area tab-type02">
+				<a href="#tabList" class="current-tab-text">전체</a>
+				<div class="tab-inner-wrap cb" id="tabList">
+					<a class="change-tab all on">
+						<span>전체</span>
+					</a>
+					<a th:each="referenceCategory: ${referenceCategoryList}"
+					   th:data-category-id="${referenceCategory.referenceCategoryId}" class="change-tab">
+						<span th:text="${referenceCategory.referenceCategoryName}"></span>
+					</a>
+				</div>
+			</div>
+			<div class="tab-contents-box">
+				<div class="tab-contents">
+					<h3 class="tit">전체</h3>
+					<div class="reference-area">
+						<ul class="cb">
+							<li th:each="reference : ${referenceList}"
+								th:class="'reference-item category-' + ${reference.referenceCategory.referenceCategoryId}">
+								<div class="thumb">
+									<img th:src="'/file/reference-thumbnail/view/' + ${reference.referenceThumbnail.referenceThumbnailId}"
+										 alt="">
+								</div>
+								<div class="txt-area">
+									<h4 th:utext="${reference.referenceCompanyName}" class="tit"></h4>
+								</div>
+								<a th:if="${!#strings.isEmpty(reference.referenceEmbeddedVideoUrl)}"
+								   th:data-video-url="${reference.referenceEmbeddedVideoUrl}"
+								   th:data-video-title="${reference.referenceEmbeddedVideoTitle}"
+								   class="btn-more open-video">동영상 보기</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="video-popup" class="ds-popup popWrap">
+		<div class="popContents">
+			<div class="popContents-inner">
+				<div class="popContentsBox" style="padding: 48px">
+					<h2 id="video-title" style="margin-bottom: 8px; text-align: center; font-size: 1.5em;"></h2>
+					<iframe id="video-frame" src="" frameborder="0" allowfullscreen style="width: 800px; height: 450px;"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+				</div>
+				<a href="javascript:;" class="btn-close-pop">Close</a>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

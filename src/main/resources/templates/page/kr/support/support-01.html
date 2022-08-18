@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='주요 업무 내용',
+	url='/kr/support/support-01',
+	enUrl='/en/support/support-01',
+	description='두산로지스틱스솔루션은 고객의 원활한 물류센터 운영을 위해 기술 지원에 적극적으로 임하고 있습니다. 가장 빠르고 적절한 방법으로 기술 지원 서비스를 받으십시오.',
+	keyword='두산로지스틱스솔루션 기술지원, Doosan logistics solutions technical support, Doosan logistics solutions hotline, HELP DESK'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='기술지원',
+		depth1url='/kr/support/support-01',
+		depth2name='주요 업무 내용',
+		depth2url='/kr/support/support-01'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: support"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='주요 업무 내용',
+		className='sub-support01'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">
+						고객의 원활한 물류센터 운영을 위해<br class="m-only2">
+						기술 지원에 적극적으로 임하고 있습니다.<br>
+						가장 빠르고 적절한 방법으로<br class="m-only2">
+						기술 지원 서비스를 받으시기 바랍니다.
+					</strong>
+				</div>
+			</div>
+		</div>
+		<div class="sequential column-align-wrap support-intro-wrap">
+			<div class="sub-contents-inner cb">
+				<div class="tit-area">
+					<h3 class="tit">
+						신속한<br class="w-only2">
+						HELP DESK 운영
+					</h3>
+				</div>
+				<ul class="dot-list">
+					<li>
+						<strong class="fPointC01">24/7/365</strong>
+						대응 체계
+					</li>
+				</ul>
+				<div class="cnt-area">
+					<div class="thumb">
+						<img src="/images/support/img-support-intro01.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="sub-contents-inner cb end">
+				<div class="tit-area">
+					<h3 class="tit">
+						유형별 전문화<br class="w-only2">
+						서비스 대응
+					</h3>
+				</div>
+				<div class="cnt-area type-area">
+					<ul>
+						<li>
+							<h4 class="tit">Controller</h4>
+							<ul class="dot-list">
+								<li>유형별 장애 복구 절차 준수</li>
+								<li>원인 규명 및 유지 보수신청</li>
+							</ul>
+						</li>
+						<li>
+							<h4 class="tit">Hardware</h4>
+							<ul class="dot-list">
+								<li>장애 대책 리소스를 이용, 안정적인 기구/장비 구현</li>
+								<li>장애 발생 장비, 공급 업체에 통보, 즉시 구비</li>
+							</ul>
+						</li>
+						<li>
+							<h4 class="tit">Parts</h4>
+							<ul class="dot-list">
+								<li>보증기간 내 (또는 만료 이후 최소 10년간) 납품된 품목에 대한 예비/마모 부품 가용성 보장</li>
+								<li>교체 리드 타임 최소화</li>
+							</ul>
+						</li>
+						<li>
+							<h4 class="tit">Software</h4>
+							<ul class="dot-list">
+								<li>백업된 파일로부터 복구</li>
+								<li>로직 검증</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

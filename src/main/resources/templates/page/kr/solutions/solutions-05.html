@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='기술 지원',
+	url='/kr/solutions/solutions-05',
+	enUrl='/en/solutions/solutions-05',
+	description='두산로지스틱스솔루션은 고객에게 최고의 유지보수 서비스를 제공하기 위해 원스톱 고객지원 및 유형별 특화 서비스를 지원합니다.',
+	keyword='기술지원, 유지보수, 원스톱 고객지원, 정기 점검, 상주 점검, 긴급 점검, 비정기 고개 점검, Technical Support, Maintenance, 24/7 Support, Spare parts'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='솔루션',
+		depth1url='/kr/solutions/solutions-01',
+		depth2name='기술 지원',
+		depth2url='/kr/solutions/solutions-05'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='기술 지원',
+		className='sub-solutions05'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">원스톱 고객지원</strong>
+				</div>
+			</div>
+		</div>
+		<div class="sequential column-align-wrap solutuons-technical-wrap">
+			<div class="sub-contents-inner">
+				<div class="onestop-area">
+					<h3 class="tit">
+						<span>
+							원스톱<br>
+							고객 지원
+						</span>
+					</h3>
+					<ul class="cb">
+						<li>
+							<span>
+								신속한 장애처리<br>
+								서비스 품질 향상
+							</span>
+						</li>
+						<li>
+							<span>
+								고객 지원 이력 관리<br>
+								체계화된 서비스 제공
+							</span>
+						</li>
+						<li>
+							<span>
+								24/7 무중단<br>
+								서비스 제공
+							</span>
+						</li>
+						<li>
+							<span>
+								긴급 Hot Line 서비스 제공<br>
+								안정적 운영 방안 확보
+							</span>
+						</li>
+						<li>
+							<span>
+								예비 부품 확보<br>
+								장애 대응시간 단축
+							</span>
+						</li>
+						<li>
+							<span>
+								체계적인 Before/After 서비스<br>
+								장애 발생 최소화
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sub-contents-inner cb end">
+				<div class="tit-area">
+					<h3 class="tit">점검 서비스</h3>
+				</div>
+				<div class="cnt-area type-area">
+					<ul>
+						<li>
+							<h4 class="tit">정기 점검</h4>
+							<div class="txt">
+								물류센터내 최적의 자동화설비 운영을 위한<br class="w-only">
+								정기 점검 실행, 문제 사전 방지
+							</div>
+						</li>
+						<li>
+							<h4 class="tit">상주 점검</h4>
+							<div class="txt">
+								전문 엔지니어가 고객사 현장에 상주하여<br class="w-only">
+								운영 이상 발생시 즉각 대응
+							</div>
+						</li>
+						<li>
+							<h4 class="tit">긴급 Call 점검</h4>
+							<div class="txt">
+								긴급 장애 발생시 전문 엔지니어가<br class="w-only">
+								고객사 현장에 방문하여 장애 유형에 따른<br class="w-only">
+								신속한 문제 해결 수행
+							</div>
+						</li>
+						<li>
+							<h4 class="tit">비정기 고객 요청 점검</h4>
+							<div class="txt">
+								고객사에서 요청시 협의된 일정에 따라<br class="w-only">
+								전문 엔지니어가 현장 방문하여 점검 수행
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

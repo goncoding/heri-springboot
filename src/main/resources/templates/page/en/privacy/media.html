@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Privacy Policy',
+	url='/en/privacy/media',
+	krUrl='/kr/privacy/media',
+	description='Doosan Logistics Solutions values your personal information and complies with the Personal Information Protection Act and the Act on Promotion of Information and Communications Network Utilization and Information Protection.',
+	keyword='두산로지스틱스솔루션 개인정보처리방침, 두산로지스틱스솔루션 개인정보취급방침,  두산로지스틱스솔루션 영상정보기기 운영방침, Doosan logistics solutions general data protection policym doosan logistics solutions cookie policy'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth1Breadcrumb(
+		depth1name='Privacy Policy',
+		depth1url='/en/privacy/media'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual('Privacy Policy', 'sub-bg-none')"></th:block>
+
+	<div class="sub-contents border-has sub-footer">
+		<div class="tab-area tab-type01">
+			<div class="tab-inner-wrap cb">
+				<a href="/en/privacy">
+					<span>Personal Information Processing Policy</span>
+				</a>
+				<a href="/en/privacy/media" class="on">
+					<span>Visual Information Processing Equipment Management Policy</span>
+				</a>
+			</div>
+		</div>
+		<h3 class="blind">Visual Information Processing Equipment Management Policy</h3>
+		<div class="sub-contents-inner">
+			<div class="contents-block border-none">
+				<div>
+					<p class="txt-normal">
+						This policy indicates how Doosan Logistics Solutions Co.,Ltd. operates and manages video
+						processing devices and why we use them.
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">01. Ground for and Purpose of Installing Visual Data Processing Devices</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Doosan Logistics Solutions Co.,Ltd. (herein after referred to as ‘Doosan’) has installed and
+							utilized visual data processing devices (herein after referred to as ‘CCTV’) pursuant to
+							Clause 1 of Article 25 on Personal Information Protection Act in order to:
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>keep facilities secure and prevent fire;</li>
+								<li>prevent crime for customer safety;</li>
+								<li>fulfill legitimate purpose within the range of applicable laws.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">02. CCTV Updates</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal"></p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>Installed Quantity: 4</li>
+								<li>
+									Installed Location : Doosan Logistics Solutions Co.,Ltd. HQ’s external/internal
+									entrances
+								</li>
+								<li>Camera Coverage: Common Areas and external/internal entrances</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							※ Quantity may vary depending on potential relocation/creation/redesign of Doosan Logistics
+							Solutions Co.,Ltd. facility as long as it meets the purpose of devices.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">03. How Long We Record and Retain and Where We Store Video</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							The following are the recording time, retention period, and place of the personal image
+							information:
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>Recording time: 24 hours</li>
+								<li>Retention time : 60 days</li>
+								<li>Place of Storage: Operating room B1</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule-block">
+						<p class="txt-normal">
+							※ How It Handled: Video use for unintended purpose, share with third parties, deletion, or
+							viewing are recorded and controlled. Following the expiration of the retention period, video
+							footage is permanently erased so as to ensure that it cannot be restored and physical
+							records are destroyed in a manner where they cannot be reproduced (e.g., shredding or
+							incinerating); provided; however, that if visual data is bound to be stored in accordance
+							with laws and regulations, the footage is stored and controlled separately.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">04. Authorized Staff</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Your privacy is important to us, so access to the CCTV system is only be for authorized
+							staff stated below. If you have any concerns about our visual data processing, please
+							contact us.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>A. Authorization to manage footage</div>
+									<ul class="dash-list nomargin">
+										<li>Name of the Company: Doosan Logistics Solutions Co.,Ltd.</li>
+										<li>Name: Hwansung Kim</li>
+										<li>Tel: +82-31-270-1805</li>
+									</ul>
+								</li>
+								<li>
+									<div>B. Authorization to view footage</div>
+									<ul class="dash-list nomargin">
+										<li>Name of the Company: Doosan Logistics Solutions Co.,Ltd.</li>
+										<li>Name: Seokwoo Lee</li>
+										<li>Tel: +82-31-270-1805</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">
+					05. Outsourcing of the Installation and Management of Visual Information Processing Equipment
+				</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							The Company entrusts the processing of personal video information as follows and manages and
+							supervises whether the trustee handles the personal image information safely:
+						</p>
+					</div>
+
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>Trustee: Doosan Cuvex Co., Ltd.</li>
+								<li>
+									Outsourced service: installation and operation of visual information processing
+									equipment
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">06. Exercise Your Right to View CCTV Footage</h4>
+				<div>
+					<div class="rule-block">
+						<ul class="dash-list nomargin">
+							<li>
+								How to exercise your right of access to visual data: Contact the authorized staff who
+								has access privilege prior to your visit to our facility. You can view your video on
+								your visit to our facility.
+							</li>
+							<li>Where to watch: Security Zone in our building</li>
+						</ul>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">※ Documents You Need For Viewing</p>
+						<div class="table-wrap noscroll scrolled">
+							<table class="tbl-basic table-border-has">
+								<colgroup>
+									<col style="width:15%">
+									<col style="width:15%">
+									<col style="width:70%">
+								</colgroup>
+								<thead>
+								<tr>
+									<th colspan="2">Requesters</th>
+									<th>Required Documents</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="border-left-none" rowspan="2">Individuals</td>
+									<td>Applicant</td>
+									<td>
+										Identity documents (ID card, driver’s license, or passport), request form (use
+										Doosan form)
+									</td>
+								</tr>
+								<tr>
+									<td>Representative</td>
+									<td>
+										Identity document of representatives or power of attorney, a certificate of seal
+										impression, request form (use Doosan form)
+									</td>
+								</tr>
+								<tr>
+									<td class="border-left-none" colspan="2">
+										Public institutions (Courts or investigation agencies)
+									</td>
+									<td>
+										A copy of government official ID (front/back), bench warrant or submission
+										order, an official document of investigation agencies (signature of a head of
+										organization required)
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">07. Providing Access to CCTV to Data Subjects</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							You have the right to ask Doosan Logistics Solutions Co.,Ltd. to confirm presence of video
+							you appear on and to show or delete the video at any given time. However, it is limited to
+							footage that you are caught on or when we have a good faith belief that the video is
+							absolutely necessary in an urgent manner for the protection of life, body, and/or property
+							of the data subject.
+						</p>
+					</div>
+					<div class="rule-block">
+						<a href="/download/privacy/privacy_form2_kr.doc"
+						   class="btn btn-download fPointC02 underline-over" title="file download">
+							<span>Request Form (CCTV Footage Request)</span>
+						</a>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							Your request to view might be denied in some cases stipulated herein. Managers send reasons
+							of denial in writing within 10 days to you. Refer to potential cases below.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>As the defined retention period having expired, the footage no longer exists;</li>
+								<li>Access to video or steps involved might jeopardize the privacy of others;</li>
+								<li>Other legitimate reasons exist to refuse the request of data subjects.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">08. Security of Video</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							We use encryption protection for video and its visual information. Additionally, we practice
+							access control to footage and personal data. The use and regular review of access log,
+							including date of creation, viewer, purpose, provides assurance that only authorized
+							personnel have access to and view the footage, preventing data forgery. The storage medium
+							is maintained in a secure environment with locking devices.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">09. Updates to Our Operation and Management of Video Processing Devices</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							This policy was updated on July 31st in 2020. In some instances, we may have to change,
+							modify or amend this policy in order to comply with applicable laws and regulations or
+							evolving security technology. We will post a prominent notice on our website to notify you
+							of any significant changes to our policy and reasons.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>Posting Date: July 31, 2020</li>
+								<li>Effective Date : July 31, 2020</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

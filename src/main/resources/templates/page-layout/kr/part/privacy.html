@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Privacy</title>
+</head>
+<body>
+
+<th:block th:fragment="previousVersions">
+	<div class="contents-block border-none">
+		<span>시행 일자 선택:</span>
+		<div style="display: inline-block; width: 240px;">
+			<select id="privacy-version" title="시행 일자 선택">
+				<option value="/kr/privacy">현행 (2020.12.07)</option>
+				<option value="/kr/privacy/privacy-20200731">2020.07.31</option>
+			</select>
+		</div>
+	</div>
+</th:block>
+
+</body>
+</html>

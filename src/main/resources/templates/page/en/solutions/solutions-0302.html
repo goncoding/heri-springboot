@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Sortation System',
+	url='/en/solutions/solutions-0302',
+	krUrl='/kr/solutions/solutions-0302',
+	description='Doosan Logistics Solutions has partnered with global logistics material handling systems companies to provide state-of-the-art sortation systems such as Cross belt sorter, Slide shoe sorter, and Pocket sorter system.',
+	keyword='분류 시스템, 물류 자동화, 물류 자동화 시스템, 크로스 벨트 소터, 슬라이드슈소터, 포켓소터 시스템, 소터 시스템 Sortation System, Warehouse automation, Material Handling Equipment, Material handling system, Gold peak, Ginfon, MHS, Vanriet, KNAPP, Cross belt sorter, Slide Shoe Sorter, Pocket sorter system'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth3Breadcrumb(
+		depth1name='Solutions',
+		depth1url='/en/solutions/solutions-01',
+		depth2name='Material Handling Systems',
+		depth2url='/en/solutions/solutions-03',
+		depth3name='Sortation System',
+		depth3url='/en/solutions/solutions-0302'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/en/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual(
+		title='Material Handling Systems',
+		className='sub-solutions0302'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/en/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="tab-area tab-type02 quad page">
+				<a href="#tabList" class="current-tab-text">Sortation System</a>
+				<div class="tab-inner-wrap cb" id="tabList">
+					<a href="/en/solutions/solutions-0301">
+						<span>Storage System</span>
+					</a>
+					<a href="/en/solutions/solutions-0302" class="on">
+						<span>Sortation System</span>
+					</a>
+					<a href="/en/solutions/solutions-0303">
+						<span>Picking System</span>
+					</a>
+					<a href="/en/solutions/solutions-0304">
+						<span>Transport System</span>
+					</a>
+				</div>
+			</div>
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">Sortation System</strong>
+				</div>
+			</div>
+			<div class="sequential">
+				<div class="section">
+					<div class="thumb w-only2">
+						<img src="/images/solutions/img-solutions-portfolio-sotation-en.jpg"
+							 alt="Warehouse automation technology portfolio" usemap="#portfolio-map">
+						<map name="portfolio-map">
+							<area shape="circle" coords="396,557,13" href="/en/solutions/solutions-0301"
+								  alt="Storage System" title="Storage System">
+							<area shape="circle" coords="652,796,13" href="/en/solutions/solutions-0303"
+								  alt="Picking System" title="Picking System">
+							<area shape="circle" coords="735,612,13" href="/en/solutions/solutions-0304"
+								  alt="Transport System" title="Transport System">
+						</map>
+					</div>
+					<div class="thumb m-only2">
+						<img src="/images/solutions/img-solutions-portfolio-sotation-m-en.jpg"
+							 alt="Warehouse automation technology portfolio" class="m-only2">
+					</div>
+					<a href="/images/solutions/img-solutions-portfolio-sotation-btnless-en.jpg"
+					   class="btn btn-expand m-only2" title="expand">expand</a>
+				</div>
+				<div class="section">
+					<ul class="explain-area thumb-type">
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation01.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Cross-belt Sorter</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>
+											The cross-belt sorter is an intelligent system with optimized loading
+											strategy, sorting precision and high control. The perfect integration
+											between hardware and software ensures the highest accuracy of the sorting
+											solution.
+										</li>
+										<li>
+											The high-quality of the components results in a robust system and the
+											modular design allows various and different types of layouts, available in
+											straight and curved sections, inclined, declined and stacked.
+										</li>
+										<li>
+											The modular design is scalable and may be expanded or conﬁgured to meet the
+											customer's developing requirements.
+										</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>Strategic partner</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner05.jpg" alt="MHS GLOBAL">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation02.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Slide shoe Sorter</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>
+											The advanced slide shoe design creates optimal product handling
+											characteristics for a high variety of products in which “gentle handling” is
+											guaranteed.
+										</li>
+										<li>
+											Slide shoe sorter has a fully closed deck. This reduces the amount of dust,
+											noise and pollution which can enter the sorter and prevents products from
+											being damaged or getting stuck. The result is a higher sorting quality and
+											less maintenance.
+										</li>
+										<li>
+											With 3 m/s the slide shoe sorter is the fastest closed deck shoe sorter on
+											the market.
+										</li>
+										<li>
+											The modular design enables a large variety of customer specific designs.
+										</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>Strategic partner</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner05.jpg" alt="MHS GLOBAL">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-sotation03.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Pocket Sorter System</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>
+											The pocket sorter system is an overhead sorting/sequencing system that uses
+											pouches or hanger adapters.
+										</li>
+										<li>
+											The system adopts the unique matrix sortation algorithm, based on which
+											items picked in diverse warehouse zones are put into a precise sequence and
+											brought to a single packaging station.
+										</li>
+										<li>
+											This system is ideal for e-commerce and omni-channel applications, fashion
+											and retail.
+										</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>Strategic partner</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner01.jpg" alt="KNAPP AG">
+									</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

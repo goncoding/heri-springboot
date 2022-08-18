@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='CEO Message',
+	url='/en/intro/intro-01',
+	krUrl='/kr/intro/intro-01',
+	description='Doosan Logistics Solutions is an innovation partner that adds to customers’ business value through continuous communication with customers to understand their needs and via open innovation with different strong partners which can help us address those needs.',
+	keyword='두산로지스틱스솔루션, 두산, 삼오물류정보, 김환성, 물류 자동화, Doosan Logistics Solutions, DLS, Logistics Solution Provider, Logistics system integrator, number 1 logistics innovation partner'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth2Breadcrumb(
+		depth1name='Company',
+		depth1url='/en/intro/intro-01',
+		depth2name='CEO Message',
+		depth2url='/en/intro/intro-01'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/en/part/sub-gnb :: intro"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual(
+		title='CEO Message',
+		className='sub-intro01'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/en/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="section-ceo cb">
+				<div class="txt-area">
+					<div class="summary-area">
+						<div class="summary-tit">
+							<strong class="bar-type">I sincerely welcome all of you to our website.</strong>
+						</div>
+					</div>
+					<div class="txt">
+						<p>
+							Doosan Logistics Solutions started off as Samoh Logistics Information after having been
+							split from Samsung Aerospace Industries. Through ceaseless innovation and transformation,
+							Doosan Logistics Solutions have led the warehouse automation software industry in Korea and,
+							based on the partnership with global leaders in the field, Doosan Logistics Solutions have
+							further bolstered our capabilities of offering integrated state-of-the-art logistics
+							solutions.<br>
+							<br>
+							Starting as Doosan Logistics Solutions in 2019, Doosan Logistics Solutions, as a system
+							integrator, have broadened its business areas to total warehouse automation solutions
+							by combining consulting service, software, and material handling equipment.<br>
+							<br>
+							With uprising of e-commerce, there increases demands for a high speed, intelligent,
+							laborless warehouse. Convergence of various material handling equipments and cutting edge SW
+							technologies such as IoT, big data analytics and AI is required to meet the market
+							needs.<br>
+							<br>
+							Doosan Logistics Solutions wants to be an innovation partner that adds to customers’
+							business value through continuous communication with customers to understand their needs and
+							via open innovation with different strong partners which can help us address those
+							needs.<br>
+							<br>
+							We will commit to fulfill our slogan of being “The Number 1 Logistics Innovation Partner”
+							who provides THE BEST solutions for customers with innovative technologies and methodologies
+							that others cannot try.<br>
+							<br>
+							I hope you keep watching our continuous innovative attempts with interest and support.<br>
+							<br>
+							Thank you.
+						</p>
+						<div class="sign-area">
+							<p>
+								CEO, Doosan Logistics Solutions
+								<strong>Kim Hwan-sung</strong>
+							</p>
+							<img src="/images/intro/img-ceo-sign.jpg" alt="sign">
+						</div>
+					</div>
+				</div>
+				<div class="thumb">
+					<img src="/images/intro/img-ceo.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

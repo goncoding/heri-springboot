@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+
+/* =================================== 텝 =================================== */
+
+.gu_tab_depth3 ul li a{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}
+.gu_tab_depth4 ul li a{font-family: "PlainLight",sans-serif;font-weight: 300 !important;}
+
+.gu_tab_depth4 ul li{ margin-bottom:20px;}
+.gu_tab_depth4 ul li a{ font-size:20px;}
+
+.gu_grid .gu_title{ font-size:28px; line-height:40px;font-family: "PlainMedium",sans-serif;font-weight: 500 !important;letter-spacing: -0.4px}
+
+.gu_btn_big_box a{ font-size:0;}
+.gu_btn_big_box a span{ font-size:18px; height:100%; line-height:60px;}
+
+.gu_btn_sm_box a{ font-size:0;}
+.gu_btn_sm_box a span{ font-size:16px; height:100%; line-height:51px;}
+
+.gu_sort_area .gu_sort_name:before {
+    transform: translateY(-40%);
+}
+.gu_sort_area .gu_sort_name a{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}
+.gu_sort_area .gu_selectbox .gu_selectbox_inner a{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}
+
+.gu_table thead th{font-family: "PlainMedium",sans-serif;font-weight: 500 !important;}
+
+.gu_detail_view .gu_detail_top .gu_detail_type{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}
+.gu_detail_view .gu_detail_top .gu_detail_date{font-family: "PlainLight",sans-serif;font-weight: 300 !important;}
+.gu_detail_view .gu_detail_top .gu_detail_title{font-family: "PlainMedium",sans-serif;font-weight: 500 !important;}
+
+.gu_detail_view .gu_detail_bottom .gu_detail_btn_area{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}
+
+/* ================================== Laptop css ================================== */
+@media all and (max-width: 1280px) {
+
+}
+
+/* ================================== Tablet css ================================== */
+@media all and (max-width: 1080px) {
+    #SUB_KEYVISUAL .gu_sub_top h1{ font-size:32px; line-height:38px;}
+    .gu_tab_depth4 ul li a{ font-size:15px;}
+    .gu_grid .gu_title{ font-size:21px; line-height:28px;}
+    .gu_grid_sm .gu_title{font-size:21px; line-height:28px;}
+
+    .gu_btn_big_box a span{ font-size:14px; line-height:53px;}
+    .gu_btn_sm_box a span{ font-size:14px; line-height:44px;}
+
+}
+
+/* ================================== Mobile css ================================== */
+@media all and (max-width: 766px) {
+
+
+}
+@media all and (max-width: 374px) {
+
+    .gu_btn_big_box a{font-size:12px;}
+
+    .gu_table tbody td.download span:before {
+        right: -20px;
+    }
+
+
+
+}

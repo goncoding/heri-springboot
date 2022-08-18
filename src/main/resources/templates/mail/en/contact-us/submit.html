@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{mail-layout/en/basic}">
+
+<head>
+	<title>An inquiry has been accepted via Contact Us at the Doosan Logistics Solutions website.</title>
+</head>
+
+<body>
+
+<th:block layout:fragment="head-message">
+	An inquiry has been accepted via Contact Us at the Doosan Logistics Solutions website as follows.
+	<p style="font-size:12px; color:#666; margin-top:17px; font-weight:400;">
+		An inquiry has been accepted via Contact Us at the Doosan Logistics Solutions website.<br>
+		Please reply as soon as possible.<br>
+		Thank you.
+	</p>
+</th:block>
+
+<th:block layout:fragment="footer-message">
+	<th:block th:replace="mail-layout/en/part/footer :: footer-for-manager"></th:block>
+</th:block>
+
+<th:block layout:fragment="button-area">
+	<th:block th:replace="mail-layout/en/part/content :: info-button-content-base(
+		linkText='Reply',
+		linkAddress='https://v3-obc.doosan.com/doosan-heritage/contact/received/' + ${inquiryId}
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<!--/* Customer information */-->
+	<th:block th:replace="mail-layout/en/part/content :: customer-info-heading"></th:block>
+
+	<th:block th:replace="mail-layout/en/part/content :: customer-name"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: customer-country"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: customer-company"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: customer-mail"></th:block>
+
+	<!--/* Padding between information */-->
+	<th:block th:replace="mail-layout/en/part/content :: info-bottom-padding"></th:block>
+
+	<!--/* Inquiry information */-->
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-info-heading"></th:block>
+
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-type"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-title"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-content"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-attachment"></th:block>
+	<th:block th:replace="mail-layout/en/part/content :: inquiry-datetime"></th:block>
+
+	<!--/* Padding between information */-->
+	<th:block th:replace="mail-layout/en/part/content :: info-bottom-padding"></th:block>
+
+</th:block>
+
+</body>
+
+</html>

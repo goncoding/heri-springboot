@@ -1,0 +1,221 @@
+body{word-break:keep-all;}
+
+
+/* 서브페이지 키비쥬얼 */
+#SUB_KEYVISUAL .gu_sub_top .kv_img_area{background-image: url('../../images/footer/KV_privacy.jpg')}
+
+#SUB_WRAPPER .ico_drag {
+    display: none;
+}
+
+#HEADER #GNB .gnb_inner{border-bottom:1px solid rgba(0,0,0,.1); box-sizing:border-box;}
+
+#SUB_KEYVISUAL .kv_inner {max-width: 1116px; margin: 0 auto;  border-bottom: 1px solid rgba(0,0,0,.1); }
+.gu_tab_depth3 {max-width: 1116px; text-align:left;}
+.gu_tab_depth3 ul li{margin:0;}
+
+#SUB_KEYVISUAL .gu_sub_top .sec_inner,#SUB_KEYVISUAL .gu_sub_top .kv_img_area {height: 316px; margin:0 auto;}
+#SUB_KEYVISUAL .gu_sub_top{padding:0;}
+#SUB_KEYVISUAL .gu_sub_top h1{left:0; font-size:46px;}
+#SUB_KEYVISUAL .gu_sub_top .kv_img_area:before {background: rgba(255,255,255,1); }
+#INDICATOR .indicator_inner a:before {color: rgba(0,0,0,.6);}
+#SUB_KEYVISUAL .gu_sub_top h1, #INDICATOR .indicator_inner a{color: #000;}
+#INDICATOR {right:0px;}
+
+
+.gu_contents_depth3 {display: block;}
+.gu_contents_wrap {padding-top: 0px; margin-bottom:139px;}
+
+#PRIVACY_EN .gu_grid_sm .text_area{font-size:18px; line-height:32px; color:#444;}
+#PRIVACY_EN .gu_grid_sm .text_area p{margin-top:36px;}
+
+#PRIVACY_EN .gu_grid_sm .tab_area{margin-top:133px;}
+#PRIVACY_EN .gu_grid_sm .tab_area li{float:left; margin-bottom:26px;}
+#PRIVACY_EN .gu_grid_sm .tab_area li a{font-size:20px; color:rgba(0,0,0,.42); letter-spacing:-.5px;}
+#PRIVACY_EN .gu_grid_sm .tab_area li a.on{color:#000; border-bottom:2px solid #1634DB; padding-bottom:10px;}
+
+#PRIVACY_EN .gu_grid_sm .tab_area li:first-child:before{content:none;}
+#PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(4):before{content:none;}
+#PRIVACY_EN .gu_grid_sm .tab_area li:before{content:'|'; display:inline-block; padding:0 15px; color:rgba(0,0,0,.1);}
+#PRIVACY_EN .gu_grid_sm .tab_area:after{content:''; display:block; clear:both;}
+
+#PRIVACY_EN .gu_grid_sm .content_area{margin-top:70px;}
+#PRIVACY_EN .gu_grid_sm .content_area .left_section{font-size:24px; line-height:36px; }
+
+#PRIVACY_EN .gu_grid_sm .content_area li{display:none;}
+#PRIVACY_EN .gu_grid_sm .content_area li:nth-child(1){display:block;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .top_text{font-size:20px; line-height:34px;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block{border-top:1px solid rgba(0,0,0,.1); margin-top:72px; padding-top:70px}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .title{font-size:24px; line-height:32px; margin-bottom:41px;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list{font-size:18px; line-height:32px; margin-bottom:50px; position:relative; padding-left:20px}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list:before{content:'1.'; display:inline-block; position:absolute; left:0; top:0; }
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list2:before{content:'2.';}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list3:before{content:'3.';}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list4:before{content:'4.';}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list5:before{content:'5.';}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list6:before{content:'6.';}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .list7:before{content:'7.';}
+
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list p{font-size:16px; line-height:30px; color:#444; padding-left:17px; position:relative;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list p:before{content:'·'; display:inline-block; padding-right:10px; position:absolute; left:0; top:0;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list p:nth-child(1){margin-top:22px;}
+
+#PRIVACY_EN .gu_grid_sm .content_area a:link, #PRIVACY_EN .gu_grid_sm .content_area a:visited{text-decoration:none; color:#1634DB;}
+
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table{margin:25px 0; width:100%;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table thead{border-top:2px solid #444; background-color:#FAFAFA;
+    text-align:center; font-size:16px; line-height:22px; margin-top:50px;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table thead td{padding:22px 10px;}
+
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody{border-top:1px solid rgba(0,0,0,.1); border-bottom:1px solid #444; text-align:center;
+    font-size:16px; line-height:22px; color:#444; }
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody td{padding:29px 10px;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody .purpose{text-align:left;}
+
+#PRIVACY_EN .gu_table tbody tr:hover {background: transparent;}
+
+
+#PRIVACY_EN .gu_grid_sm .content_area .privacy_and_information_processing_policy .block:nth-child(1){margin-top:0; padding-top:0; border:none;}
+#PRIVACY_EN .gu_grid_sm .content_area .image_information_processing_equipment_operation .block:nth-child(1){margin-top:0;  padding-top:0; border:none;}
+
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc{color:#444; font-size: 18px; line-height: 32px; }
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc .alphabet_title{margin:20px 0;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc div p{position:relative; padding-left:17px;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc div p:before{content:'·'; display:inline-block; padding-right:10px; position:absolute; left:0; top:0;}
+#PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc .sub_title_in_desc{margin-top:20px;}
+
+
+/* ================================== Laptop css ================================== */
+@media all and (max-width: 1280px){
+    /**********************************************************************************************************************************************************************************************************
+       기능
+    */
+
+    #PRIVACY_EN .gu_grid_sm .tab_area li:first-child:before{content:none;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(3) {clear:both;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(3):before{content:none;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(4):before{content:'|';}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(5):before{content:none;}
+
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody td span{display:block;}
+
+    #SUB_KEYVISUAL .kv_inner {
+        max-width: 1116px;
+        margin: 0 auto;
+        padding: 0 88px;
+        border-bottom: none;
+        border-top: none;
+    }
+
+
+
+    #SUB_KEYVISUAL .gu_sub_top h1 {font-size: 48px;}
+    #SUB_KEYVISUAL .gu_sub_top .sec_inner{border-bottom:1px solid rgba(0,0,0,.1);}
+    #INDICATOR {right:87px; }
+
+
+
+}
+
+/* ================================== Tablet css ================================== */
+@media all and (max-width: 1080px){
+    /**********************************************************************************************************************************************************************************************************
+        기능
+    */
+
+    .gu_contents_wrap {padding-top: 44px; margin-bottom: 77px;}
+    #SUB_KEYVISUAL .kv_inner{padding:0 50px;}
+
+
+    #PRIVACY_EN .gu_grid_sm .text_area {font-size: 14px; line-height: 24px;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li a {font-size: 15px; }
+    .gu_grid .gu_left_grid, .gu_grid .gu_right_grid{float:none; width:100%;}
+    .gu_grid .gu_left_grid{margin-bottom:50px;}
+
+    #PRIVACY_EN .gu_grid_sm .tab_area {margin-top: 74px;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li {margin-bottom: 21px;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li a.on {padding-bottom: 5px;}
+
+    #PRIVACY_EN .gu_grid_sm .content_area {margin-top: 50px; }
+    .gu_grid .gu_left_grid {margin-bottom: 27px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .left_section {font-size: 21px; line-height: 28px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .top_text { font-size: 15px; line-height: 25px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block {margin-top:40px; padding-top: 39px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .title { font-size: 18px; line-height: 26px; margin-bottom: 25px; }
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list { font-size: 14px; line-height: 24px; margin-bottom: 30px; }
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list p {font-size: 13px; line-height: 23px; }
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table thead {font-size: 12px; line-height: 11px; margin-top: 30px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody {font-size: 12px; line-height: 16px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table thead td {padding: 16px 10px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table tbody td {padding: 20px 10px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_desc {font-size: 14px; line-height: 24px;}
+
+    #SUB_KEYVISUAL .gu_sub_top .kv_img_box{height:248px;}
+    #SUB_KEYVISUAL .gu_sub_top .sec_inner{height:248px;}
+    #SUB_KEYVISUAL .gu_sub_top h1{font-size:40px; line-height:48px;}
+
+
+}
+
+/* ================================== Mobile css ================================== */
+@media all and (max-width: 766px){
+    /**********************************************************************************************************************************************************************************************************
+        기능
+    */
+
+
+    #SUB_KEYVISUAL .kv_inner{padding:0 20px;}
+
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(2):before{content:none;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(3):before{content:none;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(4):before{content:none;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li:nth-child(5):before{content:none;}
+
+    #PRIVACY_EN .gu_grid_sm .tab_area li{float:none;}
+
+    #PRIVACY_EN .gu_grid_sm .content_area a:link, #PRIVACY_EN .gu_grid_sm .content_area span{display:block;}
+    #PRIVACY_EN .gu_grid_sm .tab_area li a.on {padding-bottom: 2px;}
+
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list .gu_table{overflow:auto;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list .gu_table table{min-width:500px;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list table{margin:0;}
+    #PRIVACY_EN .gu_grid_sm .content_area .gu_right_grid .block .content_list .gu_table{margin:25px 0;}
+
+    #PRIVACY_EN .ico_drag {
+        display:block;
+        position:relative;
+        z-index:1;
+    }
+
+    #PRIVACY_EN .ico_drag img {
+        width: 68px;
+        height: 68px;
+        position: absolute;
+        left: 50%;
+        padding-top:170px;
+        /*top: 50%;*/
+        transform: translate3d(-64px, 0, 0);
+        animation:guide 1.3s ease-in-out infinite;
+        -ms-animation:guide 1.3s ease-in-out infinite;
+        -webkit-animation-delay:1s;
+        -moz-animation-delay:1s;
+        -o-animation-delay:1s;
+        animation-delay:0.5s;
+        animation-direction: alternate;}
+
+    @keyframes guide {
+        0% {
+            transform: translate3d(-64px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0px, 0, 0);
+        }
+    }
+
+    #SUB_KEYVISUAL .gu_sub_top .sec_inner{margin:0;}
+    #SUB_KEYVISUAL .gu_sub_top h1{font-size:32px; line-height:36px;}
+
+
+
+
+}

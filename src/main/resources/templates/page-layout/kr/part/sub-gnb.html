@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Sub GNB</title>
+</head>
+
+<body>
+
+<th:block th:fragment="sub-gnb">
+	<div id="sub-gnb-wrap">
+		<div>
+			<th:block layout:fragment="sub-gnb-list"></th:block>
+		</div>
+	</div>
+</th:block>
+
+<th:block th:fragment="intro">
+	<ul>
+		<li class="m01">
+			<a href="/kr/intro/intro-01">CEO 인사말</a>
+		</li>
+		<li class="m02">
+			<a href="/kr/intro/intro-02">연혁</a>
+		</li>
+		<li class="m03">
+			<a href="/kr/intro/intro-03">About DLS</a>
+		</li>
+		<li class="m04">
+			<a href="/kr/intro/intro-04">Our Partners</a>
+		</li>
+		<li class="m05">
+			<a href="/kr/intro/intro-05">CI</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="solutions">
+	<ul>
+		<li class="m01">
+			<a href="/kr/solutions/solutions-01">개요</a>
+		</li>
+		<li class="m02">
+			<a href="/kr/solutions/solutions-02">컨설팅&amp;엔지니어링</a>
+		</li>
+		<li class="m03">
+			<a href="/kr/solutions/solutions-03">물류 자동화 시스템</a>
+		</li>
+		<li class="m04">
+			<a href="/kr/solutions/solutions-04">물류 IT</a>
+		</li>
+		<li class="m05">
+			<a href="/kr/solutions/solutions-05">기술 지원</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="support">
+	<ul>
+		<li class="m01">
+			<a href="/kr/support/support-01">주요 업무 내용</a>
+		</li>
+		<li class="m01">
+			<a href="/kr/support/support-02">운영 조직도</a>
+		</li>
+		<li class="m01">
+			<a href="/kr/support/support-03">Contact Info</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="media-center">
+	<ul>
+		<li class="m01">
+			<a href="/kr/media-center/news">뉴스</a>
+		</li>
+		<li class="m02">
+			<a href="/kr/media-center/event">이벤트</a>
+		</li>
+	</ul>
+</th:block>
+
+</body>
+
+</html>

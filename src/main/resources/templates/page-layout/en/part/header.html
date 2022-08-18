@@ -1,0 +1,194 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Header</title>
+</head>
+
+<body>
+
+<th:block th:fragment="header">
+	<div id="Header">
+		<div class="header-inner">
+			<th:block th:replace="page-layout/en/part/header :: logo"></th:block>
+
+			<div class="header-gnb">
+				<th:block th:replace="page-layout/en/part/header :: mobile-language-change"></th:block>
+				<th:block th:replace="page-layout/en/part/header :: gnb"></th:block>
+			</div>
+
+			<div id="gnbHeader" class="header-util">
+				<th:block th:replace="page-layout/en/part/header :: language-change"></th:block>
+				<th:block th:replace="page-layout/en/part/header :: right-icons"></th:block>
+				<th:block th:replace="page-layout/en/part/header :: text-logo"></th:block>
+			</div>
+
+			<th:block th:replace="page-layout/en/part/header :: search"></th:block>
+		</div>
+		<div class="subGnbBack"></div>
+	</div>
+</th:block>
+
+<th:block th:fragment="logo">
+	<h1>
+		<a href="/en">Doosan Logistics</a>
+	</h1>
+</th:block>
+
+<th:block th:fragment="mobile-language-change">
+	<div class="gnb-language">
+		<ul class="lang">
+			<li>
+				<a href="#" data-lang="ko">KOR</a>
+			</li>
+			<li class="current">
+				<a href="#" data-lang="en">ENG</a>
+			</li>
+		</ul>
+	</div>
+</th:block>
+
+<th:block th:fragment="gnb">
+	<div id="Gnb">
+		<ul class="gnb-dep01">
+			<li>
+				<a href="/en/intro/intro-01" class="w-only">Company</a>
+				<a href="#" class="m-only">Company</a>
+				<div class="gnb-dep02-div">
+					<ul class="gnb-dep02">
+						<li class="m01">
+							<a href="/en/intro/intro-01">CEO Message</a>
+						</li>
+						<li class="m02">
+							<a href="/en/intro/intro-02">History</a>
+						</li>
+						<li class="m03">
+							<a href="/en/intro/intro-03">About DLS</a>
+						</li>
+						<li class="m04">
+							<a href="/en/intro/intro-04">Partners</a>
+						</li>
+						<li class="m05">
+							<a href="/en/intro/intro-05">CI</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/en/solutions/solutions-01" class="w-only">Solutions</a>
+				<a href="#" class="m-only">Solutions</a>
+				<div class="gnb-dep02-div">
+					<ul class="gnb-dep02">
+						<li class="m01">
+							<a href="/en/solutions/solutions-01">Overview</a>
+						</li>
+						<li class="m02">
+							<a href="/en/solutions/solutions-02">Consulting & Engineering</a>
+						</li>
+						<li class="m03">
+							<a href="/en/solutions/solutions-03">Material Handling Systems</a>
+						</li>
+						<li class="m04">
+							<a href="/en/solutions/solutions-04">Logistics IT</a>
+						</li>
+						<li class="m05">
+							<a href="/en/solutions/solutions-05">Technical Support</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/en/reference/reference">References</a>
+			</li>
+			<li>
+				<a href="/en/support/support-01" class="w-only">Technical Support</a>
+				<a href="#" class="m-only">Technical Support</a>
+				<div class="gnb-dep02-div">
+					<ul class="gnb-dep02">
+						<li class="m01">
+							<a href="/en/support/support-01">Our Services</a>
+						</li>
+						<li class="m01">
+							<a href="/en/support/support-02">Organization</a>
+						</li>
+						<li class="m01">
+							<a href="/en/support/support-03">Contact Info</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/en/media-center/news" class="w-only">Media Center</a>
+				<a href="#" class="m-only">Media Center</a>
+				<div class="gnb-dep02-div">
+					<ul class="gnb-dep02">
+						<li class="m01">
+							<a href="/en/media-center/news">News</a>
+						</li>
+						<li class="m02">
+							<a href="/en/media-center/event">Event</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/en/contact-us">Contact Us</a>
+			</li>
+		</ul>
+	</div>
+	<button class="close">
+		<span class="txthidden">Close total menu</span>
+	</button>
+</th:block>
+
+<th:block th:fragment="language-change">
+	<div class="header-language">
+		<button>English</button>
+		<div id="Language" class="Language">
+			<a href="#" data-lang="en" data-sub-dir="en" class="on">English</a>
+			<a href="#" data-lang="ko" data-sub-dir="kr">한국어</a>
+		</div>
+	</div>
+</th:block>
+
+<th:block th:fragment="right-icons">
+	<button class="btn_show_search submit">Search</button>
+	<div class="header-menu" title="total menu">
+		<button>
+			<span>Total menu</span>
+		</button>
+	</div>
+</th:block>
+
+<th:block th:fragment="text-logo">
+	<div class="header-txt">
+		<a href="/en">Doosan Logistics Solutions</a>
+	</div>
+</th:block>
+
+<th:block th:fragment="search">
+	<div class="header-search">
+		<form id="gnbSearchForm" action="/en/search" method="get">
+			<div id="Search" class="Search">
+				<label for="lb-headerSearch0">search</label>
+				<input type="text" id="lb-headerSearch0" name="query" class="g_search"
+					   placeholder="Input search keyword">
+				<button type="button" class="btn_top_search submit" data-test="test">
+					<span class="txthidden">Search</span>
+				</button>
+			</div>
+		</form>
+		<button class="close">
+			<span class="txthidden">Close search area</span>
+		</button>
+	</div>
+</th:block>
+
+</body>
+
+</html>

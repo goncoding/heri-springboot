@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Contact Us',
+	url='/en/contact-us',
+	krUrl='/kr/contact-us',
+	description='Thank you for your interest in Doosan Heritage. If you have any questions, please fill out the form below and submit it to us and we\'ll answer them as soon as soon as possible.',
+	keyword='두산로지스틱스솔루션 문의, 두산로지스틱스솔루션 Contact Us, Doosan heritage inquiry, doosan heritage contact us'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth1Breadcrumb(
+		depth1name='Contact Us',
+		depth1url='/en/contact-us'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual('Contact Us', 'sub-contact-us')"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="contents-block ac">
+				<div class="contact-result-area">
+					<h4 class="page-slogan-tit">Your inquiry has been successfully registered.</h4>
+					<div class="page-slogan-text">
+						<p>
+							<span>We will reach you at</span>
+							<a data-text="${contactInfo.userEmail}" class="fPointC01"></a>
+							<span>
+								as soon as possible.<br class="m-only">
+								Thank you.
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="btn-box">
+				<a href="/en" class="btn btnL btn-black-r over">
+					<span>Back to the Main</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

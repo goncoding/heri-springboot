@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Paging</title>
+</head>
+
+<body>
+
+<th:block th:fragment="basic-paging(itemPage, queryString)">
+	<div th:if="${itemPage instanceof T(org.springframework.data.domain.Page)}"
+		 th:with="pagingSize = 10,
+					pagingStart = ${(T(Math).floor(itemPage.number / pagingSize) * pagingSize)},
+					lastPagingStart = ${T(Math).floor((itemPage.totalPages - 1) / pagingSize) * pagingSize},
+					pagingEnd = ${T(Math).min((pagingStart + pagingSize), itemPage.totalPages * 1.0)}"
+		 class="ds-paging">
+		<th:block th:if="${pagingEnd > itemPage.number}">
+			<a th:if="${pagingStart != 0}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + #numbers.formatDecimal(pagingStart - pagingSize, 0, 0) + '&' + queryString}"
+			   class="ds-paging-prev">이전</a>
+			<a th:each="page: ${#numbers.sequence(pagingStart, pagingEnd - 1)}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + page + '&' + queryString}"
+			   th:class="${page == itemPage.number} ? 'ds-paging-page ds-paging-current' : 'ds-paging-page'"
+			   th:text="${page + 1}"></a>
+			<a th:if="${pagingStart != lastPagingStart}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + #numbers.formatDecimal(pagingStart + pagingSize, 0, 0) + '&' + queryString}"
+			   class="ds-paging-next">다음</a>
+		</th:block>
+	</div>
+</th:block>
+
+<th:block th:fragment="full-paging(itemPage, queryString)">
+	<div th:if="${itemPage instanceof T(org.springframework.data.domain.Page)}"
+		 th:with="pagingSize = 10,
+					pagingStart = ${(T(Math).floor(itemPage.number / pagingSize) * pagingSize)},
+					lastPagingStart = ${T(Math).floor((itemPage.totalPages - 1) / pagingSize) * pagingSize},
+					pagingEnd = ${T(Math).min((pagingStart + pagingSize), itemPage.totalPages * 1.0)}"
+		 class="ds-paging">
+		<th:block th:if="${pagingEnd > itemPage.number}">
+			<a th:if="${!itemPage.first}"
+			   th:href="${#httpServletRequest.requestURI + '?page=0&' + queryString}"
+			   class="ds-paging-first">처음</a>
+			<a th:if="${pagingStart != 0}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + #numbers.formatDecimal(pagingStart, 0, 0) + '&' + queryString}"
+			   class="ds-paging-prev">이전</a>
+			<a th:each="page: ${#numbers.sequence(pagingStart, pagingEnd - 1)}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + page + '&' + queryString}"
+			   th:class="${page == itemPage.number} ? 'ds-paging-page ds-paging-current' : 'ds-paging-page'"
+			   th:text="${page + 1}"></a>
+			<a th:if="${pagingStart != lastPagingStart}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + #numbers.formatDecimal(pagingStart + pagingSize, 0, 0) + '&' + queryString}"
+			   class="ds-paging-next">다음</a>
+			<a th:if="${!itemPage.last}"
+			   th:href="${#httpServletRequest.requestURI + '?page=' + (itemPage.totalPages - 1) + '&' + queryString}"
+			   th:data-page="${itemPage.totalPages - 1}"
+			   class="ds-paging-first">마지막</a>
+		</th:block>
+	</div>
+</th:block>
+
+</body>
+
+</html>

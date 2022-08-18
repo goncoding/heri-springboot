@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='운영 조직도',
+	url='/kr/support/support-02',
+	enUrl='/en/support/support-02',
+	description='두산로지스틱스솔루션은 유지보수 전담 조직을 운영하여 신속한 장애 대응, 안정화된 최상의 시스템 서비스를 제공합니다.',
+	keyword='두산로지스틱스솔루션 기술지원, 두산로지스틱스솔루션 운영 조직도, Doosan logistics solutions technical support, Doosan logistics solutions organization'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='기술지원',
+		depth1url='/kr/support/support-01',
+		depth2name='운영 조직도',
+		depth2url='/kr/support/support-02'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: support"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='운영 조직도',
+		className='sub-support02'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">
+						유지보수 전담 조직을 운영하여<br>
+						신속한 장애 대응, 안정화된 최상의 시스템 서비스를 제공합니다.
+					</strong>
+				</div>
+			</div>
+		</div>
+		<div class="sequential">
+			<div class="sub-contents-inner cb">
+				<h3 class="bar-type center">운영 조직도</h3>
+				<div class="cnt-support-organization">
+					<h1>고객 지원 센터</h1>
+					<ul class="cb">
+						<li>
+							<h2><strong>
+									<span>
+										Solution<br class="m-only2">
+										기술 지원
+									</span>
+								<br class="m-only2">
+								/
+								<span>Spare parts</span>
+							</strong></h2>
+							<ul class="cb">
+								<li>
+									<h3>
+										<strong>Hotline*</strong>
+									</h3>
+									<ul class="dot-list">
+										<li>DLS, KNAPP외 파트너사</li>
+									</ul>
+								</li>
+								<li>
+									<h3>
+										<strong>HW AS</strong>
+									</h3>
+									<ul class="dot-list">
+										<li>OSR Shuttle 외 KNAPP AS 대응</li>
+										<li>기타 설비 운영 관련 현장 지원</li>
+									</ul>
+								</li>
+								<li>
+									<h3>
+										<strong>Spare parts</strong>
+									</h3>
+									<ul class="dot-list">
+										<li>핵심부품 재고 보유 및 수급/공급</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2>
+								<strong>Software 기술 지원 센터</strong>
+							</h2>
+							<ul>
+								<li>
+									<h3>
+										<strong>Hotline*</strong>
+									</h3>
+									<ul class="dot-list">
+										<li>24/7/365 대응 체계</li>
+										<li>필요시 전문 엔지니어 대응</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<p>* 고객별 전담 유지보수 긴급 대응</p>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

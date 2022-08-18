@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Material Handling Systems',
+	url='/en/solutions/solutions-03',
+	krUrl='/kr/solutions/solutions-03',
+	description='Doosan Logistics Solutions has the insight to accurately suggest automation solutions for customers through a thorough analysis of logistics automation technologies and suggest of advanced technologies.',
+	keyword='두산로지스틱스솔루션, 두산, 물류 자동화 시스템, 물류 IT, 보관 시스템, 피킹 시스템, 분류 시스템, Doosan Logistics Solutions, Doosan, Material handling equipment, Material Handling System, Storage System, Picking System, Sorting System, Logistics IT'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+	<link rel="stylesheet" href="/css/sub_layout.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth2Breadcrumb(
+		depth1name='Solutions',
+		depth1url='/en/solutions/solutions-01',
+		depth2name='Material Handling Systems',
+		depth2url='/en/solutions/solutions-03'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/en/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual(
+		title='Material Handling Systems',
+		className='sub-solutions03'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/en/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">Warehouse automation technology portfolio</strong>
+				</div>
+			</div>
+			<div class="sequential">
+				<div class="section">
+					<div class="thumb w-only2">
+						<img src="/images/solutions/img-solutions-portfolio-en.jpg" alt="" usemap="#portfolio-map">
+						<map name="portfolio-map">
+							<area shape="circle" coords="396,468,13" href="/en/solutions/solutions-0301"
+								  alt="Storage System" title="Storage System">
+							<area shape="circle" coords="871,524,13" href="/en/solutions/solutions-0302"
+								  alt="Sortation System" title="Sortation System">
+							<area shape="circle" coords="652,705,13" href="/en/solutions/solutions-0303"
+								  alt="Picking System" title="Picking System">
+							<area shape="circle" coords="735,524,13" href="/en/solutions/solutions-0304"
+								  alt="Transport System" title="Transport System">
+						</map>
+					</div>
+					<div class="thumb m-only2">
+						<img src="/images/solutions/img-solutions-portfolio-m-en.jpg" alt="">
+					</div>
+					<a href="/images/solutions/img-solutions-intro01-en.jpg" class="btn btn-expand m-only2"
+					   title="expand">expand</a>
+				</div>
+				<div class="section">
+					<ul class="short-cut-area">
+						<li>
+							<p>Storage System</p>
+							<a href="/en/solutions/solutions-0301" class="btn btnL btn-black-r over">Learn more</a>
+						</li>
+						<li>
+							<p>Sortation System</p>
+							<a href="/en/solutions/solutions-0302" class="btn btnL btn-black-r over">Learn more</a>
+						</li>
+						<li>
+							<p>Picking System</p>
+							<a href="/en/solutions/solutions-0303" class="btn btnL btn-black-r over">Learn more</a>
+						</li>
+						<li>
+							<p>Transport System</p>
+							<a href="/en/solutions/solutions-0304" class="btn btnL btn-black-r over">Learn more</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

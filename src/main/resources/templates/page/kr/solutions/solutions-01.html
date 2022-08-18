@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='개요',
+	url='/kr/solutions/solutions-01',
+	enUrl='/en/solutions/solutions-01',
+	description='물류 자동화 기술에 대한 철저한 분석과 첨단 기술 도입을 통해 고객에게 필요한 자동화 영역을 정확하게 제안할 수 있는 통찰력을 보유하고 있습니다.',
+	keyword='물류 솔루션, 물류 컨설팅, 물류 엔지니어링, 물류 자동화 시스템, 물류 자동화 설비, 물류 IT, 기술 지원, Warehouse solution, warehouse automation solution, warehouse automation, warehouse consulting, warehouse engineering, material handling equipment, material handling system, logistics IT, warehouse technical support'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+
+	<script src="/js/library/tweenmax/plugin.js"></script>
+	<script src="/js/library/jquery/jquery.rwd-image-maps.min.js"></script>
+	<script src="/js/page/solutions/solutions-01.js"></script>
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='솔루션',
+		depth1url='/kr/solutions/solutions-01',
+		depth2name='개요',
+		depth2url='/kr/solutions/solutions-01'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='개요',
+		className='sub-solutions01'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">물류 자동화 기술 포트폴리오</strong>
+				</div>
+				<div class="summary-txt">
+					물류 자동화 기술에 대한 철저한 분석과 선제적 기술 도입을 통해<br class="m-only">
+					고객에게 필요한 자동화 영역을 정확하게 제안할 수 있는 통찰력을 보유하고 있습니다.
+				</div>
+			</div>
+			<div class="thumb">
+				<img src="/images/solutions/img-solutions-intro01.jpg" alt="">
+			</div>
+			<a href="/images/solutions/img-solutions-intro01.jpg" class="btn btn-expand m-only2" title="확대">확대</a>
+		</div>
+		<div class="sub-contents-inner wide bg">
+			<h4 class="bar-type center">산업별 전문화된 솔루션</h4>
+			<div class="inner solutions-industry-inner">
+				<ul class="cb">
+					<li>
+						<div>
+							<span>일반 유통</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>패션</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>식음료</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>제약 &amp; 화장품</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>택배 &amp; 3PL</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>일반 제조</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="sub-contents-inner">
+			<h4 class="bar-type center">사업분야</h4>
+			<div class="solutions-intro-wrap">
+				<div class="inner">
+					<div class="intro-scroll">
+						<span class="scroll">
+							<span class="bar" style="height: 0%;"></span>
+						</span>
+						<ul class="item">
+							<li>
+								<a href="#" class="nTouch">컨설팅 &amp; 엔지니어링</a>
+							</li>
+							<li>
+								<a href="#" class="nTouch">물류 자동화 시스템</a>
+							</li>
+							<li>
+								<a href="#" class="nTouch">물류 IT</a>
+							</li>
+							<li>
+								<a href="#" class="nTouch">기술 지원</a>
+							</li>
+						</ul>
+					</div>
+					<div class="intro-cnt">
+						<div class="article">
+							<div class="tit-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="tit-area-inner">
+									<h4 class="tit bar-type">컨설팅 &amp; 엔지니어링</h4>
+									<p>
+										물류 운영 현황 진단 (물류 거점, 프로세스, 재고관리 외)<br>
+										물류 프로세스 최적화 및 자동화 제언
+									</p>
+								</div>
+							</div>
+							<div class="txt-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="con">
+									<ul>
+										<li>물류 전 단계 진단 및 운영전략</li>
+										<li>운영 및 물동량 Data 분석, Simulation 통한 개선 방향 도출</li>
+										<li>물류자동화, 운영, 조직 및 성과관리 마스터플랜</li>
+									</ul>
+									<a href="/kr/solutions/solutions-02" class="btn btnL btn-black-r over">
+										<span>Learn more</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="article">
+							<div class="tit-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="tit-area-inner">
+									<h4 class="tit bar-type">물류 자동화 시스템</h4>
+									<p>보관 / 분류 / 피킹 / 이송 시스템</p>
+								</div>
+							</div>
+							<div class="txt-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="con">
+									<ul>
+										<li>물류센터 부분 또는 전체 자동화 설계 및 최적 Layout 및 설비 구성</li>
+										<li>최적 설비/시스템 조달 및 설치/구현</li>
+										<li>레거시 시스템과 자동화 시스템 제어의 통합 관리 구현</li>
+									</ul>
+									<a href="/kr/solutions/solutions-03" class="btn btnL btn-black-r over">
+										<span>Learn more</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="article">
+							<div class="tit-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="tit-area-inner">
+									<h4 class="tit bar-type">물류 IT</h4>
+									<p>WES / WMS / WCS / SMS</p>
+								</div>
+							</div>
+							<div class="txt-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="con">
+									<ul>
+										<li>Warehouse Execution System</li>
+										<li>Warehouse Mgmt. System</li>
+										<li>Warehouse Control System</li>
+										<li>Sorter Mgmt. System</li>
+									</ul>
+									<a href="/kr/solutions/solutions-04" class="btn btnL btn-black-r over">
+										<span>Learn more</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="article">
+							<div class="tit-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="tit-area-inner">
+									<h4 class="tit bar-type">기술 지원</h4>
+									<p>
+										Software 유지보수<br>
+										Hardware 유지보수
+									</p>
+								</div>
+							</div>
+							<div class="txt-area" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 50);">
+								<div class="con">
+									<ul>
+										<li>24/7/365 대응 체계</li>
+										<li>Maintenance Service 제공</li>
+									</ul>
+									<a href="/kr/solutions/solutions-05" class="btn btnL btn-black-r over">
+										<span>Learn more</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

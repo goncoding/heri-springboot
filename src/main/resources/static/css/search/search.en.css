@@ -1,0 +1,8 @@
+#SEARCH_CONTAIN .search_inner .search_chain .reSearch label .check_box{ vertical-align:middle;}
+#RESULT_CONTAIN .result_inner .tabs a{ line-height:63px;}
+
+
+/* ================================== Tablet css ================================== */
+@media all and (max-width: 1080px){
+    #RESULT_CONTAIN .result_inner .tabs a{ line-height:40px;}
+}

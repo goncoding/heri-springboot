@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='보관 시스템',
+	url='/kr/solutions/solutions-0301',
+	enUrl='/en/solutions/solutions-0301',
+	description='두산로지스틱스솔루션은 세계적인 물류 자동화 시스템 업체들과의 파트너십을 통해 OSR Shuttle, A-Frame System, KNAPP-Store, AS/RS, Vertical carousel, Pallet shuttle 등 첨단 보관 시스템을 제공합니다.',
+	keyword='보관 시스템, 물류 자동화, 자동창고, 셔틀, 팔레트 셔틀, 보관 설비, 스토리지 시스템, 물류 창고 Storage System, Warehouse automation, Material Handling Equipment, Material handling system, KNAPP, Dexion, Dambach, OSR Shuttle, A frame system, ASRS, Automated Storage Retrieval System, Pallet shuttle ASRS, VERTICAL CAROUSELS'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth3Breadcrumb(
+		depth1name='솔루션',
+		depth1url='/kr/solutions/solutions-01',
+		depth2name='물류 자동화 시스템',
+		depth2url='/kr/solutions/solutions-03',
+		depth3name='보관 시스템',
+		depth3url='/kr/solutions/solutions-0301',
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: solutions"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='물류 자동화 시스템',
+		className='sub-solutions0301'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="tab-area tab-type02 quad page">
+				<a href="#tabList" class="current-tab-text">보관 시스템</a>
+				<div class="tab-inner-wrap cb" id="tabList">
+					<a href="/kr/solutions/solutions-0301" class="on">
+						<span>보관 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0302">
+						<span>분류 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0303">
+						<span>피킹 시스템</span>
+					</a>
+					<a href="/kr/solutions/solutions-0304">
+						<span>이송 시스템</span>
+					</a>
+				</div>
+			</div>
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">보관 시스템</strong>
+				</div>
+			</div>
+			<div class="sequential">
+				<div class="section">
+					<div class="thumb w-only2">
+						<img src="/images/solutions/img-solutions-portfolio-storage.jpg" alt="물류 자동화 기술 포트폴리오"
+							 usemap="#portfolio-map">
+						<map name="portfolio-map">
+							<area shape="circle" coords="871,612,13" href="/kr/solutions/solutions-0302" alt="분류 시스템"
+								  title="분류 시스템">
+							<area shape="circle" coords="650,798,13" href="/kr/solutions/solutions-0303" alt="피킹 시스템"
+								  title="피킹 시스템">
+							<area shape="circle" coords="735,612,13" href="/kr/solutions/solutions-0304" alt="이송 시스템"
+								  title="이송 시스템">
+						</map>
+					</div>
+					<div class="thumb m-only2">
+						<img src="/images/solutions/img-solutions-portfolio-storage-m.jpg" alt="물류 자동화 기술 포트폴리오">
+					</div>
+					<a href="/images/solutions/img-solutions-portfolio-storage-btnless.jpg"
+					   class="btn btn-expand m-only2" title="확대">확대</a>
+				</div>
+				<div class="section">
+					<ul class="explain-area thumb-type">
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-storage01.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">OSR Shuttle™</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>단마다 고속 셔틀이 배치되어 스태커 크레인(Staker Crane) type 대비 10배이상의 물동량을 처리하는 시스템</li>
+										<li>Goods-to-person 시스템 연계로 피킹 생산성 향상</li>
+										<li>다양한 크기 및 종이박스를 핸들링하는 유연성 보유</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner01.jpg" alt="KNAPP AG">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-storage02.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">A-Frame Picking System</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>규격화 되어있는 품목에 대한 고속 피킹 시스템</li>
+										<li>의약품/화장품 산업에 많이 적용되어 있으며, Vision system 과 연동하여 자동 검수 가능</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner01.jpg" alt="KNAPP AG">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<!--
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-storage03.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">AS/RS(Automated Storage/Retrieval System)</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>
+											품목을 보관하는 랙(Rack)과 물건을 입출고하는 스태커 크레인(Stacker Crane),<br class="w-only">
+											컨베이어어와 리프터 등으로 구성된 시스템
+										</li>
+										<li>주문 처리시 저장된 품목을 자동 반출하여 피킹존으로 이송 연계</li>
+										<li>일반 Rack 대비 40±M높이 고밀도 보관 효율 지원</li>
+										<li>타입: Unit-load AS/RS , Mini-load AS/RS 등</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner02.jpg" alt="DEXION CO.,LTD">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-storage05.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">
+									Vertical Carousels<br>
+									(Tornado vertical lift storage machines)
+								</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>동일 공간 높은 보관밀도 및 피킹 시간 단축 가능한 시스템</li>
+										<li>인체공학적 디자인으로 트레이의 높이가 자동 조정되어 작업자 생산성 향상</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner02.jpg" alt="DEXION CO.,LTD">
+									</dd>
+								</dl>
+							</div>
+						</li>
+						-->
+						<li>
+							<div class="thumb">
+								<img src="/images/solutions/img-storage04.jpg" alt="">
+							</div>
+							<div class="txt-area">
+								<h3 class="bar-type">Pallet Shuttle AS/RS</h3>
+								<div class="txt">
+									<ul class="dot-list">
+										<li>다양한 품목을 팔레트 단위로 적재하여 자동 입출고하는 시스템</li>
+										<li>모듈 구조로 된 고밀도 저장 지원하고, 확장성이 뛰어남</li>
+										<li>최대 45m 높이, 셔틀 정격 하중 1,500kg</li>
+										<li>시간 당 최대 250 팔레트의 높은 처리 속도</li>
+									</ul>
+								</div>
+								<dl>
+									<dt>전략파트너사</dt>
+									<dd>
+										<img src="/images/solutions/logo-partner03.jpg" alt="DAMBACH Lagersysteme">
+									</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

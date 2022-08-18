@@ -1,0 +1,173 @@
+
+/* 국문 산돌고딕 */
+
+@font-face {
+	font-family: 'SDGothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url('SDGothicNeoaTTF-dRg.eot');
+	src: url('SDGothicNeoaTTF-dRg.eot?#iefix') format('embedded-opentype'),
+	url('SDGothicNeoaTTF-dRg.woff') format('woff'),
+	url('SDGothicNeoaTTF-dRg.woff2') format('woff2'),
+	url('SDGothicNeoaTTF-dRg.ttf') format('truetype');
+
+}
+@font-face {
+	font-family: 'SDGothic';
+	font-style: normal;
+	font-weight: 500;
+	src: url('SDGothicNeoaTTF-eMd.eot');
+	src: url('SDGothicNeoaTTF-eMd.eot?#iefix') format('embedded-opentype'),
+	url('SDGothicNeoaTTF-eMd.woff') format('woff'),
+	url('SDGothicNeoaTTF-eMd.woff2') format('woff2'),
+	url('SDGothicNeoaTTF-eMd.ttf') format('truetype');
+
+}
+
+@font-face {
+	font-family: 'SDGothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url('SDGothicNeoaTTF-gBd.eot');
+	src: url('SDGothicNeoaTTF-gBd.eot?#iefix') format('embedded-opentype'),
+	url('SDGothicNeoaTTF-gBd.woff') format('woff'),
+	url('SDGothicNeoaTTF-gBd.woff2') format('woff2'),
+	url('SDGothicNeoaTTF-gBd.ttf') format('truetype');
+
+}
+
+
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * "WRITE HERE THE DOMAIN NAME"
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * optimo.ch <http://optimo.com/>, 2019
+ */
+
+/* START - Fonts ----------------------------------------------------------------------------- */
+
+
+/* 영문 plain */
+@font-face {
+	font-family: 'PlainThin';
+	font-style: normal;
+	font-weight: 200;
+	src: url('Plain-Thin.eot');
+	src: url('Plain-Thin.eot?#iefix') format('embedded-opentype'),
+	url('Plain-Thin.woff') format('woff'),
+	url('Plain-Thin.woff2') format('woff2'),
+	url('Plain-Thin.ttf') format('truetype'),
+	url('PlainThin-Regular.svg#PlainThin-Regular') format('svg');
+
+}
+@font-face {
+	font-family: 'PlainLight';
+	font-style: normal;
+	font-weight: 300;
+	src: url('Plain-Light.eot');
+	src: url('Plain-Light.eot?#iefix') format('embedded-opentype'),
+	url('Plain-Light.woff') format('woff'),
+	url('Plain-Light.woff2') format('woff2'),
+	url('Plain-Light.ttf') format('truetype'),
+	url('PlainLight-Regular.svg#PlainLight-Regular') format('svg');
+
+}
+@font-face {
+	font-family: 'PlainRegular';
+	font-style: normal;
+	font-weight: 400;
+	src: url('Plain-Regular.eot');
+	src: url('Plain-Regular.eot?#iefix') format('embedded-opentype'),
+	url('Plain-Regular.woff') format('woff'),
+	url('Plain-Regular.woff2') format('woff2'),
+	url('Plain-Regular.ttf') format('truetype'),
+	url('PlainRegular-Regular.svg#PlainRegular-Regular') format('svg');
+
+}
+@font-face {
+	font-family: 'PlainMedium';
+	font-style: normal;
+	font-weight: 500;
+	src: url('Plain-Medium.eot');
+	src: url('Plain-Medium.eot?#iefix') format('embedded-opentype'),
+	url('Plain-Medium.woff') format('woff'),
+	url('Plain-Medium.woff2') format('woff2'),
+	url('Plain-Medium.ttf') format('truetype'),
+	url('PlainMedium-Regular.svg#PlainMedium-Regular') format('svg');
+
+}
+
+
+
+/* END - Fonts ----------------------------------------------------------------------------- */
+
+/* 중문 NotoSans */
+/*
+@font-face {
+	font-family: 'NotoSansRegular';
+	font-style: normal;
+	font-weight: 500;
+	src: url('notokr-regular.eot');
+	src: url('notokr-regular.eot?#iefix') format('embedded-opentype'),
+	url('notokr-regular.woff') format('woff'),
+	url('notokr-regular.woff2') format('woff2'),
+	url('notokr-regular.ttf') format('woff2'),
+	url('notokr-regular.svg#notokr-bold') format('svg');
+
+}
+@font-face {
+	font-family: 'NotoSansMedium';
+	font-style: normal;
+	font-weight: 700;
+	src: url('notokr-medium.eot');
+	src: url('notokr-medium.eot?#iefix') format('embedded-opentype'),
+	url('notokr-medium.woff') format('woff'),
+	url('notokr-medium.woff2') format('woff2'),
+	url('notokr-medium.ttf') format('woff2'),
+	url('notokr-medium.svg#notokr-bold') format('svg');
+
+}
+@font-face {
+	font-family: 'NotoSansBold';
+	font-style: normal;
+	font-weight: 900;
+	src: url('notokr-bold.eot');
+	src: url('notokr-bold.eot?#iefix') format('embedded-opentype'),
+	url('notokr-bold.woff') format('woff'),
+	url('notokr-bold.woff2') format('woff2'),
+	url('notokr-bold.ttf') format('woff2'),
+	url('notokr-bold.svg#notokr-bold') format('svg');
+
+}
+*/
+
+/* 2019.10.25 중문 폰트 변경 - NotoSansCJKsc */
+@font-face {
+	font-family: 'NotoSansRegular';
+	src: url('NotoSansSC-Medium.woff2') format('woff2'),
+	url('NotoSansSC-Medium.woff') format('woff'),
+	url('NotoSansSC-Medium.otf');
+
+}
+@font-face {
+	font-family: 'NotoSansMedium';
+	src: url('NotoSansSC-Medium.woff2') format('woff2'),
+	url('NotoSansSC-Medium.woff') format('woff'),
+	url('NotoSansSC-Medium.otf');
+}
+@font-face {
+	font-family: 'NotoSansBold';
+	src: url('NotoSansSC-Medium.woff2') format('woff2'),
+	url('NotoSansSC-Medium.woff') format('woff'),
+	url('NotoSansSC-Medium.otf');
+}
+
+
+

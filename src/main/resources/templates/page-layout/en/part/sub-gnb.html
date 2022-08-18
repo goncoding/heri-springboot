@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Sub GNB</title>
+</head>
+
+<body>
+
+<th:block th:fragment="sub-gnb">
+	<div id="sub-gnb-wrap">
+		<div>
+			<th:block layout:fragment="sub-gnb-list"></th:block>
+		</div>
+	</div>
+</th:block>
+
+<th:block th:fragment="intro">
+	<ul>
+		<li class="m01">
+			<a href="/en/intro/intro-01">CEO Message</a>
+		</li>
+		<li class="m02">
+			<a href="/en/intro/intro-02">History</a>
+		</li>
+		<li class="m03">
+			<a href="/en/intro/intro-03">About DLS</a>
+		</li>
+		<li class="m04">
+			<a href="/en/intro/intro-04">Partners</a>
+		</li>
+		<li class="m05">
+			<a href="/en/intro/intro-05">CI</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="solutions">
+	<ul>
+		<li class="m01">
+			<a href="/en/solutions/solutions-01">Overview</a>
+		</li>
+		<li class="m02">
+			<a href="/en/solutions/solutions-02">Consulting &amp; Engineering</a>
+		</li>
+		<li class="m03">
+			<a href="/en/solutions/solutions-03">Material Handling Systems</a>
+		</li>
+		<li class="m04">
+			<a href="/en/solutions/solutions-04">Logistics IT</a>
+		</li>
+		<li class="m05">
+			<a href="/en/solutions/solutions-05">Technical Support</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="support">
+	<ul>
+		<li class="m01">
+			<a href="/en/support/support-01">Our Services</a>
+		</li>
+		<li class="m01">
+			<a href="/en/support/support-02">Organization</a>
+		</li>
+		<li class="m01">
+			<a href="/en/support/support-03">Contact Info</a>
+		</li>
+	</ul>
+</th:block>
+
+<th:block th:fragment="media-center">
+	<ul>
+		<li class="m01">
+			<a href="/en/media-center/news">News</a>
+		</li>
+		<li class="m02">
+			<a href="/en/media-center/event">Event</a>
+		</li>
+	</ul>
+</th:block>
+
+</body>
+
+</html>

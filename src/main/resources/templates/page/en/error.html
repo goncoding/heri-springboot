@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Error',
+	url='/en/error',
+	krUrl='/kr/error',
+	description='Error',
+	keyword='Error'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+	<link rel="stylesheet" href="/css/error/error.css">
+	<link rel="stylesheet" href="/css/error/error.en.css">
+</head>
+<body>
+
+<th:block layout:fragment="content">
+
+	<div class="sub-contents error-contents">
+		<div class="sub-contents-inner">
+			<div class="contents-block">
+				<div class="error_lang_wrap">
+					<div class="error_lang_inner">
+						<div class="top">
+							<div class="img">
+								<img src="/images/error/logo-error-w.png" alt="Doosan logo">
+							</div>
+							<p class="kr_sd_700 title">Sorry for the inconvenience.</p>
+							<p class="kr_sd_400 desc">
+								The address of the web page you are trying to visit is incorrectly entered,
+								the requested page cannot be found,<br>
+								an incorrect page address has been entered,
+								or the address has been changed or deleted.<br>
+								Please check again if the address you have entered is correct.
+								<span>Thank you.</span>
+							</p>
+						</div>
+						<div class="bottom">
+							<div class="bottom_inner">
+								<div class="gu_btn_sm_box main">
+									<a href="/en" class="btn btnL btn-black">
+										<span>Main Page</span>
+									</a>
+								</div>
+								<div class="gu_btn_sm_box prev">
+									<a href="javascript:history.back(-2);" class="btn btnL btn-black-r">
+										<span>Previous Page</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

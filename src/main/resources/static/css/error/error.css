@@ -1,0 +1,57 @@
+body{word-break:keep-all;}
+
+#HEADER #GNB .gnb_inner:before{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:rgba(0,0,0,.1);}
+#HEADER.m_enter #GNB .gnb_inner .depth1_area{border-bottom:1px solid rgba(0,0,0,0);}
+
+.error-contents{margin-bottom:0;}
+.error_lang_wrap{display:table;width:100%;min-height:768px;margin:0 auto;padding:60px 60px;background-color:#fff;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.error_lang_wrap .lang_inner{display:table-cell;vertical-align:middle;}
+.error_lang_wrap .top{width:100%;margin:0 auto 100px;}
+.error_lang_wrap .top .img{margin-bottom:63px;text-align:center;}
+.error_lang_wrap .top .title{line-height:48px;margin-bottom:32px;text-align:center;font-size:32px;}
+.error_lang_wrap .top .desc{line-height:28px;text-align:center;font-size:0.944em;color:#666;}
+.error_lang_wrap .top .desc span{display:block;margin-top:26px;}
+.error_lang_wrap .top .desc i{display:block;font-style:normal;}
+
+.error_lang_wrap .bottom{height: 56px;text-align:center;}
+.error_lang_wrap .bottom .bottom_inner{display:inline-block;}
+.error_lang_wrap .bottom .gu_btn_sm_box{float:left;}
+.error_lang_wrap .bottom .gu_btn_sm_box.main{margin-right:16px;}
+/*.error_lang_wrap .bottom .gu_btn_sm_box.main a{color:#fff;background:#000;}*/
+.error_lang_wrap .bottom a:hover{border-color:#1634db;background-color:#1634db;transition-duration:.3s;}
+.error_lang_wrap .bottom .prev a:hover{color:#fff;}
+
+.gu_btn_sm_box{margin:0 auto;text-align:center}
+/*.gu_btn_sm_box a{display:inline-block;min-width:120px;height:56px;line-height:56px;margin:0 auto;padding:0 24px;text-align:center;font-size:16px;border:1px solid #000;background-color:#fff;
+    -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s;
+    -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.gu_btn_sm_box a span{display:inline-block;position:relative;}
+.gu_btn_sm_box a:hover{color:#fff;border-color:#1364db;background-color:#1634db;}*/
+
+
+/* ================================== Laptop css ================================== */
+@media all and (max-width: 1280px){
+
+}
+
+/* ================================== Tablet css ================================== */
+@media all and (max-width: 1080px){
+    .error_lang_wrap{padding:90px 35px;}
+    .error_lang_wrap .top {margin:0 auto 70px;}
+    .error_lang_wrap .top .img {margin-bottom:44px;}
+    .error_lang_wrap .top .img img {max-width:122px;}
+    .error_lang_wrap .top .title {line-height:36px;margin-bottom:25px;font-size:24px;}
+    .error_lang_wrap .top .desc {font-size:12px;}
+    .error_lang_wrap .top .desc span {margin-top:14px;}
+    .error_lang_wrap .top .desc i{display:block;}
+
+    .error_lang_wrap .bottom {height:48px;}
+    .gu_btn_sm_box a {height:48px;line-height:48px;}
+    .error_lang_wrap .bottom .gu_btn_sm_box.main a:hover{background: #000;}
+}
+
+/* ================================== Mobile css ================================== */
+@media all and (max-width: 766px){
+    .error_lang_wrap{min-height:auto;padding-bottom:40px;}
+    .error_lang_wrap .top .desc i{display:inline;}
+}

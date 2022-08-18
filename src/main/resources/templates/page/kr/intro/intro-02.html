@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='연혁',
+	url='/kr/intro/intro-02',
+	enUrl='/en/intro/intro-02',
+	description='1998년 설립부터 현재까지 물류 자동화산업의 새로운 미래를 만들어 나가는 두산로지스틱스솔루션을 만나보십시오.',
+	keyword='두산로지스틱스솔루션, 두산, 삼오물류정보, 물류 자동화, Doosan Logistics Solutions, DLS, Doosan, WMS, WCS, WES'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='회사소개',
+		depth1url='/kr/intro/intro-01',
+		depth2name='연혁',
+		depth2url='/kr/intro/intro-02'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: intro"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='연혁',
+		className='sub-intro02'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">
+						최고의 물류 자동화 Solution<br class="m-only2">
+						Provider로써<br>
+						물류 자동화산업의 새로운 미래를<br class="m-only2">
+						만들어 나가고 있습니다.
+					</strong>
+				</div>
+			</div>
+
+			<div class="tab-area tab-type02 tab-fixed" id="tabWrap">
+				<div class="tab-inner-wrap cb">
+					<a href="#anchor-1" data-tab-target="anchor-1" class="tab-item on">
+						<span>
+							도약의 시기<br class="m-only-tab">
+							(2019~현재)
+						</span>
+					</a>
+					<a href="#anchor-2" data-tab-target="anchor-2" class="tab-item">
+						<span>
+							성장의 시기<br class="m-only-tab">
+							(2006~2019)
+						</span>
+					</a>
+					<a href="#anchor-3" data-tab-target="anchor-3" class="tab-item">
+						<span>
+							창업의 시기<br class="m-only-tab">
+							(1998~2005)
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class="history-contents-wrap">
+				<div class="history-contents-block" data-tab="true" id="anchor-1">
+					<div>
+						<div class="history-yy">
+							<h3 class="bar-type">
+								도약의 시기<br class="m-only-tab">
+								(2019~현재)
+							</h3>
+							<strong>Forging New Path</strong>
+						</div>
+						<div class="history-block-wrap">
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>2019</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													두산로지스틱스솔루션(주) 출범
+												</li>
+												<li>
+													Total 물류 솔루션 공급자로 비전 선포
+												</li>
+												<li>
+													Insight conference “차세대 물류 솔루션” 개최
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="history-contents-block" data-tab="true" id="anchor-2">
+					<div>
+						<div class="history-yy">
+							<h3 class="bar-type">
+								성장의 시기<br class="m-only-tab">
+								(2006~2019)
+							</h3>
+							<strong>Growth and Progress</strong>
+						</div>
+						<div class="history-block-wrap">
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>2019</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													다이소 부산허브센터 Knapp 시스템 및<br>
+													WMS, WCS 개발/공급
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>2018</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													<p>국제물류산업전 (KOREA MAT) 참여</p>
+													<ul class="dash-list">
+														<li>
+															Dexion사 Storage Machine 공동 출품
+														</li>
+													</ul>
+												</li>
+												<li>
+													<p>아모레퍼시픽 오산뷰티파크 포장재 자동창고 공급</p>
+													<ul class="dash-list">
+														<li>
+															Knapp사 OSR 셔틀 구축 및 WCS Interfacing
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>2016</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													<p>Knapp사와 eCommerce Conference 개최</p>
+													<ul class="dash-list">
+														<li>
+															국내 셔틀 ASRS 공급 사례 및 Best practice 공유회
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>2013</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													다이소 남사허브센터 WMS, WCS, SMS 공급
+												</li>
+												<li>
+													네덜란드 Vanriet사(현 MHS) Sorter<br>
+													국내 독점 파트너십 계약 체결
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>2012</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													오스트리아 Knapp AG와 물류 자동화 시스템<br>
+													국내 독점 공급 파트너십 체결
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="history-contents-block" data-tab="true" id="anchor-3">
+					<div>
+						<div class="history-yy">
+							<h3 class="bar-type">
+								창업의 시기<br class="m-only-tab">
+								(1998~2005)
+							</h3>
+							<strong>Foundation Building</strong>
+						</div>
+						<div class="history-block-wrap">
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>2005</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>호주 Dexion사 Asia Pacific과 물류 설비 Distributor 파트너십 체결</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>2002</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>2002 우수 벤처기업 선정(서울경제신문사)</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>2001</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>3PL 전용 WMS 패키지 출시</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>2000</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>
+													<p>Package program 등록</p>
+													<ul class="dash-list">
+														<li>WECS21, PC-WECS 21 Visual Client 3D</li>
+														<li>WMS21, FCIS</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block reverse">
+								<div class="text-box">
+									<dl>
+										<dt>1999</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>물류 S/W전문 개발업체 (주)나우콘트롤즈 인수 합병</li>
+												<li>미국 QSSI사와 Powerhouse/WMS 동아시아 지역 Distributor 계약 체결</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="history-block">
+								<div class="text-box">
+									<dl>
+										<dt>1998</dt>
+										<dd>
+											<ul class="dot-list">
+												<li>삼성항공산업(주) 분사</li>
+												<li>(주)삼오물류정보 법인 설립</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

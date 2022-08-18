@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* 2022 CI 변경 */
+
+.banner-area{margin-bottom:-72px;padding:0 36px;}
+.banner-area a{position:relative;float:left;width:calc((100% - 10px)/2);padding-top:10.823%;text-align:center;font-size:1.333em;color:#fff;box-sizing:border-box;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+.banner-area a:nth-child(1){background:url(/images/intro/ci/doosan_story.jpg) repeat center/cover;}
+.banner-area a:nth-child(2){margin-left:10px;background-image:url(/css/images/intro/bg-banner02.png);}
+.banner-area a span{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+.banner-area a span::after{content:'';display:inline-block;width:14px;height:14px;margin:-2px 0 0 8px;background:url(/css/images/common/ico_new_win_wh.png) no-repeat 0 0 / contain;vertical-align:middle;}
+
+.gu_contents_wrap{padding:100px 36px 0; position:relative;}
+.gu_grid{position:relative;max-width:1200px; width:100%; margin:0 auto;padding-bottom:160px;*zoom:1; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+.gu_grid:after{display:block;content:"";clear:both;}
+.gu_grid .gu_title{font-size:40px; font-weight:700; line-height:56px;word-break:break-word;-ms-word-break:break-all}
+.gu_grid>div{display:inline-block; vertical-align:top;}
+.gu_grid .gu_left_grid{width:384px; float:left;}
+.gu_grid .gu_right_grid{width:calc(100% - 384px); float:right;}
+
+.gu_btn_down_pdf{position: relative}
+.gu_btn_down_pdf a{display: inline-block;font-size: 18px;line-height: 48px;position: relative;color:#000;}
+.gu_btn_down_pdf a:before{content: '';width: 0%;height: 1px;background: #000;position: absolute;bottom: 0;left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.gu_btn_down_pdf a span{position: relative;padding-right: 38px;display: inline-block; }
+.gu_btn_down_pdf a span:before{content: '';background: url(/images/common/m_ico_download_pdf.png) no-repeat 0 0 / contain; width: 24px;height: 24px;position: absolute;top: 50%;right: 0;margin-top: -12px;}
+.gu_btn_down_pdf a:hover:before{width: 100%}
+
+#INTRO_BRAND_CI{max-width: 100%;}
+
+#INTRO_BRAND_CI img{max-width:100%;}
+#INTRO_BRAND_CI .logo_area img{max-width: 600px;}
+#INTRO_BRAND_CI .logo_area img.mobile{width: 88%}
+#INTRO_BRAND_CI .gu_grid:last-child{padding-bottom:0px;}
+#INTRO_BRAND_CI .gu_grid .gu_right_grid .top_copy{font-size:22px; line-height:38px;margin-bottom:60px;}
+#INTRO_BRAND_CI .gu_grid .gu_right_grid .copy{font-size:18px; line-height:32px; color:#444; margin-bottom:60px;}
+#INTRO_BRAND_CI .gu_grid .gu_right_grid .gu_btn_down_pdf{margin-bottom:80px;}
+#INTRO_BRAND_CI .gu_grid .gu_right_grid .gu_btn_down_pdf a{margin-right:40px;}
+#INTRO_BRAND_CI .gu_grid .gu_right_grid .logo_area .mobile{display:none;}
+
+#INTRO_BRAND_CI .ci2022_title1 {font-size:18px; font-weight:600; line-height:34px;}
+#INTRO_BRAND_CI .copy{font-size:18px; line-height:32px; color:#444; margin-bottom:60px;}
+#INTRO_BRAND_CI .ci2022_desc {font-size:15px; line-height:27px;}
+#INTRO_BRAND_CI .ci2022_desc1 {padding-bottom:25px; font-weight:600;}
+#INTRO_BRAND_CI .ci2022_desc2 {padding-bottom:25px;}
+#INTRO_BRAND_CI .ci2022_desc3 {padding-bottom:80px;}
+#INTRO_BRAND_CI .ci2022_desc4 {padding-bottom:50px;}
+#INTRO_BRAND_CI .ci2022_img_right {float:right; padding-left:15px;}
+#INTRO_BRAND_CI .ci2022_img3 {margin-bottom:38px;}
+#INTRO_BRAND_CI .ci2022_img4 {margin:0 0 90px -7%;}
+#INTRO_BRAND_CI .ci2022_desc6, #INTRO_BRAND_CI .ci2022_desc7 {font-size:18px; line-height:26px; color:#005db8;}
+#INTRO_BRAND_CI .ci2022_desc6 {margin-bottom:110px;}
+#INTRO_BRAND_CI .ci2022_desc7 {width:73%;}
+:lang(en) #INTRO_BRAND_CI .ci2022_desc7 {width:95%;}
+#INTRO_BRAND_CI .ci-con > li {padding-bottom: 160px;}
+#INTRO_BRAND_CI .ci-con > li:last-child {padding-bottom: 0px;}
+
+
+@media screen and (max-width:1280px) {
+	.gu_contents_wrap{padding:56px 32px 0;}
+	.gu_grid{max-width:1104px; padding:0 56px 160px;}
+    .gu_grid>div{display:inline-block; vertical-align:top;}
+    .gu_grid .gu_left_grid{width:234px; margin-right:48px;}
+    .gu_grid .gu_right_grid{width:calc(100% - 282px);}
+}
+
+@media screen and (max-width:1080px) {
+	
+	.gu_contents_wrap{padding:42px 16px 0;}
+
+    /* 그리드/텝 */
+    .gu_grid{max-width:1104px; padding:0 34px 160px;}
+    .gu_grid>div{display:inline-block; vertical-align:top;}
+
+    .gu_grid .gu_title{font-size:24px; line-height:32px;word-break:break-all;}
+    .gu_grid_sm .gu_title{font-size:24px; line-height:32px;word-break:break-all;}
+    .gu_grid .gu_title br{display:none;}
+
+    .gu_grid .gu_left_grid{width:147px; margin-right:24px;}
+    .gu_grid .gu_right_grid{width:calc(100% - 171px);}
+
+    .gu_btn_down_pdf a{font-size:14px;}
+    .gu_btn_down_pdf a:hover:before{width:0;}
+    .gu_btn_down_pdf a span{padding-right:30px;}
+    .gu_btn_down_pdf a span:before{width: 20px; height: 20px; margin-top: -10px; background-image: url(/images/common/m_ico_download_pdf.png); background-size: contain}
+	
+    /* 2022 CI 변경 */
+	#INTRO_BRAND_CI .gu_grid .gu_right_grid .top_copy { font-size: 16px; line-height: 26px; margin-bottom:32px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .copy{font-size:14px; line-height:24px; margin-bottom:32px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .copy br{ display:none;}
+
+    #INTRO_BRAND_CI .img_logo_tab li{width:86px; padding-right:30px;}
+    #INTRO_BRAND_CI .img_logo_tab li a{font-size:14px; line-height:20px; padding-bottom:8px;}
+    #INTRO_BRAND_CI .img_logo_tab .logo_line{width:55px;}
+    #INTRO_BRAND_CI .full_img{padding-bottom:70px;}
+    #INTRO_BRAND_CI .gu_btn_down_pdf a span {padding-right: 28px;}
+
+    #INTRO_BRAND_CI .logo_area img{max-width:88%;}
+    
+    #INTRO_BRAND_CI .ci2022_desc {font-size:14px; line-height:24px;}
+    #INTRO_BRAND_CI .ci2022_desc3 {padding-bottom:40px;}
+    #INTRO_BRAND_CI .ci2022_desc6, #INTRO_BRAND_CI .ci2022_desc7 {font-size:14px; line-height:24px;}  
+    #INTRO_BRAND_CI .ci2022_img3 {margin-bottom:30px;}
+    #INTRO_BRAND_CI .ci2022_img4 {margin-bottom:30px;}  
+    #INTRO_BRAND_CI .ci2022_desc7 {width:88%;}
+    
+    .banner-area{margin-bottom:0;padding:15px 0 0;}
+	.banner-area a{width:50%;padding-top:13.021%;font-size:1.125em;}
+	.banner-area a:nth-child(2){margin-left:0;}
+	.banner-area a span{width:90%;}
+}
+@media screen and (max-width:766px) {
+	.gu_grid{padding:0 4px 160px;}
+    .gu_grid .gu_left_grid{float:none; width:100%;display:block;margin-right:0;}
+    .gu_grid .gu_right_grid{float:none;width:100%; display:block;}
+    
+    #INTRO_BRAND_CI .gu_grid{padding-bottom:74px;}
+    #INTRO_BRAND_CI .gu_btn_down_pdf a{line-height:1;}
+    
+    #INTRO_BRAND_CI .gu_grid .gu_left_grid{margin-bottom:22px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .top_copy{font-size:16px; line-height:24px;margin-bottom:40px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .copy{margin-bottom:40px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .gu_btn_down_pdf{margin-bottom:50px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .gu_btn_down_pdf a{margin-right:28px;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .logo_area .desktop{display:none;}
+    #INTRO_BRAND_CI .gu_grid .gu_right_grid .logo_area .mobile{display:block;}
+    #INTRO_BRAND_CI .logo_area img{max-width: 100%;}
+    
+    #INTRO_BRAND_CI .ci2022_img_right {float:none; margin-bottom:20px; padding: 0;}
+    #INTRO_BRAND_CI .ci2022_img_right img {width:100%;}
+    #INTRO_BRAND_CI .ci2022_img4 {margin-left:0;}
+    #INTRO_BRAND_CI .ci2022_desc6 {margin-bottom:60px;width:100%;}
+    #INTRO_BRAND_CI .ci2022_desc7 {width:100%;}
+    #INTRO_BRAND_CI .ci2022_desc2 br, #INTRO_BRAND_CI .ci2022_desc3 br, #INTRO_BRAND_CI .ci2022_desc4 br, #INTRO_BRAND_CI .ci2022_desc6 br {display:none;}
+    
+    .banner-area{padding:15px 0 0;}
+	.banner-area a{padding:80px 15px 0;}
+	.banner-area a{width:50%;}
+	.banner-area a:nth-child(2){margin-left:0;}
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='전자공고',
+	url='/kr/media-center/announce',
+	enUrl='',
+	description='두산로지스틱스솔루션의 전자 공고를 확인하실 수 있습니다.',
+	keyword='두산로지스틱스솔루션 전자공고, 두산로지스틱스솔루션 공지'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+	<link rel="stylesheet" href="/css/selectric.css">
+
+	<script src="/js/library/jquery/jquery.selectric.js"></script>
+	<script src="/js/page/media-center/ir-announce.js"></script>
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='미디어센터',
+		depth1url='/kr/media-center/news',
+		depth2name='전자공고',
+		depth2url='/kr/media-center/announce'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: media-center"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='전자공고',
+		className='sub-media03'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<div class="ds-list-search-area ds-align-right">
+				<div style="width: 120px;">
+					<select id="search-year" class="ds-select-selectric">
+						<option value="">전체</option>
+						<option th:each="year: ${#numbers.sequence(irAnnounceEndYear, irAnnounceStartYear)}"
+								th:value="${year}"
+								th:text="${year}"></option>
+					</select>
+				</div>
+				<input th:value="${param.query}"
+					   type="text" id="search-query" class="ds-no-right-margin"
+					   placeholder="검색어 입력"
+					   style="width: 240px;">
+				<a id="search-ir-announce" class="ds-button-search"></a>
+			</div>
+			<div class="ds-list-table-area">
+				<table id="announce-table" class="ds-list-table">
+					<caption>전자공고 목록입니다.</caption>
+					<colgroup>
+						<col>
+						<col width="30%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th>구분</th>
+						<th>날짜</th>
+					</tr>
+					</thead>
+					<tbody>
+					<th:block th:if="${irAnnouncePage.totalElements != 0}" th:each="irAnnounce: ${irAnnouncePage}">
+						<tr>
+							<td class="ds-list-title">
+								<a th:href="${'/kr/media-center/ir-announce/' + irAnnounce.irAnnounceId}"
+								   th:text="${irAnnounce.irAnnounceTitle}"></a>
+							</td>
+							<td th:text="${irAnnounce.irAnnounceDate}"></td>
+						</tr>
+					</th:block>
+					<th:block th:if="${irAnnouncePage.totalElements == 0}">
+						<tr>
+							<td colspan="2">검색 결과가 없습니다.</td>
+						</tr>
+					</th:block>
+					</tbody>
+				</table>
+			</div>
+			<th:block th:replace="page-layout/kr/part/paging :: basic-paging(${irAnnouncePage},
+			 					${'year=' + {year} + '&query=' + {query}})"></th:block>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

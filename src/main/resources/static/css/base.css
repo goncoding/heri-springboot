@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* reset */
+*{margin:0;padding:0;-webkit-text-size-adjust:none;font-family:"NanumBarunGothic",sans-serif,"dotum";font-weight:400;color:inherit;letter-spacing:-0.025em;}
+:lang(en) *{font-family:"Roboto",sans-serif;}
+
+body ,html{width:100%;min-width:320px;min-height:100vh;color:#000;}
+body.uiWeb{font-size:18px;}
+body.uiTab , body.uiTab2{font-size:16px;}
+body.uiMob{font-size:16px;}
+a{text-decoration:none;}
+em, i, address{font-style:normal;}
+h1, h2, h3, h4, h5, h6{line-height:1.25em;font-size:100%;font-weight:400;}
+ul, ol{list-style:none;}
+img{max-width:100%;border:0;vertical-align:top;}
+iframe{/*overflow:hidden;vertical-align:top;*/width:100%;border:none;}
+button{border:0;-webkit-appearance:none;box-shadow:none;cursor:pointer;}
+a, span, p, em, label, dt, dd, li, strong{font-size:inherit;font-weight:inherit;font-family:inherit;color:inherit;}
+strong{font-weight:500;}
+
+/*:lang(en) a, :lang(en) span, :lang(en) p, :lang(en) em, :lang(en) label, :lang(en) dt, :lang(en) dd, :lang(en) li, :lang(en) strong{font-size:inherit;font-weight:inherit;font-family:inherit;color:inherit;}*/
+:lang(en) strong{font-weight:500;}
+
+input, select, textarea{font-size:1em;color:#111;vertical-align:middle;box-sizing:border-box;}
+input[type="text"], input[type="password"], 
+input[type="search"], input[type="number"], 
+input[type="submit"], input[type="reset"], 
+input[type="email"], input[type="tel"],
+select, textarea{width:100%;-webkit-appearance:none;-webkit-border-radius:0;}
+input[type="text"], input[type="password"], 
+input[type="search"], input[type="number"], 
+input[type="email"], input[type="tel"], input[type="file"]{border:solid 1px #ccc;height:36px;padding:0 20px;outline:none;}
+textarea{width:100%;height:240px;line-height:1.5em;padding:15px 20px;border:solid 1px #ccc;}
+input[type="submit"]{cursor:pointer;}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;height:36px;padding:0 50px 0 20px;border:solid 1px #ccc;background:#fff;}
+select::-ms-expand{display:none;}
+input::-ms-clear{display:none;}
+input::-ms-reveal{display:none;}
+::-webkit-input-placeholder{color:#999;}
+::-moz-placeholder{color:#999;}
+:-ms-input-placeholder{color:#999;}
+/*
+.select-box{position:relative;}
+.select-box:after {content:"";display:block;position:absolute;top:50%;right:20px;width:0;height:0;margin-top:-2px;border:5px transparent solid;border-bottom-width:0;border-top-color:#555;}
+.select-box select{width:100%;}*/
+
+table{table-layout:fixed;border-collapse:collapse;empty-cells:show;}
+table.list td a{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+fieldset{margin:0;padding:0;border:0;}
+legend, caption{overflow:hidden;visibility:hidden;width:0;height:0;line-height:0;font-size:0;}
+th{word-wrap:break-word;}
+
+
+/* align */
+.ac{text-align:center !important;}
+.ar{text-align:right !important;}
+.al{text-align:left !important;}
+.at{vertical-align:top !important;}
+.am{vertical-align:middle !important;}
+.aj{text-align:justify !important;}
+
+.fl{float:left !important;}
+.fr{float:right !important;}
+.cb{clear:both;}
+.cb:after{content:"";clear:both;display:block;}
+
+.tmg0{margin-top:0 !important;}
+.bmg0{margin-bottom:0 !important;}
+
+
+/* font */
+.normal{font-weight:400;}
+.bold{font-weight:500;}
+:lang(en) .bold{font-weight:500;}
+[class*="underline"] span{position:relative;}
+[class*="underline"] span::before{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background-color:#111;}
+[class*="underline"].fPointC01 span::before{background-color:#0018a8;}
+[class*="underline"].fPointC02 span::before{background-color:#0088ce;}
+[class*="underline"].fPointC03 span::before{background-color:#01ae83;}
+[class*="underline"].fPointC04 span::before{background-color:#f60202;}
+.underline-over span::before{width:0;transition-duration:.3s;}
+.underline-over:focus span::before,
+.underline-over:hover span::before{width:100%;}
+.underline-over span.new-window::before,
+.underline-over span.new-window::before{display:none;}
+.fPointC01{color:#0018a8 !important;}
+.fPointC02{color:#0088ce !important;}
+.fPointC03{color:#01ae83 !important;}
+.fPointC04{color:#f60202 !important;}
+:lang(ko) .fChina{font-family:sans-serif, "dotum";color:#666;}
+
+
+/* etc */
+.block{display:block;}
+.blind{position:absolute;top:-9999em;left:-9999em;line-height:0;font-size:0;}
+.txthidden{overflow:hidden;text-indent:-999em;font-size:0;}
+.lbhidden{position:absolute;overflow:hidden;text-indent:-999em;}
+.thumb{position:relative;}
+.thumb img{width:100%;height:auto;}
+.thumbmax img{max-width:100%;max-height:auto;height:auto;}
+.tbl{display:table;width:100%;table-layout:fixed;}
+.row{display:table-row;}
+.cell{display:table-cell !important;}
+.hidden{display:none;}
+
+
+/* responsive */
+#media-480, #media-766, #media-1080, #media-1081{display:none;height:0px;overflow:hidden;}
+
+@media all and (min-width:1081px){
+    #media-1081{display:block;}
+}
+@media all and (max-width:1080px){
+    input[type="text"], input[type="submit"], input[type="password"], input[type="search"], input[type="number"], input[type="reset"], input[type="email"], input[type="tel"], select{padding:0 10px;}
+    select{padding-right:24px;}
+    textarea{padding:10px;}
+    .select-box:after {right:10px;}
+}
+@media all and (min-width:767px) and (max-width:1080px){
+    #media-1080{display:block;}
+}
+@media all and (min-width:481px) and (max-width:766px){
+    #media-766{display:block;}
+}
+@media all and (max-width:480px){
+    #media-480{display:block;}
+}
+
+@media all and (min-width:1081px){
+    .m-only{display:none !important;}
+    .w-only{display:block !important;}
+}
+@media all and (max-width:1080px){
+    .m-only{display:block !important;}
+    .w-only{display:none !important;}
+}
+.m-only-tab{display:none !important;}
+@media all and (min-width:767px){
+    .m-only2{display:none !important;}
+    .w-only2{display:block !important;}
+}
+@media all and (max-width:766px){
+    .m-only2{display:block !important;}
+    .w-only2{display:none !important;}
+    .tab-area .m-only-tab{display:block !important;}
+}

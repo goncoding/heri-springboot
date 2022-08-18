@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+input,textarea,button,select{font-family:"PlainLight", sans-serif;}
+
+body{font-family:"PlainLight", sans-serif;font-weight: 300;word-break: keep-all}
+
+/* font */
+.kr_sd_400{font-family: "PlainLight",sans-serif;font-weight: 300 !important;}/* r */
+.kr_sd_500{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}/* m */
+.kr_sd_700{font-family: "PlainMedium",sans-serif;font-weight: 500 !important;}/* b */
+.en_plain_t{font-family: "PlainThin",sans-serif;font-weight: 200 !important;}/* t */
+.en_plain_l{font-family: "PlainLight",sans-serif;font-weight: 300 !important;}/* l */
+.en_plain_r{font-family: "PlainRegular",sans-serif;font-weight: 400 !important;}/* r */
+.en_plain_m{font-family: "PlainMedium",sans-serif;font-weight: 500 !important;}/* m */
+
+/* HEADER */
+#HEADER #GNB .gnb_inner .gnb_bg.on{height: 392px}
+
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area{padding: 0 12px}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a span{display: inline}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a:hover span:before{display: none}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a:hover span{border-bottom: 1px solid #1634db}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a.on span:before{display: none}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a.on span{border-bottom: 1px solid #1634db}
+#HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul.over>li>a+.depth2_area{height: 392px}
+#HEADER #GNB .gnb_inner .depth2_container .depth2_container_inner>div>ul>li a span.link_out:before{margin-top: -2px}
+/* LNB */
+#LNB .lnb_inner .lnb_tab ul li a{font-size: 16px;vertical-align: middle}
+#LNB .lnb_inner .lnb_tab ul li a span{vertical-align: middle;line-height: 20px}
+#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a{height:unset; line-height:21px; position:relative;margin: 14px 0 14px 17px}
+#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a.on{color:#1634db;}
+#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a span{margin-left:0; font-size:14px; border-bottom: 1px solid transparent;position:relative;}
+#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a.on span{border-bottom-color: #1634db}
+#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a.on span:before{display: none}
+#LNB .lnb_inner .lnb_cnt ul li a span.link_out:before{margin-top: -5px}
+
+
+/* FOOTER */
+#FOOTER .footer_inner .footer_menu{text-align: center;margin-left: 35px; width:627px; left:54%;}
+
+
+
+/* ================================== Laptop css ================================== */
+@media all and (max-width: 1280px) {
+
+    /* HEADER */
+    #HEADER #GNB .gnb_inner .depth1_area ul.depth1_ul>li .depth2_area .depth2_area_inner>div a{line-height: 23px;margin: 11px 0}
+
+    /* FOOTER */
+    #FOOTER .footer_inner{height: 183px;}
+    #FOOTER .footer_inner .footer_menu{width:587px;}
+    #FOOTER .footer_inner .copyright{position:absolute; left:0; bottom:25px; margin-left:0; height: auto;  line-height: inherit;}
+    #FOOTER .footer_inner .youtube_area{position:absolute; right:0; bottom:25px;  height: auto; line-height: inherit;}
+
+}
+
+/* ================================== Tablet css ================================== */
+@media all and (max-width: 1080px) {
+
+    #LNB .lnb_inner .lnb_tab ul li a{width: 141px;padding: 0 20px}
+    #LNB .lnb_inner .lnb_tab ul li a.on{width: 187px;}
+    #LNB .lnb_inner .lnb_tab ul li a span{margin-top: -7px}
+    #LNB .lnb_inner .lnb_cnt ul li a span{padding: 0 0 0 20px}
+    /* FOOTER */
+    #FOOTER .footer_inner{height: 124px;}
+    #FOOTER .footer_inner .footer_menu{width: 445px; margin-left:0;}
+    #FOOTER .footer_inner .footer_menu ul li{margin:0 2%;}
+    #FOOTER .footer_inner .footer_menu ul li a{font-size:14px;}
+}
+
+/* ================================== Mobile css ================================== */
+@media all and (max-width: 766px) {
+
+    /* FOOTER */
+    #FOOTER .footer_inner{height: 215px;}
+    #FOOTER .footer_inner .footer_menu{margin-left: 0;text-align: left; width:100%; left:0;}
+
+    #FOOTER .footer_inner .copyright{bottom:30px;}
+    #FOOTER .footer_inner .youtube_area{bottom:30px;}
+
+    #FOOTER .footer_inner .footer_menu{width:100%; left:0; height:auto; margin: 10px 0 46px;}
+    #FOOTER .footer_inner .footer_menu ul li{height:auto; line-height:inherit; margin-left:0; margin-right:6%;}
+
+}
+@media all and (max-width: 374px) {
+    /*#LNB .lnb_inner .lnb_cnt.lnb_companies_mobile ul li a{font-size: 13px}*/
+    /*#LNB .lnb_inner .lnb_cnt.lnb_navi ul li a{padding: 0 0 0 20px}*/
+    /*#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a{font-size: 12px;height: 33px;line-height: 33px}*/
+    /*#LNB .lnb_inner .lnb_cnt.lnb_navi ul li .depth2_area .depth2_area_inner a span{margin-left: 12px;font-size: 12px}*/
+    #LNB .lnb_inner .lnb_tab ul li a{width: 137px}
+    #LNB .lnb_inner .lnb_tab ul li a.on{width: 137px}
+}

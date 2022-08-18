@@ -1,0 +1,243 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Content</title>
+</head>
+<body>
+
+
+<!--/* Customer information block */-->
+
+<th:block th:fragment="customer-info-heading">
+	<th:block th:replace="mail-layout/en/part/content :: info-heading-base(title='Inquirer Information')"></th:block>
+</th:block>
+
+<th:block th:fragment="customer-name">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=true,
+		contentName='Name',
+		contentText=${customerName}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="customer-country">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=false,
+		contentName='Region/Country',
+		contentText=${customerCountry}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="customer-company">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=false,
+		contentName='Company Name',
+		contentText=${customerCompany}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="customer-mail">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=true,
+		contentName='Email',
+		contentText=${customerMail}
+	)"></th:block>
+</th:block>
+
+
+<!--/* Inquiry information block */-->
+
+<th:block th:fragment="inquiry-info-heading">
+	<th:block th:replace="mail-layout/en/part/content :: info-heading-base(title='Inquiries')"></th:block>
+</th:block>
+
+<th:block th:fragment="inquiry-type">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=true,
+		contentName='Inquiry Category',
+		contentText=${inquiryType}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="inquiry-title">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=true,
+		contentName='Title',
+		contentText=${inquiryTitle}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="inquiry-content">
+	<th:block th:replace="mail-layout/en/part/content :: info-html-content-base(
+		showAlways=true,
+		contentName='Contents',
+		contentText=${inquiryContent}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="inquiry-attachment">
+	<th:block th:replace="mail-layout/en/part/content :: info-link-content-base(
+		showAlways=false,
+		contentName='Attachment',
+		linkText=${inquiryAttachmentName},
+		linkAddress=${inquiryAttachmentAddress}
+	)"></th:block>
+</th:block>
+
+<th:block th:fragment="inquiry-datetime">
+	<th:block th:replace="mail-layout/en/part/content :: info-text-content-base(
+		showAlways=true,
+		contentName='Date Received',
+		contentText=${inquiryDateTime}
+	)"></th:block>
+</th:block>
+
+
+<!--/* Basic template */-->
+
+<th:block th:fragment="info-heading-base(title)">
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td th:text="${title}"
+						style="
+							font-family: Arial,sans-serif;
+							margin-top: 39px;
+							font-size: 18px;
+							padding: 40px 0 23px 32px;
+							border-top: 1px solid rgba(0,0,0,.1);
+							font-weight: bold;"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</th:block>
+
+<th:block th:fragment="info-text-content-base(showAlways, contentName, contentText)">
+	<tr th:if="${!#strings.isEmpty(contentText) or showAlways == true}">
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td th:text="${contentName}"
+						width="180" scope="row"
+						style="
+							font-family: Arial,sans-serif;
+							color: #666;
+							font-size: 16px;
+							padding: 0 0 17px 32px;
+						"></td>
+					<td th:text="${contentText}"
+						style="
+							font-family: Arial,sans-serif;
+							font-size: 16px;
+							padding: 0 32px 17px 0;
+							color:#000;
+							vertical-align: baseline;
+							padding-left:20px;
+						"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</th:block>
+
+<th:block th:fragment="info-html-content-base(showAlways, contentName, contentText)">
+	<tr th:if="${!#strings.isEmpty(contentText) or showAlways == true}">
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td th:text="${contentName}"
+						width="180" scope="row"
+						style="
+							font-family: Arial,sans-serif;
+							color: #666;
+							font-size: 16px;
+							padding: 0 0 17px 32px;
+						"></td>
+					<td th:utext="${contentText}"
+						style="
+							font-family: Arial,sans-serif;
+							font-size: 16px;
+							padding: 0 32px 17px 0;
+							color:#000;
+							vertical-align: baseline;
+							padding-left:20px;
+						"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</th:block>
+
+<th:block th:fragment="info-link-content-base(showAlways, contentName, linkText, linkAddress)">
+	<tr th:if="${!#strings.isEmpty(linkText) and !#strings.isEmpty(linkAddress) or showAlways == true}">
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td th:text="${contentName}"
+						width="180" scope="row"
+						style="
+							font-family: Arial,sans-serif;
+							color: #666;
+							font-size: 16px;
+							padding: 0 0 17px 32px;"></td>
+					<td style="
+						font-family: Arial,sans-serif;
+						font-size: 16px;
+						padding: 0 32px 17px 0;
+						color: #000;
+						vertical-align: baseline;
+						padding-left:20px;">
+						<a th:text="${linkText}"
+						   th:href="${linkAddress}"
+						   style="
+						   	font-family: Arial,sans-serif;
+						   	width: 18px;
+						   	height: 18px;
+						   	text-decoration:none;"></a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</th:block>
+
+<th:block th:fragment="info-button-content-base(linkText, linkAddress)">
+	<tr th:if="${!#strings.isEmpty(linkText) and !#strings.isEmpty(linkAddress)}">
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td style="text-align:center;">
+						<a th:text="${linkText}"
+						   th:href="${linkAddress}"
+						   target="_blank"
+						   style="
+						   	font-family: Arial,sans-serif;
+						   	padding: 17px 24px;
+						   	background-color: #fff;
+						   	color: #000;
+						   	border: 1px solid #000;
+						   	margin: 60px auto;
+						   	display: inline-block;
+						   	text-decoration: none;
+						   	font-size:16px;"></a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</th:block>
+
+
+<!--/* Block for layout */-->
+
+<th:block th:fragment="info-bottom-padding">
+	<tr>
+		<td style="height: 23px;"></td>
+	</tr>
+</th:block>
+
+</body>
+</html>

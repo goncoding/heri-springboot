@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='개인정보처리방침',
+	url='/kr/privacy',
+	enUrl='/en/privacy',
+	description='두산로지스틱스솔루션은 고객님의 개인정보를 중요시하며, 개인정보보호법 및 정보통신망 이용촉진 및 정보보호 등에 관한 법률을 준수하고 있습니다.',
+	keyword='두산로지스틱스솔루션 개인정보처리방침, 두산로지스틱스솔루션 개인정보취급방침,  두산로지스틱스솔루션 영상정보기기 운영방침, Doosan logistics solutions general data protection policym doosan logistics solutions cookie policy'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth1Breadcrumb(
+		depth1name='개인정보처리방침',
+		depth1url='/kr/privacy'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual('개인정보처리방침', 'sub-bg-none')"></th:block>
+
+	<div class="sub-contents border-has sub-footer">
+		<div class="tab-area tab-type01">
+			<div class="tab-inner-wrap cb">
+				<a href="/kr/privacy">
+					<span>개인정보처리방침</span>
+				</a>
+				<a href="/kr/privacy/media" class="on">
+					<span>영상정보처리기기 운영·관리방침</span>
+				</a>
+			</div>
+		</div>
+		<h3 class="blind">영상정보처리기기 운영·관리방침</h3>
+		<div class="sub-contents-inner">
+			<div class="contents-block border-none">
+				<div>
+					<p class="txt-normal">
+						두산로지스틱스솔루션은 영상정보처리기기 운영∙관리 방침을 통해 회사에서 처리하는 영상정보가
+						어떠한 용도와 방식으로 이용·관리되고 있는지 알려 드립니다.
+					</p>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">01. 영상정보처리기기의 설치 근거 및 설치 목적</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							두산로지스틱스솔루션(이하 ‘회사’)은 개인정보보호법 제25조 제1항에 따라
+							다음과 같은 목적으로 영상정보처리기기를 설치·운영합니다.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>시설안전 및 화재 예방</li>
+								<li>고객의 안전을 위한 범죄 예방</li>
+								<li>기타 법령에서 허용하는 범위 내의 목적</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">02. 영상정보처리기기 설치 및 운영현황</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							회사는 정보주체의 영상정보를 보호하고 개인영상정보와 관련한 불만을 처리하기 위하여
+							아래와 같이 개인영상정보 보호책임자를 두고 있습니다.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>설치대수 : 4대</li>
+								<li>설치위치 : 회사 출입구, 사무실 입구</li>
+								<li>촬영범위 : 회사 출입구, 사무실 입구, 통로</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							※ 설치 수량은 설치 목적 내에서 두산로지스틱스솔루션 사업장의 이전/신설/환경개선에 따라
+							변동될 수 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">03. 영상정보처리기기의 촬영시간, 보관기간, 보관장소, 처리방법</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">영상정보의 촬영 시간, 보관 기간 및 보관 장소는 아래와 같습니다.</p>
+					</div>
+
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>촬영 시간 : 24시간</li>
+								<li>보관 기간 : 2개월</li>
+								<li>보관 장소 : 지하1층 관제실</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule-block">
+						<p class="txt-normal">
+							※ 처리방법 : 개인영상정보의 목적외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록 및 관리하고,
+							보관 기간 만료시 복원이 불가능한 방법으로 영구 삭제 (출력물의 경우 파쇄 또는 소각)합니다.
+							예외적으로 법령에 따라 파기하지 않고 보존해야 하는 영상정보는 다른 영상정보와 분리하여 저장∙관리합니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">04. 관리책임자, 접근권한자</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							회사는 아래와 같이 개인영상정보의 처리를 위탁하고 있으며 수탁자가 개인영상정보를
+							안전하게 처리하고 있는지를 관리∙감독하고 있습니다.
+						</p>
+					</div>
+
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ol class="number-list">
+								<li>
+									<div>가. 관리책임자</div>
+									<ul class="dash-list nomargin">
+										<li>소속 : 두산로지스틱스솔루션</li>
+										<li>성명 : 김환성</li>
+										<li>전화번호 : 031-270-1805</li>
+									</ul>
+								</li>
+								<li>
+									<div>나. 접근권한자</div>
+									<ul class="dash-list nomargin">
+										<li>소속 : 두산로지스틱스솔루션</li>
+										<li>성명 : 이석우</li>
+										<li>전화번호 : 031-270-1805</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">05. 영상정보처리기기 설치∙관리의 위탁</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							회사는 아래와 같이 개인영상정보의 처리를 위탁하고 있으며
+							수탁자가 개인영상정보를 안전하게 처리하고 있는지를 관리∙감독하고 있습니다.
+						</p>
+					</div>
+
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>수탁업체 : 두산큐벡스</li>
+								<li>위탁업무 내용 : 영상정보처리기기의 설치 및 운영에 관한 사무</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">06. 영상정보처리기기 운영자의 영상정보 확인 방법 및 장소</h4>
+				<div>
+					<div class="rule-block">
+						<ul class="dash-list nomargin">
+							<li>확인 방법 : 각 사업장 접근권한자에게 미리 연락 후 방문 시, 확인 가능</li>
+							<li>확인 장소 : 각 사업장 보안통제구역</li>
+						</ul>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">※ 개인영상정보 확인 시 필요 서류</p>
+						<div class="table-wrap noscroll scrolled">
+							<table class="tbl-basic table-border-has">
+								<colgroup>
+									<col style="width:15%">
+									<col style="width:15%">
+									<col style="width:70%">
+								</colgroup>
+								<thead>
+								<tr>
+									<th colspan="2">구분</th>
+									<th>필요서류</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="border-left-none" rowspan="2">개인</td>
+									<td>본인</td>
+									<td>
+										신분증명서(주민등록증, 운전면허증, 여권),
+										개인영상정보 열람 등 청구서(당사 양식 제공)
+									</td>
+								</tr>
+								<tr>
+									<td>대리인</td>
+									<td>
+										위임자 및 대리인 신분증명서, 위임장, 위임자 인감증명서 1부,
+										개인영상정보 열람 등 청구서(당사 양식 제공)
+									</td>
+								</tr>
+								<tr>
+									<td class="border-left-none" colspan="2">공공기관(법원 및 수사기관) </td>
+									<td>
+										공무원신분증 사본(앞/뒤) 1부, 법원의 영장 또는 제출 명령,
+										수사기관 협조공문(기관장 날인 필수) 1부
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">07. 정보주체의 영상정보 열람 등 요구에 대한 조치</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							개인영상정보에 관하여 열람 또는 존재확인∙삭제를 원하는 경우 언제든지 영상정보처리기기 운영자에게
+							요구하실 수 있습니다. 단, 열람 등의 대상이 되는 개인영상정보는 정보주체가 촬영된 개인영상정보
+							또는 명백히 정보주체의 급박한 생명, 신체, 재산상 이익의 보호를 위하여 필요한 개인영상정보에 한정됩니다.
+						</p>
+					</div>
+					<div class="rule-block">
+						<a href="/download/privacy/privacy_form2_kr.doc" class="btn btn-download fPointC02 underline-over" title="file download">
+							<span>청구서 양식(개인영상정보)</span>
+						</a>
+					</div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							예외적으로 다음의 경우에는 정보주체의 개인영상정보 열람 등 요구를 거부할 수 있습니다.
+							이 경우 관리책임자는 10일 이내에 서면 등으로 거부 사유를 정보주체에게 통지합니다.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>개인영상정보의 보관기간이 경과하여 파기한 경우</li>
+								<li>
+									열람 등 요구에 대해서 필요한 조치를 취함으로써
+									타인의 사생활 보호에 관한 권리나 이익이 침해될 우려가 큰 경우
+								</li>
+								<li>기타 정보주체의 열람 등 요구를 거부할 만한 정당한 사유가 존재하는 경우</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">08. 영상정보의 안전성 확보 조치</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							회사는 처리하는 영상정보를 암호화 조치 등을 통하여 안전하게 관리되고 있습니다.
+							또한 개인영상정보보호를 위한 관리적 대책으로 개인정보에 대한 접근 권한을 차등부여하고 있고,
+							개인 영상정보의 위∙변조 방지를 위하여 개인영상정보의 생성 일시, 열람 시 열람 목적∙열람자∙열람 일시
+							등을 기록하여 관리하고 있습니다. 이 외에도 개인영상정보의 안전한 물리적 보관을 위하여
+							잠금장치가 설치된 통제구역 내 별도 보관하고 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents-block">
+				<h4 class="tit">09. 영상정보처리기기 운영∙관리 방침 변경에 관한 사항</h4>
+				<div>
+					<div class="rule-block">
+						<p class="txt-normal">
+							이 영상정보처리기기 운영∙관리 방침은 2019년 9월 30일에 개정되었으며 법령∙정책 또는 보안기술의 변경에 따라
+							내용의 추가∙삭제 및 수정이 있을 시에는 시행하기 전에 홈페이지를 통해 변경사유 및 내용 등을 공지하도록 하겠습니다.
+						</p>
+					</div>
+					<div class="rule-block">
+						<div class="rule-block-in">
+							<ul class="dash-list nomargin">
+								<li>공고일자 : 2020.07.31</li>
+								<li>시행일자 : 2020.07.31</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

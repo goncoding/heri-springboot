@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Visual</title>
+</head>
+
+<body>
+
+<th:block th:fragment="depth1Breadcrumb(depth1name, depth1url)">
+	<span>
+		<a href="/en">Home</a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth1url}" th:utext="${depth1name}"></a>
+	</span>
+</th:block>
+
+<th:block th:fragment="depth2Breadcrumb(depth1name, depth1url, depth2name, depth2url)">
+	<span>
+		<a href="/en">Home</a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth1url}" th:utext="${depth1name}"></a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth2url}" th:utext="${depth2name}"></a>
+	</span>
+</th:block>
+
+<th:block th:fragment="depth3Breadcrumb(depth1name, depth1url, depth2name, depth2url, depth3name, depth3url)">
+	<span>
+		<a href="/en">Home</a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth1url}" th:utext="${depth1name}"></a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth2url}" th:utext="${depth2name}"></a>
+	</span>
+	/
+	<span>
+		<a th:href="${depth3url}" th:utext="${depth3name}"></a>
+	</span>
+</th:block>
+
+<th:block th:fragment="visual(title, className)">
+	<div id="subVisualWrap" th:class="${className}">
+		<div class="subVisual">
+			<h2>
+				<strong th:utext="${title}"></strong>
+			</h2>
+		</div>
+		<div class="location">
+			<th:block layout:fragment="breadcrumb"></th:block>
+		</div>
+	</div>
+</th:block>
+
+</body>
+
+</html>

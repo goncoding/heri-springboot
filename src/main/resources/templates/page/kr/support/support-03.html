@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/kr/basic}">
+
+<!--/* Set enUrl='' if no alternative English page */-->
+<head th:with="
+	title='Contact Info',
+	url='/kr/support/support-02',
+	enUrl='/en/support/support-02',
+	description='로지스틱스솔루션은 고객에게 최고의 서비스를 제공하기 위해 노력합니다. 유형별 연락처를 통해 신속한 기술 지원을 받으십시오.',
+	keyword='두산로지스틱스솔루션 기술지원, 두산로지스틱스솔루션 기술지원센터 연락처, Doosan logistics solutions technical support, Doosan logistics solutions technical support contact information'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/kr/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/kr/part/head :: alternative-url(url=${url}, enUrl=${enUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/kr/part/visual :: depth2Breadcrumb(
+		depth1name='기술지원',
+		depth1url='/kr/support/support-01',
+		depth2name='Contact Info',
+		depth2url='/kr/support/support-03'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: support"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/kr/part/visual :: visual(
+		title='Contact Info',
+		className='sub-support03'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/kr/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="sub-contents support-contact-wrap">
+		<div class="sub-contents-inner">
+			<div class="summary-area">
+				<div class="summary-tit">
+					<strong class="bar-type">
+						고객에게 최고의 서비스를<br class="m-only2">
+						제공하기 위해 노력합니다.<br>
+						유형별 연락처를 통해<br class="m-only2">
+						신속한 기술 지원을 받으십시오.
+					</strong>
+				</div>
+			</div>
+		</div>
+		<div class="sequential">
+			<div class="sub-contents-inner cb">
+				<div class="thumb">
+					<img src="/images/support/img-support-contact.jpg" alt="">
+				</div>
+				<div class="txt-area">
+					<ul class="dot-list">
+						<li>
+							<strong>Solution 기술 지원/Spare parts</strong>
+							<p>Hotline, HW AS, Spare parts 외 고객 문의 응대</p>
+							<ul class="dash-list">
+								<li>Tel: 031-270-1870</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Software 기술 지원 센터</strong>
+							<p>장애업무처리 외 고객 문의 응대</p>
+							<ul class="dash-list">
+								<li>Tel: 031-270-1882</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>

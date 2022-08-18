@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='Contact Us',
+	url='/en/contact-us',
+	krUrl='/kr/contact-us',
+	description='Thank you for your interest in Doosan Logistics Solutions. If you have any questions, please fill out the form below and submit it to us and we\'ll answer them as soon as soon as possible.',
+	keyword='두산로지스틱스솔루션 문의, 두산로지스틱스솔루션 Contact Us, Doosan logistics solutions inquiry, doosan logistics solutions contact us'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+	<link rel="stylesheet" href="/css/selectric.css">
+
+	<script src="/js/library/jquery/jquery.selectric.js"></script>
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Delete whole block if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth1Breadcrumb(
+		depth1name='Contact Us',
+		depth1url='/en/contact-us'
+	)"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual('Contact Us', 'sub-contact-us')"></th:block>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner">
+			<form id="contactUsForm" name="contactUsForm" method="post" enctype="multipart/form-data">
+				<input type="hidden" id="category" name="category">
+
+				<div class="contents-block">
+					<p class="tbl-top-txt tbl-right essential">* Required field</p>
+					<div class="table-wrap scrolled">
+						<div class="frm-box">
+							<dl class="frm-block">
+								<dt>
+									<label for="lb-category" class="essential">Type</label>
+								</dt>
+								<dd>
+									<div class="select-box w1">
+										<select id="lb-category" name="questionType" title="Type" class="selectbox">
+											<option th:each="contactCategory: ${contactCategoryList}"
+													th:value="${contactCategory.contactCategoryId}"
+													th:utext="${contactCategory.contactCategoryName}"></option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="division half nomargin mob-full">
+							<div class="frm-box">
+								<dl class="frm-block">
+									<dt>
+										<label for="lb-name" class="essential">Name</label>
+									</dt>
+									<dd>
+										<input type="text" id="lb-name" class="input_name" name="userName"
+											   placeholder="Writer name" maxlength="256">
+									</dd>
+								</dl>
+							</div>
+							<div class="frm-box">
+								<dl class="frm-block">
+									<dt>
+										<label for="lb-nation">Country</label>
+									</dt>
+									<dd>
+										<div class="select-box">
+											<select id="lb-nation" name="userCountryValue" title="Country"
+													class="selectbox">
+												<option>Select country</option>
+												<option th:each="country: ${countryList}"
+														th:value="${country.countryId}"
+														th:text="${country.countryDisplayName}"></option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="division half nomargin mob-full">
+							<div class="frm-box">
+								<dl class="frm-block">
+									<dt>
+										<label for="lb-email" class="essential">E-Mail</label>
+									</dt>
+									<dd>
+										<input type="text" id="lb-email" class="input_mail_id" name="userEmail"
+											   placeholder="ex)xxx@xxxx.com" maxlength="512">
+									</dd>
+								</dl>
+							</div>
+							<div class="frm-box">
+								<dl class="frm-block">
+									<dt>
+										<label for="lb-company">Company</label>
+									</dt>
+									<dd>
+										<input type="text" placeholder="Company name" id="lb-company"
+											   name="userCompany" maxlength="256">
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="frm-box">
+							<dl class="frm-block">
+								<dt>
+									<label for="lb-title" class="essential">Title</label>
+								</dt>
+								<dd>
+									<input type="text" class="input_title" placeholder="Title" id="lb-title"
+										   name="title">
+								</dd>
+							</dl>
+						</div>
+						<div class="frm-box">
+							<dl class="frm-block">
+								<dt>
+									<label for="lb-content" class="essential">Contents</label>
+								</dt>
+								<dd>
+									<textarea class="input_content" placeholder="Contents" id="lb-content"
+											  name="content"></textarea>
+								</dd>
+							</dl>
+						</div>
+						<div class="frm-box">
+							<dl class="frm-block">
+								<dt>
+									<span>Files</span>
+								</dt>
+								<dd>
+									<div class="division half mob-full">
+										<div>
+											<div class="filebox">
+												<label for="file">Select file</label>
+												<div class="upload-namebox">
+													<input type="text" class="upload-name" title="file name"
+														   disabled="disabled">
+												</div>
+												<input type="file" id="file" class="upload-hidden" name="contactUsFile">
+											</div>
+										</div>
+										<div>
+											<p class="comment">* The attachment file exceeds the 9MB.</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="btn-box">
+					<a href="#" class="btn btnL btn-black-r over" id="btn_apply">
+						<span>Submit</span>
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="/js/old/common.js"></script>
+	<script src="/js/page/contact-us.js"></script>
+
+</th:block>
+
+</body>
+</html>

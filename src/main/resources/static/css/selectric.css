@@ -1,0 +1,94 @@
+/*======================================
+  Selectric
+======================================*/
+.selectric-wrapper{position:relative;cursor:pointer;}
+.selectric-responsive{width:100%;}
+.selectric{position:relative;border-radius:0px;}
+.selectric .label{display:block;overflow:hidden;margin-right:36px;white-space:nowrap;text-overflow:ellipsis;color:#000;}
+
+.selectric-below .selectric .label{color:#111;}
+
+.selectric .button{display:block;position:absolute;top:50%;right:2px;width:20px;height:12px;font-size:0;/*background:url(../images/common/ico-arrow-selectbox.png) no-repeat;*/transform:translateY(-50%);}
+.selectric-open .selectric .button{background-position:0 -15px;}
+/*.selectric-focus .selectric{border-color:#f1f1f1;}*/
+.selectric-hover .selectric .button{color:#000;}
+.selectric-open{z-index:9999;}
+.selectric-open .selectric-items{display:block;}
+.selectric-disabled{filter:alpha(opacity=50);opacity:0.5;cursor:default;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+}
+.selectric-hide-select{position:relative;overflow:hidden;width:0;height:0;}
+.selectric-hide-select select{position:absolute;left:-100%;}
+.selectric-hide-select.selectric-is-native{position:absolute;width:100%;height:100%;z-index:10;}
+.selectric-hide-select.selectric-is-native select{position:absolute;top:0;left:0;right:0;width:100%;height:100%;border:none;z-index:1;box-sizing:border-box;opacity:0;}
+.selectric-input{
+position:absolute !important;
+top:0 !important;
+left:0 !important;
+overflow:hidden !important;
+clip:rect(0, 0, 0, 0) !important;
+margin:0 !important;
+padding:0 !important;
+width:1px !important;
+height:1px !important;
+outline:none !important;
+border:none !important;
+*font:0/0 a !important;
+background:none !important;
+}
+.selectric-temp-show{
+  position:absolute !important;
+  visibility:hidden !important;
+  display:block !important;
+}
+
+/* Items box */
+.selectric-items{display:none;position:absolute;top:100%;left:0;background:#333;z-index:-1;}
+.selectric-items .selectric-scroll{overflow:auto;height:100%;}
+.selectric-above .selectric-items{top:auto;bottom:100%;}
+.selectric-items ul, .selectric-items li{margin:0;padding:0;min-height:20px;line-height:20px;}
+.selectric-items ul{padding:10px 0;}
+.selectric-items li{display:block;padding:8px 20px;color:#fff;cursor:pointer;}
+/*.selectric-items li.selected{background:#f3f3f3;}
+.selectric-items li.highlighted{background:#e1e1e1;}*/
+.selectric-items li:hover{background:#555;}
+.selectric-items .disabled{
+  filter:alpha(opacity=50);
+  opacity:0.5;
+  cursor:default !important;
+  background:none !important;
+  color:#666 !important;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+}
+
+.selectric-items .selectric-group .selectric-group-label{
+  font-weight:bold;
+  padding-left:10px;
+  cursor:default;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  background:none;
+  color:#444;
+}
+
+.selectric-items .selectric-group.disabled li{
+  filter:alpha(opacity=100);
+  opacity:1;
+}
+
+.selectric-items .selectric-group li{
+  padding-left:25px;
+}
+
+@media all and (max-width:1080px){
+  .selectric-items ul{padding:5px 0;}
+	.selectric-items li{padding:8px 11px;}
+}

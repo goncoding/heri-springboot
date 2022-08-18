@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{page-layout/en/basic}">
+
+<!--/* Set krUrl='' if no alternative Korean page */-->
+<head th:with="
+	title='CI',
+	url='/en/intro/intro-05',
+	krUrl='/kr/intro/intro-05',
+	description='The logo represents the image of a good company that Doosan seeks to project – a warm, confident, powerful and sustainable enterprise.',
+	keyword='두산 CI, 두산그룹 CI, 두산 브랜드, Doosan CI, Doosan Brand'
+">
+	<title th:text="${title} + ' : ' + #{common.company-name}"></title>
+
+	<th:block
+			th:replace="page-layout/en/part/head :: common-meta(url=${url}, title=${title}, description=${description}, keyword=${keyword})"></th:block>
+	<th:block th:replace="page-layout/en/part/head :: alternative-url(url=${url}, krUrl=${krUrl})"></th:block>
+
+	<link rel="stylesheet" href="/css/sub_style.css">
+	<link rel="stylesheet" href="/css/intro/intro_ci.css">
+</head>
+<body>
+
+<th:block layout:fragment="breadcrumb">
+	<!--/* Display breadcrumb, choose from depth1 to depth3. Leave blank if not needed */-->
+	<th:block th:replace="page-layout/en/part/visual :: depth2Breadcrumb(
+		depth1name='Company',
+		depth1url='/en/intro/intro-01',
+		depth2name='CI',
+		depth2url='/en/intro/intro-05'
+	)"></th:block>
+</th:block>
+
+<!--/* Display sub GNB used on mobile view. Change the sub GNB type or delete whole block if not needed */-->
+<th:block layout:fragment="sub-gnb-list">
+	<th:block th:replace="page-layout/en/part/sub-gnb :: intro"></th:block>
+</th:block>
+
+<th:block layout:fragment="content">
+
+	<th:block th:replace="page-layout/en/part/visual :: visual(
+		title='CI',
+		className='sub-intro05'
+	)"></th:block>
+
+	<!--/* Display sub gnb used on mobile view. Delete this block if not needed */-->
+	<th:block th:replace="page-layout/en/part/sub-gnb :: sub-gnb"></th:block>
+
+	<div class="gu_contents_wrap" id="INTRO_BRAND_CI">
+		<div class="gu_grid">
+            <div class="gu_left_grid">
+                <div class="gu_title">Logo</div>
+            </div>
+            <div class="gu_right_grid">
+                <div class="top_copy">
+                    <img th:src="@{/images/intro/ci/CI_new.png}" alt="">
+                </div>
+                <div class="gu_btn_down_pdf">
+                    <a class="kr_sd_500 file-download" target="_blank" data-name="Doosan Logo AI" th:href="@{/download/intro/brand/doosan_ci.ai}"><span>AI download</span></a>
+                    <a class="kr_sd_500 file-download" target="_blank" data-name="Doosan Logo JPG" th:href="@{/download/intro/brand/Doosan_Logo.jpg}"><span>JPG download</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="gu_grid">
+            <div class="gu_left_grid">
+                <div class="gu_title en_plain_m">Color</div>
+            </div>
+            <div class="gu_right_grid">
+                <div class="ci2022_img_right">
+                    <img th:src="@{/images/intro/ci/CI_new_img2.jpg}" alt="">
+                </div>
+                <div class="ci2022_title1">'The color representing the Doosan Group'</div>
+                <div class="ci2022_desc ci2022_desc1">“Endeavour Blue”<br>“Working hard on new things”</div>
+                <div class="ci2022_desc ci2022_desc2">Endeavour Blue is the color of initiative and positivity.<br>It is the color of determination for a new world with positive thinking and a thirst for challenges.</div>
+                <div class="ci2022_desc ci2022_desc3">Endeavour Blue is a warm, hopeful color for a bright future.<br>It is the color of vitality that foresees the future and prepares for it with a positive attitude.</div>
+                <div class="ci2022_title1">Rules on background color application</div>
+                <div class="ci2022_desc ci2022_desc4">For the logo on the background in the main color or black & white,<br>100~80% white and 20~0% exclusive colors are used.</div>
+                <div>
+                    <img th:src="@{/images/intro/ci/CI_new_img1.png}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="gu_grid">
+            <div class="gu_left_grid en_plain_m">
+                <div class="gu_title">Clear Space</div>
+            </div>
+            <div class="gu_right_grid">
+                <div class="copy">Securing a margin around the logo prevents the logo from looking cluttered or chaotic by being overly adjacent to elements such as headlines, main text, and images. Always use minimal margins to maintain the logo’s original form and maximize visibility and visual impact.</div>
+                <img class="ci2022_img3" th:src="@{/images/intro/ci/CI_new_img3.png}" alt="Wordmark Clear Space A"/>
+                <p class="ci2022_desc6">When applying Wordmark, it is necessary to secure sufficient space according to the space regulations. Based on Doosan’s “D” height, there must be a minimum space of “D” height on all sides.</p>
+                <img class="ci2022_img4" th:src="@{/images/intro/ci/CI_new_img4.png}" alt="Wordmark Clear Space B"/>
+                <p class="ci2022_desc7">Margin B can be applied if it is difficult to assure readability due to space constraints in outdoor media, such as outdoor advertising and stadium fences, where readability is important.</p>
+            </div>
+        </div>
+	</div>
+
+	<div class="sub-contents">
+		<div class="sub-contents-inner wide banner-area cb">
+			<a href="https://www.doosan.com/en/intro/doosan-story" target="_blank" title="New window">
+				<span>Doosan Story</span>
+			</a>
+			<a href="https://www.doosan.com/en/intro/credo" target="_blank" title="New window">
+				<span>Our Aspiration &amp; Core Values</span>
+			</a>
+		</div>
+	</div>
+
+</th:block>
+
+</body>
+</html>
