@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN { ----->
+    <main id="main" role="main">
+
+        <!----- 온라인 역사관 { ----->
+        <section class="online-history-hall">
+            <div class="maxinner">
+                <div class="sub-tit-wrap con-ani fade-up">
+                    <h2 class="sub-tit">온라인 역사관</h2>
+                    <p class="sub-txt">두산헤리티지1896의 전시관과 전시품을 온라인 공간에서 직접 체험해보세요.</p>
+                </div>
+                <div class="hall-wrap con-ani fade-up">
+                    <a href="javascript:alert('준비중입니다.')" class="hall-box">
+                        <div class="hall-ico">
+                            <img src="/img/ico/ico-online-history-hall-vr.png" alt="">
+                        </div>
+                        <p class="hall-desc">
+                            오프라인 상설 전시
+                        </p>
+                        <h3 class="hall-title">
+                            VR 전시관
+                        </h3>
+                        <div class="more-view">
+                            <span>더보기</span>
+                        </div>
+                    </a>
+                    <a href="javascript:alert('준비중입니다.')" class="hall-box">
+                        <div class="hall-ico">
+                            <img src="/img/ico/ico-online-history-hall-metabus.png" alt="">
+                        </div>
+                        <p class="hall-desc">
+                            온라인 특별 전시
+                        </p>
+                        <h3 class="hall-title">
+                            메타버스 전시관
+                        </h3>
+                        <div class="more-view">
+                            <span>더보기</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-change">
+                <div class="bg bg01 active" style="background-image:url('/img/sub/online-history-hall-bg01.jpg')"></div>
+                <div class="bg bg02" style="background-image:url('/img/sub/online-history-hall-bg02.jpg')"></div>
+                <div class="bg bg03" style="background-image:url('/img/sub/online-history-hall-bg03.jpg')"></div>
+            </div>
+        </section>
+        <!----- } 온라인 역사관 ----->
+
+    </main>
+    <!----- } MAIN ----->
+
+
+    <!----- SCRIPT { ----->
+    <script src="../common/js/common.js"></script>
+    <script>
+        $(function(){
+            $('.hall-box').on('mouseenter',function(){
+                var changeBgNum = $(this).index() + 1;
+                $('.hall-wrap').addClass('active');
+                $('.hall-box').removeClass('active');
+                $(this).addClass('active');
+                $('.bg-change').find('.bg').removeClass('active');
+                $('.bg-change').find('.bg').eq(changeBgNum).addClass('active');
+            });
+
+            $('.hall-box').on('mouseleave',function(){
+                $('.hall-wrap').removeClass('active');
+                $('.hall-box').removeClass('active');
+                $('.bg-change').find('.bg').removeClass('active');
+                $('.bg-change').find('.bg').eq(0).addClass('active');
+            });
+        });
+    </script>
+    <!----- } SCRIPT ----->
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/online_history_hall.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:37:26 GMT -->
+</html>

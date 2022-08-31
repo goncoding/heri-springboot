@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko"xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      >
+
+<!-- Mirrored from soro122.soroweb.co.kr/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:35:44 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=10, user-scalable=yes">
+	<link rel="stylesheet" href="/common/css/base.css">
+	<link rel="stylesheet" href="/common/css/odometer-theme-default.css">
+	<link rel="stylesheet" href="/common/css/swiper-3.4.0.min.css">
+	<link rel="stylesheet" href="/common/css/common.css">
+	<link rel="stylesheet" href="/common/css/main.css">
+
+	<script src="/common/js/jquery-3.6.0.min.js"></script>
+	<script src="/common/js/gsap-3.6.0.min.js"></script>
+	<script src="/common/js/ScrollToPlugin-3.4.2.min.js"></script>
+	<script src="/common/js/ScrollTrigger-3.4.2.min.js"></script>
+	<script src="/common/js/swiper-3.4.0.min.js"></script>
+	<title>두산헤리티지1896</title>
+</head>
+<body class="index"> <!-- INDEX는 'index', 나머지 페이지는 'sub' 클래스명 적용 -->
+
+
+<!-- -&#45;&#45; INTRO WRAP { -&#45;&#45;-->
+<!--<div class="intro-wrap">-->
+<!--	<h1><span class="hide">두산헤리티지</span></h1>-->
+<!--	<div class="intro">-->
+<!--		<div class="intro-word intro-word01">-->
+<!--			<div class="word01"><div class="word">BELIEF</div></div>-->
+<!--			<div class="word02"><div class="word">더 나은 세상을 만들어 갈 수 있다는 ‘믿음’</div></div>-->
+<!--		</div>-->
+<!--		<div class="intro-word intro-word02">-->
+<!--			<div class="word01"><div class="word">HERITAGE</div></div>-->
+<!--			<div class="word02"><div class="word">그 믿음을 실천해 나가는 데 든든한 힘이 되어 준 ‘기업 유산’</div></div>-->
+<!--		</div>-->
+<!--		<div class="intro-word intro-word03">-->
+<!--			<div class="word01"><div class="word">PROMISE</div></div>-->
+<!--			<div class="word02"><div class="word">앞으로 다가올 미래에 대한 ‘약속’</div></div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="intro-bar">-->
+<!--		<strong>1896</strong>-->
+<!--		<div class="bar-wrap">-->
+<!--			<div class="bar"></div>-->
+<!--		</div>-->
+<!--		<strong>2022</strong>-->
+<!--	</div>-->
+<!--	<div class="intro-line">-->
+<!--		<div class="line-left01"></div>-->
+<!--		<div class="line-left02"></div>-->
+<!--		<div class="line-right01"></div>-->
+<!--		<div class="line-right02"></div>-->
+<!--	</div>-->
+<!--</div>-->
+<!-- -&#45;&#45; } INTRO WRAP -&#45;&#45;-->
+
+
+<!----- LOADING WRAP { ----->
+<div class="loading-wrap">
+	<svg class="loading-circle">
+		<circle cx="50%" cy="50%" r="25"></circle>
+	</svg>
+</div>
+<!----- } LOADING WRAP ----->
+
+<!----- } HEADER ----->
+<th:block th:replace="layout/kr/part/header :: header"></th:block>
+
+
+<!----- MAIN { ----->
+<main id="main" role="main">
+	<!----- VISUAL ----->
+	<section class="visual">
+		<div class="visual-inner">
+			<div class="visual-con">
+				<div class="visual-year-wrap">
+					<div class="inner">
+						<div class="visual-year">
+							<div class="year-txt">1896</div>
+							<div class="year-bar-wrap">
+								<div class="year-bar"></div>
+							</div>
+							<div class="year-txt">2022</div>
+						</div>
+					</div>
+				</div>
+				<div class="visual-txtbox-wrap">
+					<div class="visual-txtbox">
+						<h2><span>Where We Build the Tomorrow’s World</span></h2>
+						<p><span>두산의 역사를 담은 두산 헤리티지를 지금 만나보세요.</span></p>
+					</div>
+				</div>
+				<div class="scrolldown">
+					<p>SCROLL DOWN</p>
+					<i></i>
+				</div>
+			</div>
+			<div class="visual-bg-wrap"><div class="visual-bg" style="background-image:url(/img/main/visual01.jpg)"></div></div>
+		</div>
+	</section>
+
+
+	<!----- METABUS ----->
+	<section class="metabus">
+		<div>
+			<div class="metabus-tit-wrap">
+				<h2 class="metabus-tit">
+					VR &middot; 메타버스로 만나는 <br>
+					두산헤리티지1896
+				</h2>
+				<p class="metabus-txt">
+					두산그룹 고유의 역사를 담은 <br>
+					두산헤리티지1896 전시관과 전시품을 지금 온라인 공간에서 <br>
+					VR&middot;메타버스로 만나보세요.
+				</p>
+			</div>
+			<a href="/kr/online_history_hall" class="metabus-cover">
+				<div class="metabus-thumb" style="background-image:url(/img/main/metabus-img01.jpg)">
+					<span class="hide">두산헤리티지1896 VR 전시관 전경</span>
+				</div>
+			</a>
+		</div>
+	</section>
+
+
+	<!----- COLLECT ----->
+	<section class="collect">
+		<div class="inner">
+			<div class="main-tit-wrap">
+				<h2 class="main-tit">전시 &middot; 소장품</h2>
+				<p class="main-txt">두산의 특별한 스토리를 담은 전시 &middot; 소장품을 소개합니다.</p>
+			</div>
+			<div class="collect-pin-wrap">
+				<div class="collect-list-wrap">
+					<div class="collect-list">
+						<div class="collect-wrapper">
+							<a href="javascript:;" class="collect-item">
+								<div class="collect-thumb">
+									<div><img src="/img/main/collect-img01.jpg" alt=""></div>
+								</div>
+								<div class="collect-desc">
+									<span>전시</span>
+									<p>1896 박승직 상점 기념 사진</p>
+								</div>
+							</a>
+							<a href="javascript:;" class="collect-item">
+								<div class="collect-thumb">
+									<div><img src="/img/main/collect-img02.jpg" alt=""></div>
+								</div>
+								<div class="collect-desc">
+									<span>전시</span>
+									<p>1970년 두산산업 코닥직매장 오픈</p>
+								</div>
+							</a>
+							<a href="javascript:;" class="collect-item">
+								<div class="collect-thumb">
+									<div><img src="/img/main/collect-img03.jpg" alt=""></div>
+								</div>
+								<div class="collect-desc">
+									<span>소장품</span>
+									<p>두산산업 수출1억달러돌파</p>
+								</div>
+							</a>
+							<a href="javascript:;" class="collect-item">
+								<div class="collect-thumb">
+									<div><img src="/img/main/collect-img04.jpg" alt=""></div>
+								</div>
+								<div class="collect-desc">
+									<span>전시</span>
+									<p>두산 창업 100주년 기념식</p>
+								</div>
+							</a>
+							<!----- LAST ITEM - 검색오픈 { ----->
+							<div class="collect-item last-item">
+								<div class="collect-search-sm">
+									<div class="txt-con">
+										<p class="txt">
+											<strong>두산헤리티지1896</strong>의 <br>
+											더 많은 전시 &middot; 소장품을 검색해보세요.
+										</p>
+										<span class="word">SCROLL DOWN</span>
+										<div class="linebox"><span></span><span></span><span></span><span></span></div>
+									</div>
+								</div>
+							</div>
+							<!----- } LAST ITEM - 검색오픈 ----->
+						</div>
+					</div>
+				</div>
+				<div class="collect-search-wrap">
+					<div class="collect-search-sm">
+						<div class="txt-con">
+							<p class="txt">
+								<strong>두산헤리티지1896</strong>의 <br>
+								더 많은 전시 &middot; 소장품을 검색해보세요.
+							</p>
+							<div class="formbox">
+								<!----- SEARCH FORM { ----->
+								<form name="" action="#" method="">
+									<div class="searchbox">
+										<label for="main-collect-search" class="hide">전시 및 소장품 검색 키워드</label>
+										<input type="text" name="" id="main-collect-search" placeholder="검색어를 입력해주세요." class="inp-collect">
+										<input type="submit" value="검색" class="btnset btn-collect-search">
+									</div>
+								</form>
+								<!----- } SEARCH FORM ----->
+								<div class="keyword">
+									<a href="#">#두산설립기념사진</a>
+									<a href="#">#박승직상점간판</a>
+									<a href="#">#박승진상점사진</a>
+									<a href="#">#두산설립기념사진</a>
+									<a href="#">#박승직상점간판</a>
+									<a href="#">#박승진상점사진</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btnwrap">
+				<a href="/kr/collect" class="btnset btn-more-type01">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="56" viewBox="0 0 100 56" class="line1">
+						<path class="st0" d="M0.5,10.5v-10h99v55h-99v-10"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="56" viewBox="0 0 100 56" class="line2">
+						<path class="st1" d="M0.5,10.5v-10h99v55h-99v-10"/>
+					</svg>
+					<span>더보기</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+	<!----- PROMOTION ----->
+	<section class="promotion">
+		<div class="maxinner">
+			<div class="main-tit-wrap">
+				<h2 class="main-tit">홍보센터</h2>
+			</div>
+			<div class="promotion-list">
+				<article class="promotion-item">
+					<a href="#">
+						<div class="sp-thumb">
+							<div style="background-image:url(/img/main/promotion-img01.jpg)"><span class="hide">썸네일</span></div>
+						</div>
+						<div class="space sp-cate">
+							NEWS
+						</div>
+						<div class="space sp-con">
+							<h3><span>두산헤리티지1896 정식 개관</span></h3>
+							<p><span>두산의 역사를 담은 두산헤리티지1896이 정식 개관하였습니다.</span></p>
+						</div>
+						<div class="space sp-date">
+							2022.06.08
+						</div>
+						<div class="space sp-move">
+							<span class="move-arrow">자세히보기</span>
+						</div>
+					</a>
+				</article>
+				<article class="promotion-item">
+					<a href="#">
+						<div class="sp-thumb">
+							<div style="background-image:url(/img/main/promotion-img02.jpg)"><span class="hide">썸네일</span></div>
+						</div>
+						<div class="space sp-cate">
+							NOTICE
+						</div>
+						<div class="space sp-con">
+							<h3><span>오프라인 상설 전시 VR 서비스 안내</span></h3>
+							<p><span>두산헤리티지1896 오프라인 상설 전시 VR 서비스를 안내드립니다.</span></p>
+						</div>
+						<div class="space sp-date">
+							2022.06.08
+						</div>
+						<div class="space sp-move">
+							<span class="move-arrow">자세히보기</span>
+						</div>
+					</a>
+				</article>
+				<article class="promotion-item">
+					<a href="#">
+						<div class="sp-thumb">
+							<div style="background-image:url(/img/main/promotion-img03.jpg)"><span class="hide">썸네일</span></div>
+						</div>
+						<div class="space sp-cate">
+							NOTICE
+						</div>
+						<div class="space sp-con">
+							<h3><span>온라인 특별 전시 메타버스 서비스 안내</span></h3>
+							<p><span>두산헤리티지1896 온라인 특별 전시 메타버스 서비스를 안내드립니다.</span></p>
+						</div>
+						<div class="space sp-date">
+							2022.06.08
+						</div>
+						<div class="space sp-move">
+							<span class="move-arrow">자세히보기</span>
+						</div>
+					</a>
+				</article>
+			</div>
+			<div class="btnwrap">
+				<a href="/kr/pr_center" class="btnset btn-more-type01 white">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="56" viewBox="0 0 100 56" class="line1">
+						<path class="st0" d="M0.5,10.5v-10h99v55h-99v-10"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="56" viewBox="0 0 100 56" class="line2">
+						<path class="st1" d="M0.5,10.5v-10h99v55h-99v-10"/>
+					</svg>
+					<span>더보기</span>
+				</a>
+			</div>
+		</div>
+	</section>
+</main>
+<!----- } MAIN ----->
+
+
+
+<!----- FOOTER {  ----->
+<th:block th:replace="layout/kr/part/footer :: footer"></th:block>
+
+<!----- SCRIPT ----->
+<script src="/common/js/common.js"></script>
+<script src="/common/js/main.js"></script>
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:36:32 GMT -->
+</html>

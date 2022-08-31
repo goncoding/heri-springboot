@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="guide">
+                <div class="maxinner">
+                    <div class="sub-tit-wrap">
+                        <h2 class="sub-tit con-ani fade-right">관람 안내</h2>
+                    </div>
+                    
+                    <div class="guide-sec sec01">
+                        <div class="guide-bg con-ani slide-img-in">
+                            <div style="background-image:url(/img/sub/guide-img01.jpg)"><span class="hide">두산헤리티지1896 전시관 입구 모습</span></div>
+                        </div>
+                    </div>
+
+                    <div class="guide-sec con-ani fade-up sec02">
+                        <div class="flex-con">
+                            <div class="left-con">
+                                <h3 class="sub-con-tit">오시는길</h3>
+                            </div>
+                            <div class="right-con">
+                                <ul class="list-st01">
+                                    <li>주소 : 경기도 성남시 분당구 정자일로 155 분당 두산타워</li>
+                                    <li>위치 : South(S)동 4층 역사관</li>
+                                </ul>
+                                <div class="mapwrap">
+                                    <!--
+                                        * 카카오맵 - 약도서비스
+                                        * 한 페이지 내에 약도를 2개 이상 넣을 경우에는
+                                        * 약도의 수 만큼 소스를 새로 생성, 삽입해야 합니다.
+                                    -->
+                                    <!-- 1. 약도 노드 -->
+                                    <div id="daumRoughmapContainer1659579743242" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                                    <!-- 2. 설치 스크립트 -->
+                                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                                    <!-- 3. 실행 스크립트 -->
+                                    <script charset="UTF-8">
+                                        new daum.roughmap.Lander({
+                                            "timestamp" : "1659579743242",
+                                            "key" : "2b9nx",
+                                            "mapWidth" : "640",
+                                            "mapHeight" : "360"
+                                        }).render();
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="guide-sec con-ani fade-up sec03">
+                        <div class="flex-con">
+                            <div class="left-con">
+                                <h3 class="sub-con-tit">방문 절차</h3>
+                            </div>
+                            <div class="right-con">
+                                <ul class="list-st01">
+                                    <li>두산헤리리티1896 전시관은 웹사이트에서 방문 신청하시면 관람이 가능합니다.</li>
+                                    <li>방문 신청 정보를 입력하면, 방문 예약 신청 완료 안내 문자가 수신되며, 예약시간에 맞춰 역사관 방문하시면 됩니다.</li>
+                                </ul>
+                                <a href="/kr/reservation_schedule" class="btnset btn-type01"><span>관람 예약 바로가기</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-sec con-ani fade-up sec04">
+                        <div class="flex-con">
+                            <div class="left-con">
+                                <h3 class="sub-con-tit">관람 시간</h3>
+                            </div>
+                            <div class="right-con">
+                                <ul class="list-st01">
+                                    <li>월요일-금요일 : 10:00 ~ 17:00</li>
+                                    <li>토요일, 일요일 및 공휴일 휴관</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-sec con-ani fade-up sec05">
+                        <div class="flex-con">
+                            <div class="left-con">
+                                <h3 class="sub-con-tit">유의사항</h3>
+                            </div>
+                            <div class="right-con">
+                                <ul class="list-st01">
+                                    <li>전시관의 모든 공간은 금주/금연 구역입니다.</li>
+                                    <li>음식물 반입 및 안내견 외 반려동물 출입은 금지되어 있습니다.</li>
+                                    <li>전시관 입장 전 휴대전화는 무음/진동 모드로 전환해 주십시오.</li>
+                                    <li>전시관 경내에서는 다른 사람의 관람에 방해되지 않도록 정숙해주세요.</li>
+                                    <li>전시물에 손을 대거나 손상 입힐 수 있는 행위는 절대 삼가 주십시오.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main>
+
+
+    <!----- SCRIPT ----->
+    <script src="../common/js/common.js"></script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:30 GMT -->
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}"
+>
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN { ----->
+    <main id="main" role="main">
+
+        <!----- 홍보센터 { ----->
+        <div class="normal-contents">
+            <section class="pr-center">
+                <div class="maxinner">
+                    <div class="sub-tit-wrap">
+                        <h2 class="sub-tit">홍보센터</h2>
+                    </div>
+
+                    <!----- 홍보센터 { ----->
+                    <article class="board-view">
+                        <header class="board-view-tit">
+                            <h3>
+                                오프라인 상설 전시 VR 서비스 안내     
+                            </h3>
+                            <div class="board-view-info">
+                                <div class="info-date"><span class="hide">작성일</span>2022.06.08</div>
+                                <div class="info-cate"><span class="hide">카테고리</span>Notice</div> <!-- 공지사항일때 -->
+                            </div>
+                        </header>
+                    
+                        <div class="board-view-con">
+                            <h3 class="hide">본문</h3>
+                            <div class="board-con">
+                                오프라인 상설 전시 VR 서비스 안내 드립니다. <br>
+                                두산헤리티지1896닷컴에서는 온라인 전시관을 찾아 주시는 분이 온라인에서도 오프라인 전시관과 전시품들을 두루 살펴볼 수 있도록 ‘온라인 상설 전시 VR 서비스’를 제공하고 있습니다. <br>
+                                두산헤리티지1896닷컴  온라인 역사관 페이지에서, 오프라인 전시관을 VR로 확인해보세요.<br><br><br>
+                                <img src="/img/sub/pr-center-img01.jpg" alt="">
+                            </div>
+                        </div> 
+                    </article>
+
+                    <div class="board-move">
+                        <ul>
+                            <li class="prev">
+                                <a href="javascript:;" class="link-none"> <!-- 이전글, 다음글 없으면 'link-none' 클래스 추가 -->
+                                    <span>PREV</span>
+                                    <p>이전글이 없습니다.</p>
+                                </a>
+                            </li>
+                            <li class="mid">
+                                <a href="/kr/pr_center">
+                                    <span class="hide">목록으로</span>
+                                </a>
+                            </li>
+                            <li class="next">
+                                <a href="javascript:;">
+                                    <span>NEXT</span>
+                                    <p>온라인 특별 전시 메타버스 서비스 안내</p> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </section>
+        </div>
+        <!----- } 홍보센터 ----->
+
+    </main>
+    <!----- } MAIN ----->
+
+
+    <!----- SCRIPT { ----->
+    <script src="../common/js/common.js"></script>
+    <!----- } SCRIPT ----->
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/pr_center_view.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:56:30 GMT -->
+</html>

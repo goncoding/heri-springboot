@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- 전시 및 소장품 { ----->
+        <div class="normal-contents">
+            <section class="collect">
+                <div class="maxinner">
+                    <div class="sub-tit-wrap">
+                        <h2 class="sub-tit con-ani fade-right">전시 &middot; 소장품</h2>
+                    </div>
+
+
+                    <!----- 전시 및 소장품 검색 { ----->
+                    <div class="collect-search-wrap">
+                        <div class="search-wrap">
+                            <div class="left-con">
+                                <!----- 전체 게시물 검색양식 { ----->
+                                <form name="" action="#" method="">
+                                    <fieldset>
+                                        <legend>전시 및 소장품 검색</legend>
+                                        <div class="search-box">
+                                            <select name="" id="">
+                                                <option value="전체" selected>전체</option>
+                                                <option value="제목">제목</option>
+                                                <option value="제목+내용">제목+내용</option>
+                                            </select>
+                                            <input type="text" placeholder="검색어를 입력해주세요.">
+                                            <button type="submit" class="btnset btn-search">검색</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <!----- } 전체 게시물 검색양식 ----->
+                            </div>
+                            <div class="right-con">
+                                <button type="button" class="btnset btn-filter-open"><span>주제별 검색</span></button>
+                            </div>
+                        </div>
+
+                        <div class="filter-wrap">
+                            <!----- 주제별 검색 양식 { ----->
+                            <form name="" action="#" method="">
+                                <fieldset>
+                                    <legend>전시 및 소장품 검색</legend>
+                                    <div class="filter-box-wrap">
+                                        <div class="filter-box filter-subject btn-con-open">
+                                            <select name="" id="subject">
+                                                <option value="" disabled selected>오프라인 전시관 별 찾기</option>
+                                                <option value="1. 두산, 역사의 시작">1. 두산, 역사의 시작</option>
+                                                <option value="2. 대한민국 근대 기업의 시작">2. 대한민국 근대 기업의 시작</option>
+                                                <option value="3. 제조업에 기반한 그룹의 형성">3. 제조업에 기반한 그룹의 형성</option>
+                                                <option value="4. 해외 선진 브랜드와 협력을 통한 성장">4. 해외 선진 브랜드와 협력을 통한 성장</option>
+                                                <option value="5. 글로벌 인프라 기업으로 도약">5. 글로벌 인프라 기업으로 도약</option>
+                                                <option value="6. 현대 비즈니스의 역사">6. 현대 비즈니스의 역사</option>
+                                                <option value="7. 두산 브랜드 활동의 역사">7. 두산 브랜드 활동의 역사</option>
+                                                <option value="8. 기획 전시실">8. 기획 전시실</option>
+                                                <option value="9. 수장고">9. 수장고</option>
+                                            </select>
+                                        </div>
+                                        <div class="filter-box filter-history">
+                                            <button type="button" class="btnset btn-select btn-con-open" data-filter="history">시대별 찾기</button>
+                                        </div>
+                                        <div class="filter-box filter-category">
+                                            <select name="" id="category">
+                                                <option value="" disabled selected>분류별 찾기</option>
+                                                <option value="사진">사진</option>
+                                                <option value="사료">사료</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-con-wrap">
+                                        <div class="filter-con" id="history">
+                                            <div class="filter-history">
+                                                <div class="filter-history-slider"></div><!-- jquery ui 파이프 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-chk-wrap">
+                                        <h3 class="hide">검색필터 확인</h3>
+                                        <div class="filter-chk-list">
+                                        <!-- 주제,시대,초성 선택시 아이템 추가 {-->
+                                        <!--
+                                        <div class="filter-chk-item filter-item-subject">
+                                            <span>1. 두산, 역사의 시작</span>
+                                            <button type="button" class="btnset btn-filter-delete"><span class="hide">삭제</span></button>
+                                        </div>
+                                        <div class="filter-chk-item filter-item-history">
+                                            <span>1900년 ~ 1930년</span>
+                                            <button type="button" class="btnset btn-filter-delete"><span class="hide">삭제</span></button>
+                                        </div>
+                                        <div class="filter-chk-item filter-item-consonant">
+                                            <span>ㅂ</span>
+                                            <button type="button" class="btnset btn-filter-delete"><span class="hide">삭제</span></button>
+                                        </div>
+                                        -->
+                                        <!-- } 주제,시대,초성 선택시 아이템 추가-->
+                                        </div>
+                                    </div>
+                                    <div class="filter-btn-wrap">
+                                        <button type="button" class="btnset btn-reset"><span>검색 초기화</span></button>
+                                        <button type="submit" class="btnset btn-search style02">검색</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!----- } 주제별 검색 양식 ----->
+                        </div>
+                    </div>
+                    <!----- } 전시 및 소장품 검색 ----->
+
+
+                    <!----- 게시판 옵션 { ----->
+                    <div class="board-option-wrap">
+                        <h3 class="hide">전시 및 소장품 리스트</h3>
+                        <div class="left-con">
+                            <div class="board-total">
+                                총 <strong>269</strong> 건.
+                            </div>
+                        </div>
+                        <div class="right-con">
+                            <div class="board-sort">
+                                <h3 class="hide">게시판 정렬</h3>
+                                <a href="javascript:;" class="current">최신순</a>
+                                <ul class="board-sort-list">
+                                    <li><a href="#">최신순</a></li>
+                                    <li><a href="#">오래된순</a></li>
+                                    <li><a href="#">조회수순</a></li>
+                                    <li><a href="#">이름순</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!----- } 게시판 옵션 ----->
+
+
+                    <!----- 게시판 리스트 { ----->
+                    <div class="board-wrap">
+                        <div class="board-gall">
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img01.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <!-- 360도 관람 가능 { -->
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <!-- } 360도 관람 가능 -->
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>1896 박승직 상점 기념 사진</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1925년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- 팝업창 내용 { -->
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- } 팝업창 내용 -->
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img02.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>두산산업 설립 사진</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1953년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img03.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>윤한공업사 설립 사진</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1967년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img04.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>동양맥주 설립</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1925년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img05.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>한양식품㈜ 설립</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1966년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img06.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-cate">소장</div>
+                                        <div class="desc-title"><strong>한국병유리 설립</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1969년</span>
+                                            <span class="desc-info-loc">수장고</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img07.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-ico"><img src="../img/ico/ico-360.png" alt="360도 관람 가능"></div>
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>두산개발 설립</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1974년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img08.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-cate">소장</div>
+                                        <div class="desc-title"><strong>동아출판사 인수</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1966년</span>
+                                            <span class="desc-info-loc">수장고</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gall-item">
+                                <a href="javascript:;" class="btn-pop-open" data-popid="pop-collect">
+                                    <div class="thumb">
+                                        <div style="background-image:url(/img/sub/collect-img09.jpg)"></div>
+                                    </div>
+                                    <div class="desc">
+                                        <div class="desc-cate">전시</div>
+                                        <div class="desc-title"><strong>두산 창업 100주년 기념식</strong></div>
+                                        <div class="desc-info">
+                                            <span class="desc-info-year">1996년</span>
+                                            <span class="desc-info-loc">제 1 역사관</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="pop-copy">
+                                    <div class="collect-pop">
+                                        <div class="left-con">
+                                            <img src="/img/sub/pop-collect-img01.jpg" alt="">
+                                        </div>
+                                        <div class="right-con">
+                                            <div class="collect-detail-desc">
+                                                <div class="detail-cate">전시</div>
+                                                <div class="detail-title">
+                                                    <h3>주식회사 박승직 상점 간판</h3>
+                                                </div>
+                                                <div class="detail-txt">
+                                                    1986년 문을 연 박승직 상점의 간판. <br>
+                                                    박승직 상점은 두산그룹의 전신으로 최초의 한국 개인 상점이라 평가되고 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="collect-detail-info">
+                                                <ul>
+                                                    <li>
+                                                        <span>전시</span>
+                                                        <p>두산, 역사의 시작</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>연도</span>
+                                                        <p>1925년</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>관련인물</span>
+                                                        <p>박승직</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="collect-detail-view">
+                                                <h4>이미지 선택</h4>
+                                                <p>아래 버튼을 클릭하시면 전시·소장품의 각 일반, 3D 이미지를 확인하실 수 있습니다.</p>
+                                                <div class="btnwrap">
+                                                    <a href="#" class="btnset btn-detail-view fill-black">이미지 보기</a>
+                                                    <a href="#" class="btnset btn-detail-view">360° 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!----- } 게시판 리스트 ----->
+
+
+                    <!----- 팝업창 { ----->
+                    <div class="pop-wrap over-scroll" id="pop-collect">
+                        <div class="pop-inner">
+                            <div class="pop-con"></div>
+                            <a href="javascript:;" class="btn-pop-close"><span class="hide">팝업창 닫기</span></a>
+                        </div>
+                    </div>
+                    <!----- } 팝업창 ----->
+
+
+                    <!----- 페이징 { ----->
+                    <div class="paging-wrap">
+                        <a href="#" class="arrow start"><span class="hide">첫페이지</span></a>
+                        <a href="#" class="arrow prev"><span class="hide">이전페이지</span></a>
+                        <a href="#" class="active"><span>01</span></a>
+                        <a href="#"><span>02</span></a>
+                        <a href="#"><span>03</span></a>
+                        <a href="#"><span>04</span></a>
+                        <a href="#"><span>05</span></a>
+                        <a href="#"><span>06</span></a>
+                        <a href="#"><span>07</span></a>
+                        <a href="#"><span>08</span></a>
+                        <a href="#"><span>09</span></a>
+                        <a href="#"><span>10</span></a>
+                        <a href="#" class="arrow next"><span class="hide">다음페이지</span></a>
+                        <a href="#" class="arrow end"><span class="hide">마지막페이지</span></a>
+                    </div>
+                    <!----- } 페이징 ----->
+                </div>
+            </section>
+        </div>
+        <!----- } 전시 및 소장품 ----->
+    </main>
+
+
+
+
+
+
+    <!----- SCRIPT { ----->
+    <script src="../common/js/common.js"></script>
+    <script>
+        $(function(){
+            /* ===== 정렬 버튼 ===== */
+            $('.board-sort').on('click',function(e){
+                e.preventDefault();
+
+                if($(this).hasClass('active') == true){
+                    $(this).removeClass('active');
+                }else {
+                    $(this).addClass('active');
+                }
+            });
+            $(document).click(function(e){
+                if (!$(".board-sort").is(e.target) && $(".board-sort").has(e.target).length === 0){
+                    $(".board-sort").removeClass("active");
+                }
+            });
+
+
+            /* ===== 주제별 검색 버튼 ===== */
+            $('.btn-filter-open').on('click',function(e){
+                e.preventDefault();
+
+                if($('.collect-search-wrap').hasClass('open')){
+                    $('.collect-search-wrap').removeClass('open');
+                }else{
+                    $('.collect-search-wrap').addClass('open');
+                }
+            });
+            
+
+            /* ===== 각 검색창 버튼 ===== */
+            $('.btn-con-open').on('click',function(e){
+                e.preventDefault();
+
+                $('.btn-con-open').removeClass('active');
+                $(this).addClass('active');
+                
+                $('.filter-con').removeClass('active');
+                if($(this).attr('data-filter')){
+                    $('#' + $(this).attr('data-filter')).addClass('active');
+                }
+            });
+
+
+            /* ===== 필터영역체크 ===== */
+            function chkListHide() {
+                if($('.filter-chk-wrap').find('.filter-chk-item').length > 0){
+                    $('.filter-chk-wrap').show();
+                }else{
+                    $('.filter-chk-wrap').hide();
+                }
+            }chkListHide()
+
+
+
+            /* ===== 주제별 필터 ===== */
+
+            /* 생성 */
+            $("#subject").on("change", function(){
+                var subjectVal = $(this).val();
+
+                if($('.filter-item-subject').length > 0){ // 주제 필터 있으면 텍스트만 변경
+                    $('.filter-item-subject span').text(subjectVal);
+                }else{ // 주제 필터 없으면 생성
+                    $('.filter-chk-list').append(
+                        '<div class="filter-chk-item filter-item-subject">'
+                        +'<span>'+subjectVal+'</span>'
+                        +'<button type="button" class="btnset btn-filter-delete">'
+                        +'<strong class="hide">삭제</strong>'
+                        +'</button>'
+                        +'</div>'
+                    );
+                }
+
+                chkListHide(); //필터영역체크
+            });
+
+            /* 삭제 */
+            $(document).on("click", ".filter-item-subject .btn-filter-delete", function(e) {
+                e.preventDefault();
+
+                $('#subject').val(""); // 셀렉트값 초기화
+                $('select').niceSelect('update'); // nice select update
+                $(this).parent().remove();
+                chkListHide(); //필터영역체크
+            });
+
+
+            /* ===== 시대별 필터 ===== */
+
+            /* 슬라이드 세팅 */
+            var pipMin = 1890; //최소년도
+            var pipMax = 2030; //최대년도
+
+            $('.filter-history-slider').slider({ 
+                min: pipMin,
+                max: pipMax,
+                step:10, // 몇단계씩 이동?
+                range: true, // 범위선택허용
+            })
+            .slider('pips', {
+                rest: 'label'
+            })
+            .on("slidechange", function(e,ui) { //슬라이드 값 변경시
+                var chgMinYear = $('.filter-history-slider').slider('values',0); //시작년도
+                var chgMaxYear = $('.filter-history-slider').slider('values',1); //마지막년도
+                var chgYearTxt = chgMinYear + '년 ~ ' + chgMaxYear + '년';
+
+                if($('.filter-item-history').length > 0){ // 시대 필터 있으면 텍스트 변경
+                    $('.filter-item-history span').text(chgYearTxt);
+                }
+
+                chkListHide(); //필터영역체크
+            });
+
+            /* 생성 */
+            $('.filter-history-slider').on('click',function(e){
+                e.preventDefault();
+
+                var minYear = $('.filter-history-slider').slider('values',0); //시작년도
+                var maxYear = $('.filter-history-slider').slider('values',1); //마지막년도
+                var yearTxt = minYear + '년 ~ ' + maxYear + '년';
+
+                if($('.filter-item-history').length <= 0){ // 시대 필터 없으면 생성
+                    $('.filter-chk-list').append(
+                        '<div class="filter-chk-item filter-item-history">'
+                        +'<span>'+yearTxt+'</span>'
+                        +'<button type="button" class="btnset btn-filter-delete">'
+                        +'<strong class="hide">삭제</strong>'
+                        +'</button>'
+                        +'</div>'
+                    );
+                }
+
+                chkListHide(); //필터영역체크
+            });
+
+            /* 삭제 */
+            $(document).on("click", ".filter-item-history .btn-filter-delete", function(e) {
+                e.preventDefault();
+
+                //슬라이더 값 초기화
+                $('.filter-history-slider')
+                .slider("option", "values", [pipMin, pipMin]) 
+                .slider("pips","refresh");
+
+                $(this).parent().remove();
+                chkListHide(); //필터영역체크
+            });
+
+
+            /* ===== 분류별 필터 ===== */
+
+            /* 생성 */
+            $("#category").on("change", function(){
+                var categoryVal = $(this).val();
+
+                if($('.filter-item-category').length > 0){ // 주제 필터 있으면 텍스트만 변경
+                    $('.filter-item-category span').text(categoryVal);
+                }else{ // 주제 필터 없으면 생성
+                    $('.filter-chk-list').append(
+                        '<div class="filter-chk-item filter-item-category">'
+                        +'<span>'+categoryVal+'</span>'
+                        +'<button type="button" class="btnset btn-filter-delete">'
+                        +'<strong class="hide">삭제</strong>'
+                        +'</button>'
+                        +'</div>'
+                    );
+                }
+
+                chkListHide(); //필터영역체크
+            });
+
+            /* 삭제 */
+            $(document).on("click", ".filter-item-category .btn-filter-delete", function(e) {
+                e.preventDefault();
+
+                $('#category').val(""); // 셀렉트값 초기화
+                $('select').niceSelect('update'); // nice select update
+                $(this).parent().remove();
+                chkListHide(); //필터영역체크
+            });
+
+
+            /* ===== 초성별 필터 ===== 
+
+            $('.filter-consonant input[type="checkbox"]').each(function(){
+                $(this).on('click', function() {
+                    if ($(this).prop('checked')){
+                        $('.filter-chk-list').append(
+                            '<div class="filter-chk-item filter-item-consonant">'
+                            +'<span>'+$(this).val()+'</span>'
+                            +'<button type="button" class="btnset btn-filter-delete">'
+                            +'<strong class="hide">삭제</strong>'
+                            +'</button>'
+                            +'</div>'
+                        );
+                    }
+                    chkListHide(); //필터영역체크
+                });
+            });
+
+            $(document).on("click", ".filter-item-consonant .btn-filter-delete", function(e) {
+                e.preventDefault();
+
+                // 체크박스 초기화
+                var consonantVal = $(this).parent().find('span').text();
+                var chkBox = $('.filter-consonant input[type="checkbox"]');
+                for (i=0;i<chkBox.length ;i++ ){
+                    if (chkBox[i].checked == true ){
+                        if (consonantVal == chkBox[i].value ){
+                            chkBox[i].checked = false;
+                        }
+                    }
+                }
+
+                $(this).parent().remove();
+                chkListHide(); //필터영역체크
+            });
+            */
+
+
+            /* ===== 리셋버튼 ===== */
+
+            $(document).on("click", ".btn-reset", function(e) {
+                e.preventDefault();
+                $('.filter-chk-item').remove();
+
+                // 주제필터 초기화
+                $('#subject').val(""); // 셀렉트값 초기화
+                
+                // 시대필터 초기화
+                $('.filter-history-slider')
+                .slider("option", "values", [pipMin, pipMin]) 
+                .slider("pips","refresh");
+
+                // 분류별 초기화
+                $('#category').val(""); // 셀렉트값 초기화
+
+                // SELECTBOX UPDATE
+                $('select').niceSelect('update'); // nice select update
+
+                // 필터영역체크
+                chkListHide(); 
+            });
+        });
+    </script>
+    <!----- } SCRIPT ----->
+
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/collect.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:19 GMT -->
+</html>

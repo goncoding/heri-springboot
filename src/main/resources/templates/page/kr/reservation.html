@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="reservation">
+                <div class="maxinner">
+                    <div class="reservation-tit-wrap">
+                        <div class="maxinner">
+                            <div class="sub-tit-wrap">
+                                <h2 class="sub-tit con-ani fade-right">관람 예약</h2>
+                            </div>
+                            <ol class="step-list">
+                                <li><span>1</span>날짜 선택</li>
+                                <li class="on"><span>2</span>예약 정보 입력</li>
+                                <li><span>3</span>예약 완료</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                   <div class="form-wrap">
+                        <!----- 문의폼 양식 { ----->
+                        <form name="" action="#" method="">
+                            <fieldset>
+                                <div class="form-flex">
+                                    <h3>예약자 정보 입력</h3>
+                                    <div class="form-right">
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">이름</label>
+                                            </div>
+                                            <div class="form-input form-half">
+                                                <input type="text" id="" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">연락처</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-tel-confirm">
+                                                    <div class="form-tel">
+                                                        <select name="" id="">
+                                                            <option value="" disabled selected>선택</option>
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        <span class="bar">-</span>
+                                                        <input type="text" id="" name="">
+                                                        <span class="bar">-</span>
+                                                        <input type="text" id="" name="">
+                                                    </div>
+                                                    <button type="button" class="btnset btn-tel-confirm">본인인증</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">E-Mail</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-email">
+                                                    <input type="text" id="" name="">
+                                                    <span class="bar">@</span>
+                                                    <input type="text" id="" name="">
+                                                    <select name="" id="">
+                                                        <option value="" selected>직접입력</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="daum.net">daum.net</option>
+                                                        <option value="hanmail.net">hanmail.net</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                        <option value="hotmail.com">hotmail.com</option>
+                                                        <option value="gmail.com">gmail.com</option>
+                                                        <option value="icloud.com">icloud.com</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">회사명</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input form-half">
+                                                    <input type="text" id="" name="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">직위</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input form-half">
+                                                    <input type="text" id="" name="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>관람 정보 입력</h3>
+                                    <div class="form-right">
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">관람일</label>
+                                            </div>
+                                            <div class="form-input form-half">
+                                                <input type="text" id="" name="" class="datepicker">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">관람 시간</label>
+                                            </div>
+                                            <div class="form-input form-half">
+                                                <select name="" id="">
+                                                    <option value="" disabled selected>선택</option>
+                                                    <option value="10:00 ~ 11:00">10:00 ~ 11:00</option>
+                                                    <option value="11:00 ~ 12:00">11:00 ~ 12:00</option>
+                                                    <option value="12:00 ~ 13:00" disabled>12:00 ~ 13:00</option>
+                                                    <option value="13:00 ~ 14:00" disabled>13:00 ~ 14:00</option>
+                                                    <option value="14:00 ~ 15:00">14:00 ~ 15:00</option>
+                                                    <option value="15:00 ~ 16:00" disabled>15:00 ~ 16:00</option>
+                                                    <option value="16:00 ~ 17:00">16:00 ~ 17:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">동반자 정보</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-partner">
+                                                    <div class="chk-box02">
+                                                        <input type="radio" id="partner01" name="partner">
+                                                        <label for="partner01">없음</label>
+                                                    </div>
+                                                    <div class="chk-box02">
+                                                        <input type="radio" id="partner02" name="partner">
+                                                        <label for="partner02">있음</label>
+                                                    </div>
+                                                    <select name="" id="">
+                                                        <option value="" disabled selected>인원</option>
+                                                        <option value="5명 이하">5명 이하</option>
+                                                        <option value="5명 이상">5명 이상</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>개인정보 수집 및 <br>이용동의</h3>
+                                    <div class="form-right">
+                                        <div class="privacy-box-wrap over-scroll">
+                                            <div class="privacy-box">
+                                                두산헤리티지1896닷컴은「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 및 「개인정보 보호법」등 관련 법령에 의거하여, 귀하로부터 개인정보를 수집함에 있어
+                                                아래 내용을 안내하고 있습니다. 귀하께서는 아래 내용을 자세히 읽어 보시고, 모든 내용을 이해하신 후에 동의 여부를 결정해 주시기 바랍니다. <br><br>
+
+                                                1. 개인정보의 수집 및 이용 목적<br>
+                                                귀하의 제품 내지 서비스에 대한 문의 또는 요청에 대한 회신, 유익한 정보의 제공<br><br>
+
+                                                2. 수집 및 이용하려는 개인정보의 항목<br>
+                                                가. 필수정보<br>
+                                                이름<br>
+                                                이메일주소<br>
+                                                전화번호<br>
+                                                회사명
+                                            </div>
+                                        </div>
+                                        <div class="agree-chk-wrap">
+                                            <p>개인정보 수집 및 이용동의를 자세히 읽어 보신 후 동의해 주시기 바랍니다.</p>
+                                            <div class="agree-chk">
+                                                <input type="checkbox" id="agree01" name="" value="">
+                                                <label for="agree01">동의</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="btn-confirm-wrap">
+                                    <a href="/kr/contactus" class="btnset btn-cancel">취소하기</a>
+                                    <!--<input type="submit" class="btnset btn-submit" value="문의하기">-->
+                                    <!-- 팝업 확인용 임시버튼. 개발시 위 버튼 주석 해제 {-->
+                                    <a href="javascript:;" class="btnset btn-submit btn-pop-open" data-popid="pop-reservation-success">예약하기</a>
+                                    <!-- } 팝업 확인용 임시버튼. 개발시 위 버튼 주석 해제-->
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!----- } 문의폼 양식 ----->
+                    </div>
+
+                    <!----- 완료 팝업창 { ----->
+                    <div class="pop-wrap over-scroll pop-reservation" id="pop-reservation-success">
+                        <div class="pop-inner">
+                            <div class="pop-con">
+                                <div class="ico">
+                                    <img src="../img/ico/ico-reservation-calender.png" alt="">
+                                </div>
+                                <h2>관람 예약이 완료되었습니다.</h2>
+                                <div class="reservation-box">
+                                    <ul class="reservation-info">
+                                        <li>
+                                            <strong>관람일자 : </strong>
+                                            2022-07-13
+                                        </li>
+                                        <li>
+                                            <strong>예약자 : </strong>
+                                            홍길동
+                                        </li>
+                                        <li>
+                                            <strong>방문시간 : </strong>
+                                            09:00
+                                        </li>
+                                        <li>
+                                            <strong>연락처 : </strong>
+                                            010-1234-5678
+                                        </li>
+                                        <li>
+                                            <strong>동반자 정보 : </strong>
+                                            있음 / 5명 이하
+                                        </li>
+                                        <li>
+                                            <strong>E-Mail : </strong>
+                                            test@doosan.com
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pop-btnwrap">
+                                    <a href="/kr/reservation_schedule" class="btnset btn-submit">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!----- } 완료 팝업창 ----->
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main> 
+
+
+
+    <!----- SCRIPT ----->
+    <script src="../common/js/common.js"></script>
+    <script>
+        $(function(){
+            $(".datepicker").datepicker({
+                closeText: "CLOSE",
+                prevText: "이전달",
+                nextText: "다음달",
+                currentText: "TODAY",
+                monthNames: ["1월","2월","3월","4월","5월","6월", "7월","8월","9월","10월","11월","12월"],
+                dayNames: ["일","월","화","수","목","금","토"],
+                dayNamesMin: ["일","월","화","수","목","금","토"],
+                dateFormat: "yy-mm-dd",
+                firstDay: 0, //주의 시작을 일요일로 설정
+                isRTL: false,
+                showMonthAfterYear: true, //년,월순으로 변경
+                yearSuffix: "년" //년도 뒤에 붙는 텍스트
+            });
+        });
+    </script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/reservation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:56:31 GMT -->
+</html>

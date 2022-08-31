@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="contact">
+                <div class="maxinner">
+                    <div class="contact-tit-wrap">
+                        <div class="sub-tit-wrap">
+                            <h2 class="sub-tit con-ani fade-right">Contact Us</h2>
+                            <p class="sub-txt con-ani fade-right">문의사항을 남겨 주시면 담당자 확인 후 신속히 답변 드리겠습니다.</p>
+                        </div>
+                        <a href="/kr/reservation_schedule" class="btnset btn-type01"><span>관람 예약 바로가기</span></a>
+                    </div>
+
+
+                   <div class="form-wrap">
+                        <!----- 문의폼 양식 { ----->
+                        <form name="testform" action="#" method="" onsubmit="return formChk(testform)">
+                            <fieldset>
+                                <div class="form-flex">
+                                    <h3>작성자 정보</h3>
+                                    <div class="form-right">
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">이름</label>
+                                            </div>
+                                            <div class="form-input form-half">
+                                                <input type="text" id="" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">연락처</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-tel">
+                                                    <select name="" id="">
+                                                        <option value="" disabled selected>선택</option>
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </select>
+                                                    <span class="bar">-</span>
+                                                    <input type="text" id="" name="">
+                                                    <span class="bar">-</span>
+                                                    <input type="text" id="" name="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">E-Mail</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-email">
+                                                    <input type="text" id="" name="">
+                                                    <span class="bar">@</span>
+                                                    <input type="text" id="" name="">
+                                                    <select name="" id="">
+                                                        <option value="">직접입력</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="daum.net">daum.net</option>
+                                                        <option value="hanmail.net">hanmail.net</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                        <option value="hotmail.com">hotmail.com</option>
+                                                        <option value="gmail.com">gmail.com</option>
+                                                        <option value="icloud.com">icloud.com</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">회사명</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input form-half">
+                                                    <input type="text" id="" name="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">직위</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input form-half">
+                                                    <input type="text" id="" name="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>문의내용</h3>
+                                    <div class="form-right">
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">문의 항목<label>
+                                            </div>
+                                            <div class="form-input form-half">
+                                                <select name="" id="">
+                                                    <option value="" disabled selected>선택</option>
+                                                    <option value="관람 문의">관람 문의</option>
+                                                    <option value="사료 문의">사료 문의</option>
+                                                    <option value="기획 문의">기획 문의</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">제목</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">내용</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="">첨부파일</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-file">
+                                                    <div class="form-file-con">
+                                                        <div class="form-file-name" id="file-name">
+                                                            <p>파일을 선택해주세요.</p>
+                                                        </div>
+                                                        <div class="form-file-btn">
+                                                            <label for="on-file"><span class="hide">파일1</span>찾아보기</label>
+                                                            <input type="file" name="on-file" id="on-file" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="form-smtxt">* 첨부 파일은 jpg, png, gif, hwp, pdf, ppt, xls, zip 파일에 한해 등록이 가능합니다. / 최대 용량 : 10MB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>개인정보 수집 및 <br>이용동의</h3>
+                                    <div class="form-right">
+                                        <div class="privacy-box-wrap over-scroll">
+                                            <div class="privacy-box">
+                                                두산헤리티지1896닷컴은「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 및 「개인정보 보호법」등 관련 법령에 의거하여, 귀하로부터 개인정보를 수집함에 있어
+                                                아래 내용을 안내하고 있습니다. 귀하께서는 아래 내용을 자세히 읽어 보시고, 모든 내용을 이해하신 후에 동의 여부를 결정해 주시기 바랍니다. <br><br>
+
+                                                1. 개인정보의 수집 및 이용 목적<br>
+                                                귀하의 제품 내지 서비스에 대한 문의 또는 요청에 대한 회신, 유익한 정보의 제공<br><br>
+
+                                                2. 수집 및 이용하려는 개인정보의 항목<br>
+                                                가. 필수정보<br>
+                                                이름<br>
+                                                이메일주소<br>
+                                                전화번호<br>
+                                                회사명
+                                            </div>
+                                        </div>
+                                        <div class="agree-chk-wrap">
+                                            <p>개인정보 수집 및 이용동의를 자세히 읽어 보신 후 동의해 주시기 바랍니다.</p>
+                                            <div class="agree-chk">
+                                                <input type="checkbox" id="agree01" name="" value="">
+                                                <label for="agree01">동의</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="btnwrap">
+                                    <a href="/kr/contactus" class="btnset btn-cancel">취소하기</a>
+                                    <input type="submit" class="btnset btn-submit" value="문의하기">
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!----- } 문의폼 양식 ----->
+                   </div>
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main>
+
+
+    <!----- SCRIPT ----->
+    <script src="../common/js/common.js"></script>
+    <script>
+        $(function(){
+            $('#on-file').on('change',function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/kr/index').pop().split('\\').pop();
+                }
+                $('#file-name p').text(filename);
+            });
+        });
+
+        function formChk(form) {   
+            alert('문의가 정상적으로 접수되었습니다.\n빠르게 확인하여 답변드리도록 하겠습니다.');
+        }
+    </script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:21 GMT -->
+</html>

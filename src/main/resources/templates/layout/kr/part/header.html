@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- Mirrored from soro122.soroweb.co.kr/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:35:44 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=10, user-scalable=yes">
+
+	<title>Header</title>
+</head>
+<body>
+<th:block th:fragment="header">
+	<!----- HEADER { ----->
+	<header id="header">
+		<div class="header-inner">
+
+			<th:block th:replace="layout/kr/part/header :: logo"></th:block>
+
+			<th:block th:replace="layout/kr/part/header :: gnb"></th:block>
+
+			<th:block th:replace="layout/kr/part/header :: language-change"></th:block>
+
+
+		</div>
+	</header>
+</th:block>
+
+<th:block th:fragment="logo">
+	<h1>
+		<a href="/kr"><span class="hide">두산헤리티지1896</span></a>
+	</h1>
+</th:block>
+
+<th:block th:fragment="gnb">
+	<nav class="gnb-wrap">
+		<h2 class="hide">대메뉴</h2>
+		<ul class="gnb">
+			<!--				templates/test-page/kr/sub/collect.html-->
+			<li><a href="javascript:alert('준비중입니다.');">역사관 소개</a></li>
+			<li><a href="/kr/online_history_hall">온라인 역사관</a></li>
+			<li><a href="/kr/collect">전시 &middot; 소장품</a></li>
+			<li><a href="/kr/pr_center">홍보센터</a></li>
+		</ul>
+	</nav>
+</th:block>
+
+<th:block th:fragment="language-change">
+	<div class="hd-info">
+		<div class="hd-language">
+			<h2 class="hide">언어선택</h2>
+			<button type="button" class="btnset btn-hd-language">한국어</button>
+			<ul>
+				<li class="on"><a href="/kr">한국어</a></li>
+				<li><a href="javascript:alert('Coming soon.');">English</a></li>
+			</ul>
+		</div>
+	</div>
+</th:block>
+
+</body>
+</html>
