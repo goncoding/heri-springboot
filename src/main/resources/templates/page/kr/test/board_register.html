@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="contact">
+                <div class="maxinner">
+                    <div class="contact-tit-wrap">
+                        <div class="sub-tit-wrap">
+                            <h2 class="sub-tit con-ani fade-right">Contact Us</h2>
+                            <p class="sub-txt con-ani fade-right">문의사항을 남겨 주시면 담당자 확인 후 신속히 답변 드리겠습니다.</p>
+                        </div>
+                        <a href="/kr/reservation_schedule" class="btnset btn-type01"><span>관람 예약 바로가기</span></a>
+                    </div>
+
+
+                    <div class="form-wrap">
+                        <!----- 문의폼 양식 { ----->
+                        <form name="testform" th:action="@{/board/register}" th:method="POST" onsubmit="return formChk(testform)">
+
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>문의내용</h3>
+                                    <div class="form-right">
+
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="title">제목</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="title" name="title">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="content">내용</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="writerEmail">writerEmail</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="email" id="writerEmail" name="writerEmail">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <div class="btnwrap">
+                                    <a href="/kr/contactus" class="btnset btn-cancel">취소하기</a>
+                                    <input type="submit" class="btnset btn-submit" value="문의하기">
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!----- } 문의폼 양식 ----->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main>
+
+
+    <!----- SCRIPT ----->
+    <script src="../common/js/comsmon.js"></script>
+
+
+    <script>
+
+        $(function(){
+
+            $('#on-file').on('change',function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/kr/index').pop().split('\\').pop();
+                }
+                $('#file-name p').text(filename);
+            });
+        });
+
+        function formChk(form) {
+            alert('문의가 정상적으로 접수되었습니다.\n빠르게 확인하여 답변드리도록 하겠습니다.');
+        }
+    </script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:21 GMT -->
+</html>

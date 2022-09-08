@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="contact">
+                <div class="maxinner">
+                    <div class="contact-tit-wrap">
+                        <div class="sub-tit-wrap">
+                            <h2 class="sub-tit con-ani fade-right">Contact Us</h2>
+                            <p class="sub-txt con-ani fade-right">문의사항을 남겨 주시면 담당자 확인 후 신속히 답변 드리겠습니다.</p>
+                        </div>
+                        <a href="/kr/reservation_schedule" class="btnset btn-type01"><span>관람 예약 바로가기</span></a>
+                    </div>
+
+
+                    <div class="form-wrap">
+                        <!----- 문의폼 양식 { ----->
+<!--                        <form name="testform" th:action="@{/board/register}" th:method="POST" onsubmit="return formChk(testform)">-->
+
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>문의내용</h3>
+                                    <div class="form-right">
+
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="bno">bno</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="bno" name="bno" th:value="${dto.bno}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="title">제목</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="title" name="title" th:value="${dto.title}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="content">내용</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <textarea name="content" id="content" cols="30" rows="10" readonly>[[${dto.content}]]</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="writerName">writerName</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="writerName" name="writerName" th:value="${dto.writerName}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="writerEmail">writerEmail</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="writerEmail" name="writerEmail" th:value="${dto.writerEmail}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="regDate">regDate</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="regDate" name="regDate" th:value="${#temporals.format(dto.regDate, 'yyyy/MM/dd')}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="modDate">modDate</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="modDate" name="modDate" th:value="${#temporals.format(dto.modeDate, 'yyyy/MM/dd')}" readonly>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <a th:href="@{/board/modify(bno=${dto.bno}, page=${requestDto.page},type=${requestDto.type},keyword=${requestDto.keyword})}">
+                                    <button type="button" class="btnset btn-cancel">수정</button>
+                                </a>
+                                <a th:href="@{/board/list(bno=${dto.bno}, page=${requestDto.page},type=${requestDto.type},keyword=${requestDto.keyword})}">
+                                    <button type="button" class="btnset btn-cancel">list</button>
+                                </a>
+                                <div class="btnwrap">
+<!--                                    <a href="/kr/contactus" class="btnset btn-cancel">취소하기</a>-->
+                                    <h1><span class="addReply">Add Reply</span></h1>
+                                    <h1><span class="replyCount">Reply Count [[${dto.replyCount}]]</span></h1>
+                                    <div class="list-group replyList">
+
+                                    </div>
+<!--                                    <input type="submit" class="btnset btn-submit" value="문의하기">-->
+                                </div>
+                            </fieldset>
+
+<!--                        </form>-->
+                        <!----- } 문의폼 양식 ----->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main>
+
+    <div class="card-body">
+        <b></b>
+        <h4 class="card-title"></h4>
+        <h5 class="card-subtitle"></h5>
+        <p class="card-text"></p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="replyText" placeholder="replyText">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="replyer" placeholder="replyer">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default replyRemove" data-dismiss="modal">remove</button>
+                    <button type="button" class="btn btn-default replyModify" data-dismiss="modal">modify</button>
+                    <button type="button" class="btn btn-default replyClose" data-dismiss="modal">close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!----- SCRIPT ----->
+    <script src="/common/js/comsmon.js"></script>
+
+    <script th:inline="javascript">
+        $(document).ready(function(){
+
+            var bno = [[${dto.bno}]];
+
+            let listGroup = $(".replyList");
+
+            //특정 게시글의 댓글 처리
+            function loadJSONData(){
+                $.getJSON('/replies/board/'+bno,function(arr){
+
+                    console.log(arr);
+
+                    var str = "";
+
+                    $('.replyCount').html(" Reply Count "+arr.length);
+
+                    $.each(arr, function(idx, reply){
+                        console.log(reply);
+
+                            str += '<div class="card-body" data-rno="'+reply.rno+'">\n' +
+                                '        <b>'+reply.rno+'</b>\n' +
+                                '        <h2 class="card-title">'+reply.text+'</h2>\n' +
+                                '        <h2 class="card-subtitle">'+reply.replyer+'</h2>\n' +
+                                '        <p class="card-text">'+formatTime(reply.regDate)+'</p>\n' +
+                                '    </div>';
+
+                    })
+
+                    listGroup.html(str);
+
+                })
+            }
+
+            $(".replyCount").click(function(){
+                loadJSONData();
+            })//end click
+
+            var modal = $('.modal');
+
+            $(".addReply").click(function(){
+                // alert("aaa");
+                modal.modal('show');
+
+                $('input[name="replyText"]').val('');
+                $('input[name="replyer"]').val('');
+
+
+
+            })
+
+
+            function formatTime(str){
+
+                var date = new Date(str);
+
+                return date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+'/'+date.getHours()+'/'+date.getMinutes();
+            }
+
+
+        });
+    </script>
+
+
+    <script>
+
+        $(function(){
+
+            $('#on-file').on('change',function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/kr/index').pop().split('\\').pop();
+                }
+                $('#file-name p').text(filename);
+            });
+        });
+
+        function formChk(form) {
+            alert('문의가 정상적으로 접수되었습니다.\n빠르게 확인하여 답변드리도록 하겠습니다.');
+        }
+    </script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:21 GMT -->
+</html>

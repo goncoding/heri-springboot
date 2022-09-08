@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <div class="normal-contents">
+            <div class="col-md-12">
+        </div>
+
+
+            <h1>게시글 수정</h1>
+
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="title">글 번호</label>
+                            <input type="text" class="form-control" id="id" th:value="${post.id}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">제목</label>
+                            <input type="text" class="form-control" id="title" th:value="${post.title}">
+                        </div>
+                        <div class="form-group">
+                            <label for="author"> 작성자 </label>
+                            <input type="text" class="form-control" id="author" th:value="${post.author}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="content"> 내용 </label>
+                            <textarea class="form-control" id="content">[[${post.content}]]</textarea>
+                        </div>1
+                    </form>
+                    <a href="/" role="button" class="btn btn-secondary">취소</a>
+                    <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
+                    <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="/js/app/index.js"></script>
+
+    </main>
+</div>
+<!--end layout : content-->
+</body>
+</html>
+
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/kr/SubBase}">
+
+<body class="sub"> <!-- 서브페이지 body에 '.sub' 클래스 추가 -->
+
+<div layout:fragment="content">
+
+    <!----- MAIN ----->
+    <main id="main" role="main">
+
+        <!----- CONTACT US { ----->
+        <div class="normal-contents">
+            <section class="contact">
+                <div class="maxinner">
+                    <div class="contact-tit-wrap">
+                        <div class="sub-tit-wrap">
+                            <h2 class="sub-tit con-ani fade-right">Contact Us</h2>
+                            <p class="sub-txt con-ani fade-right">문의사항을 남겨 주시면 담당자 확인 후 신속히 답변 드리겠습니다.</p>
+                        </div>
+                        <a href="/kr/reservation_schedule" class="btnset btn-type01"><span>관람 예약 바로가기</span></a>
+                    </div>
+
+
+                    <div class="form-wrap">
+                        <!----- 문의폼 양식 { ----->
+                        <form name="testform" th:action="@{/guestbook/modify}" th:method="POST" onsubmit="return formChk(testform)">
+
+                            <input type="hidden" name="page" th:value="${requestDto.page}"/>
+                            <input type="hidden" name="type" th:value="${requestDto.type}"/>
+                            <input type="hidden" name="keyword" th:value="${requestDto.keyword}"/>
+
+                            <fieldset class="bt-line">
+                                <div class="form-flex">
+                                    <h3>문의내용</h3>
+                                    <div class="form-right">
+
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="bno">bno</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="bno" name="bno" th:value="${dto.bno}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="title">제목</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="title" name="title" th:value="${dto.title}">
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="content">내용</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <textarea name="content" id="content" cols="30" rows="10">[[${dto.content}]]</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="writerName">writerName</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="writerName" name="writerName" th:value="${dto.writerName}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="writerEmail">writerEmail</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="writerEmail" name="writerEmail" th:value="${dto.writerEmail}" readonly>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="regDate">regDate</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="regDate"  th:value="${#temporals.format(dto.regDate, 'yyyy/MM/dd')}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-box">
+                                            <div class="form-label">
+                                                <label for="modDate">modDate</label>
+                                            </div>
+                                            <div class="form-input form-full">
+                                                <input type="text" id="modDate"  th:value="${#temporals.format(dto.modeDate, 'yyyy/MM/dd')}" readonly>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <button type="button" class="btnset btn-cancel modifyBtn">수정</button>
+                                <button type="button" class="btnset btn-cancel listBtn">list</button>
+                                <button type="button" class="btnset btn-cancel removeBtn">remove</button>
+<!--                                <div class="btnwrap">-->
+<!--                                    <a href="/kr/contactus" class="btnset btn-cancel">취소하기</a>-->
+<!--                                    <input type="submit" class="btnset btn-submit" value="문의하기">-->
+<!--                                </div>-->
+                            </fieldset>
+                        </form>
+                        <!----- } 문의폼 양식 ----->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!----- } CONTACT US ----->
+    </main>
+
+
+    <!----- SCRIPT ----->
+    <script src="/common/js/common.js"></script>
+
+    <script th:inline="javascript">
+
+        var actionForm = $("form");
+
+        $(".removeBtn").click(function(e){
+
+            actionForm
+                .attr("action","/board/remove")
+                .attr("method","post")
+                .submit();
+        });
+
+        $(".modifyBtn").click(function(){
+
+            if (!confirm("수정하시겠습니까?")) {
+                return;
+            }
+
+            actionForm
+                .attr("action","/board/modify")
+                .attr("method","post")
+                .submit();
+        });
+
+        $(".listBtn").click(function(){
+
+            let pageInfo = $("input[name='page']");
+            let typeInfo = $("input[name='type']");
+            let keywordInfo = $("input[name='keyword']");
+
+            actionForm.empty();
+            actionForm.append(pageInfo);
+            actionForm.append(typeInfo);
+            actionForm.append(keywordInfo);
+            actionForm
+                .attr("action","/board/list")
+                .attr("method","get")
+                .submit();
+
+                // console.log(actionForm.html());
+
+        })
+
+
+    </script>
+
+    <script>
+
+        $(function(){
+
+            $('#on-file').on('change',function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/kr/index').pop().split('\\').pop();
+                }
+                $('#file-name p').text(filename);
+            });
+        });
+
+        function formChk(form) {
+            alert('문의가 정상적으로 접수되었습니다.\n빠르게 확인하여 답변드리도록 하겠습니다.');
+        }
+    </script>
+</div>
+<!--end layout : content-->
+</body>
+
+<!-- Mirrored from soro122.soroweb.co.kr/sub/contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Aug 2022 07:38:21 GMT -->
+</html>
